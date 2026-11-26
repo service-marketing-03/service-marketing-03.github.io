@@ -1017,6 +1017,12 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
  .scol .sic{transform:scale(.6);margin:1rem auto 0;height:52px}
  .faq summary{font-size:.98rem}
 }
+
+/* v27: promo photo never covers text */
+.pcard.pq:not(.pq-prod){display:flex!important;flex-direction:column}
+.pcard.pq:not(.pq-prod) .pq-tx{flex:none;padding-bottom:22px!important}
+.pcard.pq:not(.pq-prod) .pq-ph{position:relative!important;flex:1 1 0;height:auto!important;min-height:0}
+@media (max-width:640px){.pcard.pq{aspect-ratio:3/4!important}.pq h4{font-size:24px!important}.pq-p{font-size:15px!important}.pq-tx{padding:26px 24px 0!important}}
 </style>
 
 <div class="vfab" id="vfab" style="right:20px;bottom:96px">
