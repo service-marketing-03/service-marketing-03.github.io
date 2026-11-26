@@ -831,6 +831,30 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
 .closer-rail li:hover .cutfig img{transform:scale(1.03)}
 
 /* 핵심 기능: 애플식 카드 */
+.kf-wrap{margin-top:2.5rem}
+.kf-rail{list-style:none;margin:0;padding:0 max(16px,calc((100vw - 1180px)/2));display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:max(16px,calc((100vw - 1180px)/2));scrollbar-width:none}
+.kf-rail::-webkit-scrollbar{display:none}
+.kf-card{position:relative;flex:0 0 min(1180px,calc(100vw - 48px));height:clamp(460px,52vw,680px);background:#fff;border-radius:28px;overflow:hidden;scroll-snap-align:start;box-shadow:2px 4px 12px rgba(0,0,0,.06)}
+.kf-h{position:relative;z-index:2;margin:0;padding:clamp(28px,4vw,52px) clamp(24px,4.4vw,60px) 0;font-size:clamp(19px,1.9vw,24px);font-weight:600;line-height:1.3;letter-spacing:-.015em;color:#1d1d1f}
+.kf-img{position:absolute;left:0;right:0;bottom:0;width:100%;height:78%;object-fit:cover;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 22%);mask-image:linear-gradient(180deg,transparent 0,#000 22%);transform:scale(1.06);transition:transform 1.6s cubic-bezier(.2,.8,.2,1)}
+.kf-card.on .kf-img{transform:scale(1)}
+.kf-cap{position:absolute;z-index:2;left:clamp(24px,4.4vw,60px);bottom:clamp(20px,3vw,36px);margin:0;font-size:14px;font-weight:600;color:#1d1d1f;background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);padding:.45rem .9rem;border-radius:999px}
+.kf-ctrl{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:28px}
+.kf-dots{display:flex;align-items:center;gap:14px;height:56px;padding:0 24px;border-radius:999px;background:rgba(232,232,237,.9);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.kf-dot{width:8px;height:8px;padding:0;border:0;border-radius:999px;background:#86868b;cursor:pointer;transition:width .4s,background .4s}
+.kf-dot[aria-current="true"]{width:48px;background:#1d1d1f}
+.kf-play{width:56px;height:56px;border-radius:50%;border:0;background:rgba(232,232,237,.9);color:#1d1d1f;cursor:pointer;display:grid;place-items:center}
+.kf-play svg{width:18px;height:18px}
+.kf-dash{position:absolute;left:clamp(24px,6vw,90px);right:clamp(24px,6vw,90px);bottom:-24px;top:34%;background:#fff;border-radius:20px 20px 0 0;box-shadow:0 30px 80px -20px rgba(16,40,90,.25),0 0 0 1px rgba(0,0,0,.06);overflow:hidden}
+.kf-card:has(.kf-dash){background:linear-gradient(180deg,#fff 0,#eaf1fd 100%)}
+.kfd-bar{display:flex;align-items:center;gap:.7rem;padding:1rem 1.4rem;background:#14213d;color:#fff;font-weight:600;font-size:15px}.kfd-bar b{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:linear-gradient(145deg,#5ac8fa,#2f6fe0);font-size:14px}
+.kfd-body{padding:1.4rem}
+.kfd-st{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.kfd-st div{background:#f5f7fb;border-radius:14px;padding:1rem 1.1rem}.kfd-st small{display:block;font-size:12px;color:#6e6e73}.kfd-st b{font-size:clamp(20px,2.4vw,30px);font-weight:700;letter-spacing:-.02em;color:#1d1d1f}
+.kfd-ls{list-style:none;margin:1.1rem 0 0;padding:0;display:grid;gap:.2rem}.kfd-ls li{display:flex;align-items:center;gap:.7rem;padding:.7rem .4rem;border-bottom:1px solid #eef0f4;font-size:14px;color:#1d1d1f}
+.kfd-ls span{width:10px;height:10px;border-radius:3px}.kfd-ls .c1{background:#ff9f0a}.kfd-ls .c2{background:#e0245e}
+.kfd-ls em{margin-left:auto;font-style:normal;font-size:12px;font-weight:600;padding:.2rem .6rem;border-radius:999px}.kfd-ls .ok{background:#e3f5e8;color:#1f7a3d}.kfd-ls .run{background:#e6f0ff;color:#0062d6}
+@media (max-width:640px){.kf-card{flex-basis:calc(100vw - 40px);height:520px}.kf-img{height:64%}.kfd-st{grid-template-columns:1fr 1fr}.kfd-st div:nth-child(3){display:none}.kf-dash{top:40%}}
+:root[data-contrast="high"] .kf-card{border:2px solid #000}
 .fx-wrap{margin-top:2.5rem}
 .fx-rail{list-style:none;display:flex;gap:24px;margin:0;padding:0 max(16px,calc((100vw - 1168px)/2)) 1rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:max(16px,calc((100vw - 1168px)/2));scrollbar-width:none}
 .fx-rail::-webkit-scrollbar{display:none}
@@ -1000,7 +1024,7 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
       </div>
     </div>
   </div>
-<div class="fx-wrap"><ul class="fx-rail" id="fxrail" aria-label="Relief 핵심 기능"><li class="fx-card"><figure class="fx-fig"><img src="assets/relief-layers.jpg" alt="촉각 그래픽으로 변환되는 그래프 레이어." loading="lazy"></figure><p class="fx-p"><b>AI 촉각 변환.</b> 강의 PDF 속 그래프 한 장을 올리면 몇 초 만에 손으로 읽는 촉각 그래픽이 됩니다.</p></li><li class="fx-card"><figure class="fx-fig"><img src="assets/relief-graph.jpg" alt="촉각 그래프가 솟아오른 Relief pad 화면." loading="lazy"></figure><p class="fx-p"><b>576핀 촉각 디스플레이.</b> 32×18개의 핀이 오르내리며 함수 곡선, 도형, 지도를 그대로 그려 냅니다.</p></li><li class="fx-card"><figure class="fx-fig"><img src="assets/relief-finger.jpg" alt="손끝으로 점자 핀을 읽는 모습." loading="lazy"></figure><p class="fx-p"><b>점자와 음성, 동시에.</b> 텍스트는 점자와 음성으로, 손끝이 닿은 값은 바로 읽어 줍니다.</p></li><li class="fx-card"><figure class="fx-fig"><div class="fx-type"><span class="fx-ic" aria-hidden="true">R</span><p><span class="nw"><span class="fx-chip c1"><i></i>변환 요청</span>과</span><br><span class="nw"><span class="fx-chip c2"><i></i>기기 대여</span>,</span><br>학생별 지원 내역을<br>한 화면에서.</p></div></figure><p class="fx-p"><b>기관 콘텐츠 관리 SaaS.</b> 기기 대여, 변환 요청, 학생별 지원 내역을 한 화면에서 관리합니다.</p></li><li class="fx-card"><figure class="fx-fig"><img src="assets/relief-desk.jpg" alt="책상 위 Relief pad를 손으로 읽는 학생." loading="lazy"></figure><p class="fx-p"><b>업데이트·유지보수·교육까지.</b> 기기 공급으로 끝나지 않고, 담당자와 이용자 교육을 함께 제공합니다.</p></li></ul><div class="wrap"><div class="rail-ctrl"><button class="round" type="button" data-rail="fxrail" data-dir="-1" aria-label="이전 기능">‹</button><button class="round" type="button" data-rail="fxrail" data-dir="1" aria-label="다음 기능">›</button></div></div></div>
+<div class="kf-wrap"><ul class="kf-rail" id="kfrail" aria-label="Relief 핵심 기능"><li class="kf-card" id="kf0" role="group" aria-roledescription="슬라이드" aria-label="1 / 5"><h3 class="kf-h">강의 PDF 속 그래프 한 장을 올리면<br>몇 초 만에 손으로 읽는 촉각 그래픽으로.</h3><img class="kf-img" src="assets/relief-layers.jpg" alt="촉각 그래프 레이어가 겹쳐 떠 있는 모습." loading="lazy"><p class="kf-cap">AI 촉각 변환</p></li><li class="kf-card" id="kf1" role="group" aria-roledescription="슬라이드" aria-label="2 / 5"><h3 class="kf-h">576개의 핀이 오르내리며<br>함수 곡선, 도형, 지도를 그대로.</h3><img class="kf-img" src="assets/relief-graph.jpg" alt="촉각 그래프가 솟아오른 Relief pad 화면." loading="lazy"><p class="kf-cap">576핀 · 32×18 촉각 디스플레이</p></li><li class="kf-card" id="kf2" role="group" aria-roledescription="슬라이드" aria-label="3 / 5"><h3 class="kf-h">텍스트는 점자와 음성으로.<br>손끝이 닿은 값은 바로 읽어 줍니다.</h3><img class="kf-img" src="assets/relief-student.jpg" alt="이어폰을 끼고 웃으며 점자를 읽는 학생." loading="lazy"><p class="kf-cap">점자 + 음성 동시 출력</p></li><li class="kf-card" id="kf3" role="group" aria-roledescription="슬라이드" aria-label="4 / 5"><h3 class="kf-h">변환 요청과 기기 대여,<br>학생별 지원 내역을 한 화면에서.</h3><div class="kf-dash" aria-hidden="true"><div class="kfd-bar"><b>R</b>Relief Cloud</div><div class="kfd-body"><div class="kfd-st"><div><small>이번 달 변환</small><b>128</b></div><div><small>대여 중</small><b>24대</b></div><div><small>평균 처리</small><b>9.6분</b></div></div><ul class="kfd-ls"><li><span class="c1"></span>통계학 3주차.pdf<em class="ok">완료</em></li><li><span class="c2"></span>Relief pad 대여 · 김○○<em class="run">대여 중</em></li><li><span class="c1"></span>미시경제 6장 그래프<em class="run">변환 중</em></li></ul></div></div><p class="kf-cap">Relief Cloud 기관 관리</p></li><li class="kf-card" id="kf4" role="group" aria-roledescription="슬라이드" aria-label="5 / 5"><h3 class="kf-h">기기 공급으로 끝나지 않고<br>담당자와 이용자 교육까지 함께.</h3><img class="kf-img" src="assets/relief-fair.jpg" alt="담당자가 옆에서 학생의 첫 사용을 돕는 모습." loading="lazy"><p class="kf-cap">업데이트 · 유지보수 · 교육</p></li></ul><div class="kf-ctrl"><div class="kf-dots"><button type="button" class="kf-dot" data-i="0" aria-label="1번째 기능 보기"></button><button type="button" class="kf-dot" data-i="1" aria-label="2번째 기능 보기"></button><button type="button" class="kf-dot" data-i="2" aria-label="3번째 기능 보기"></button><button type="button" class="kf-dot" data-i="3" aria-label="4번째 기능 보기"></button><button type="button" class="kf-dot" data-i="4" aria-label="5번째 기능 보기"></button></div><button type="button" class="kf-play" id="kfplay" aria-label="자동 넘김 일시정지"></button></div></div></div>
 </section>
 
 <section class="sec slim" id="design" aria-labelledby="design-title" style="padding-top:2rem">
@@ -1603,6 +1627,22 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
     st.textContent=picked.join(", ")+" 신청을 확인했습니다. 이 페이지는 시연용이라 실제로 발송되지는 않습니다.";
   });
 })();
+
+  (function(){var r=document.getElementById("kfrail");if(!r)return;var cards=[].slice.call(r.children),dots=[].slice.call(document.querySelectorAll(".kf-dot")),pb=document.getElementById("kfplay"),
+    red=matchMedia("(prefers-reduced-motion: reduce)").matches,cur=0,on=!red,t=null,
+    P='<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="2" width="3.4" height="12" rx="1" fill="currentColor"/><rect x="9.6" y="2" width="3.4" height="12" rx="1" fill="currentColor"/></svg>',
+    G='<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.2v11.6c0 .6.7 1 1.2.6l8.6-5.8a.7.7 0 0 0 0-1.2L5.2 1.6c-.5-.4-1.2 0-1.2.6z" fill="currentColor"/></svg>';
+    function mark(i){cur=i;dots.forEach(function(d,k){d.setAttribute("aria-current",k===i?"true":"false")});cards.forEach(function(c,k){c.classList.toggle("on",k===i)})}
+    function go(i){i=(i+cards.length)%cards.length;r.scrollTo({left:cards[i].offsetLeft-cards[0].offsetLeft,behavior:red?"auto":"smooth"});mark(i)}
+    function tick(){clearTimeout(t);if(on)t=setTimeout(function(){go(cur+1);tick()},5000)}
+    function setPlay(v){on=v;pb.innerHTML=on?P:G;pb.setAttribute("aria-label",on?"자동 넘김 일시정지":"자동 넘김 재생");tick()}
+    dots.forEach(function(d){d.addEventListener("click",function(){go(+d.dataset.i);tick()})});
+    pb.addEventListener("click",function(){setPlay(!on)});
+    var st;r.addEventListener("scroll",function(){clearTimeout(st);st=setTimeout(function(){var x=r.scrollLeft,b=0,bd=1e9;cards.forEach(function(c,k){var d=Math.abs(c.offsetLeft-cards[0].offsetLeft-x);if(d<bd){bd=d;b=k}});if(b!==cur){mark(b);tick()}},90)},{passive:true});
+    r.addEventListener("pointerdown",function(){if(on)setPlay(false)});
+    if("IntersectionObserver" in window){var vis=false;new IntersectionObserver(function(es){vis=es[0].isIntersecting;if(vis)tick();else clearTimeout(t)},{threshold:.4}).observe(r)}
+    mark(0);setPlay(on);
+  })();
 </script>
 
 </body>
