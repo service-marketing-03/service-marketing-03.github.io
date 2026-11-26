@@ -9,7 +9,8 @@
 
 | 버전 | 주소 | 내용 |
 |---|---|---|
-| v2 (현재) | [/versions/v2/](https://service-marketing-03.github.io/versions/v2/) | 브랜드 Relief, 제품 페이지 스타일 전면 리디자인, 고객가치·핵심시장·목표고객, 음성으로 듣기, 점자·음성 자료 신청 |
+| v3 (현재) | [/versions/v3/](https://service-marketing-03.github.io/versions/v3/) | 홍보물 바로가기와 스크롤 3D 태블릿, 판매촉진(시범 도입·니어 팩·시리즈 팩·프리미엄·다수 구매 할인, 혜택 계산기), 도입 혜택 카드, 차별점, 실사풍 기기·상품 그림, 인터랙션 |
+| v2 | [/versions/v2/](https://service-marketing-03.github.io/versions/v2/) | 브랜드 Relief, 제품 페이지 스타일 전면 리디자인, 고객가치·핵심시장·목표고객, 음성으로 듣기, 점자·음성 자료 신청 |
 | v1 | [/versions/v1/](https://service-marketing-03.github.io/versions/v1/) | 첫 버전, 임시 브랜드 닿음, 스토어형 레이아웃 |
 
 루트 `index.html`은 항상 최신 버전이고, 지난 버전은 `versions/` 폴더에 그대로 남겨 둡니다.
