@@ -12,4 +12,4 @@
 | v2 (현재) | [/versions/v2/](https://service-marketing-03.github.io/versions/v2/) | 브랜드 Relief, 제품 페이지 스타일 전면 리디자인, 고객가치·핵심시장·목표고객, 음성으로 듣기, 점자·음성 자료 신청 |
 | v1 | [/versions/v1/](https://service-marketing-03.github.io/versions/v1/) | 첫 버전, 임시 브랜드 닿음, 스토어형 레이아웃 |
 
-각 버전은 같은 이름의 git 태그(`v1`, `v2`)로도 남겨 둡니다. 루트 `index.html`은 항상 최신 버전입니다.
+루트 `index.html`은 항상 최신 버전이고, 지난 버전은 `versions/` 폴더에 그대로 남겨 둡니다.
