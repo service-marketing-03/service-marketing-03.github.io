@@ -13,7 +13,8 @@
 | v7 | [/versions/v7/](https://service-marketing-03.github.io/versions/v7/) | 실사 태블릿 사진(어두운 히어로), 애플식 상단 메뉴, 히어로→기능→홍보→판매촉진 순서, 작은 글씨, 실제 화면 같은 핵심 기능 목업, 교육 스토어식 판매촉진(도입 스토어) |
 | v8 | [/versions/v8/](https://service-marketing-03.github.io/versions/v8/) | 그려 넣은 태블릿 그림을 모두 실사 사진으로 교체(핵심 기능·디자인 사진 모음·홍보·더 알아보기·스토어), 도입 스토어 카드를 애플 스토어식 사진 카드와 글자 크기로 |
 | v9 | [/versions/v9/](https://service-marketing-03.github.io/versions/v9/) | 판매촉진 정리(남다른 도입·도입 여정·중복 혜택 카드 삭제, 신학기 프로모션을 위로), 프로모션 카드에 손 사진, 히어로 버튼 애플식 간소화, 관리 화면을 자체 브랜드 스타일로 |
-| v10 (현재) | [/versions/v10/](https://service-marketing-03.github.io/versions/v10/) | 디자인 사진을 애플식 "보다 자세히 들여다보기" 검은 배경 큰 카드 슬라이드로, 도입 스토어 아이콘 줄 삭제, 음성 버튼 크기 축소 |
+| v10 | [/versions/v10/](https://service-marketing-03.github.io/versions/v10/) | 디자인 사진을 애플식 "보다 자세히 들여다보기" 검은 배경 큰 카드 슬라이드로, 도입 스토어 아이콘 줄 삭제, 음성 버튼 크기 축소 |
+| v11 (현재) | [/versions/v11/](https://service-marketing-03.github.io/versions/v11/) | 배경을 지운(누끼) 태블릿 사진: 더 알아보기 기기 3대·스토어 제품·들여다보기 카드, 구입 방식 버튼 글씨색 수정, 사진 없는 액세서리(키보드 커버·충전 거치대) 숨김 |
 | v5 | [/versions/v5/](https://service-marketing-03.github.io/versions/v5/) | 판매촉진을 애플식 카드·일러스트 레이아웃으로(ACCESS FOR ALL, 체험에서 도입까지, 가격·비가격 혜택), 가장 좋은 이유 카드를 우리 판매촉진으로, 한글 점자 각인과 접이식 각인 미리 보기, 제품 페이지 음성으로 안내 듣기 버튼, 핵심 기능 제목, 애플식 시스템 글꼴 |
 | v4 | [/versions/v4/](https://service-marketing-03.github.io/versions/v4/) | 스토어 상품 더 알아보기 제품 상세 페이지(사양 비교·모델 비교), 판매촉진을 기획안대로(ACCESS FOR ALL, 체험에서 도입까지, 비가격·가격 혜택, 체험형·기본형·확장형), 새 음성 듣기 버튼, 홍보물 태블릿 고정 오류와 모바일 화면 수정 |
 | v3 | [/versions/v3/](https://service-marketing-03.github.io/versions/v3/) | 홍보물 바로가기와 스크롤 3D 태블릿, 판매촉진(시범 도입·니어 팩·시리즈 팩·프리미엄·다수 구매 할인, 혜택 계산기), 도입 혜택 카드, 차별점, 실사풍 기기·상품 그림, 인터랙션 |

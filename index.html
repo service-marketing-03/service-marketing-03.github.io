@@ -804,6 +804,15 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
 .listen{min-height:0!important;height:44px;padding:0 5px 0 18px!important;font-size:15px!important;font-weight:500;gap:.7rem}
 .listen .lc{width:34px!important;height:34px!important}.listen .lc svg{width:12px;height:12px}
 .st-listen{margin-top:1.4rem}.sales .st-h:first-of-type{margin-top:3.5rem}
+
+.bw-btn{color:#fff!important}
+.art-cut{display:block;width:100%;height:auto;max-height:240px;object-fit:contain;filter:drop-shadow(0 24px 30px rgba(0,0,0,.22))}
+.tri .cut{display:block;width:100%;height:auto;filter:drop-shadow(0 40px 50px rgba(0,0,0,.6))}
+
+.closer-rail .cutfig{display:grid;place-items:center;background:radial-gradient(60% 50% at 50% 55%,#2a2a2e 0%,#161617 70%)}
+.closer-rail .cutfig img{width:82%;height:auto;max-height:80%;object-fit:contain;filter:drop-shadow(0 40px 50px rgba(0,0,0,.7))}
+.closer-rail .cutfig.sm img{width:56%}
+.closer-rail li:hover .cutfig img{transform:scale(1.03)}
 </style>
 
 </head>
@@ -895,7 +904,7 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
     <h2 class="sr-only" id="design-title">얇고 가벼운 설계</h2>
     <div class="closer" aria-labelledby="closer-h">
       <div class="wrap"><h3 class="closer-h" id="closer-h">보다 자세히 들여다보기.</h3></div>
-      <ul class="closer-rail" id="crail"><li><figure><img src="assets/relief-pad-float.jpg" alt="공중에 떠 있는 얇은 Relief pad." loading="lazy"></figure><p>얇고 가벼운 알루미늄 바디.</p></li><li><figure><img src="assets/relief-close.jpg" alt="화면 위로 솟은 점자 핀 확대." loading="lazy"></figure><p>솟아오른 핀 하나하나가 손끝에 또렷하게.</p></li><li><figure><img src="assets/relief-hand.jpg" alt="한 손 위에 올린 아주 얇은 Relief pad." loading="lazy"></figure><p>두께 9mm, 무게 690g.</p></li><li><figure><img src="assets/relief-corner.jpg" alt="둥근 알루미늄 모서리와 점자가 솟은 화면 확대." loading="lazy"></figure><p>둥글게 다듬은 테두리.</p></li><li><figure><img src="assets/relief-stand.jpg" alt="스탠드로 세운 Relief pad 위의 촉각 그래프." loading="lazy"></figure><p>스탠드로 세워 교재처럼.</p></li><li><figure><img src="assets/relief-pad-gold.jpg" alt="골드 색상 Relief pad." loading="lazy"></figure><p>실버 · 그래파이트 · 골드.</p></li></ul>
+      <ul class="closer-rail" id="crail"><li><figure><img src="assets/relief-pad-float.jpg" alt="공중에 떠 있는 얇은 Relief pad." loading="lazy"></figure><p>얇고 가벼운 알루미늄 바디.</p></li><li><figure><img src="assets/relief-close.jpg" alt="화면 위로 솟은 점자 핀 확대." loading="lazy"></figure><p>솟아오른 핀 하나하나가 손끝에 또렷하게.</p></li><li><figure><img src="assets/relief-hand.jpg" alt="한 손 위에 올린 아주 얇은 Relief pad." loading="lazy"></figure><p>두께 9mm, 무게 690g.</p></li><li><figure><img src="assets/relief-corner.jpg" alt="둥근 알루미늄 모서리와 점자가 솟은 화면 확대." loading="lazy"></figure><p>둥글게 다듬은 테두리.</p></li><li><figure class="cutfig sm"><img src="assets/relief-stand-cut.webp" alt="스탠드로 세운 Relief pad 위의 촉각 그래프." loading="lazy"></figure><p>스탠드로 세워 교재처럼.</p></li><li><figure class="cutfig"><img src="assets/relief-pad-gold-cut.webp" alt="골드 색상 Relief pad." loading="lazy"></figure><p>실버 · 그래파이트 · 골드.</p></li></ul>
       <div class="wrap"><div class="rail-ctrl dark"><button class="round" type="button" data-rail="crail" data-dir="-1" aria-label="이전 사진">‹</button><button class="round" type="button" data-rail="crail" data-dir="1" aria-label="다음 사진">›</button></div></div>
     </div>
     <p class="copy">두께 9mm, 무게 690g의 Relief pad는 강의실 가방에 그대로 들어갑니다. 576개의 핀을 움직이는 저전력 구동부 덕분에 <strong>하루 종일 수업을 들어도 배터리가 버팁니다.</strong> 촉각 디스플레이, 점자 출력, 음성 안내를 한 기기에 담아 노트북과 점자정보단말기를 따로 챙길 필요가 없습니다.</p>
@@ -1230,9 +1239,9 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
       g+=up?'<circle cx="'+(px+i*sw)+'" cy="'+(py+j*sh)+'" r="'+(r*1.12)+'" fill="url(#pu'+id+')" filter="url(#ds'+id+')"/>':'<circle cx="'+(px+i*sw)+'" cy="'+(py+j*sh)+'" r="'+(r*.9)+'" fill="url(#pd'+id+')"/>'}
     g+='<rect x="'+(x+6)+'" y="'+(y+6)+'" width="'+(W-12)+'" height="'+(H-12)+'" rx="'+(H*.11)+'" fill="url(#hl'+id+')"/>';
     return {defs:defs(id,col),g:g,id:id}}
-  function art(kind,col){var m={pad:"relief-pad-hero",mini:"relief-pad-gold",overlay:"relief-layers",folio:"relief-stand",kbd:"relief-corner"};
+  function art(kind,col){var m={pad:"relief-pad-light",mini:"relief-pad-gold",overlay:"relief-layers",folio:"relief-stand"};
     if(kind==="cloud")return '<div class="mk-dash art-dash"><div class="dw-bar"><b class="dw-logo">R</b><span class="dw-t">Relief Cloud</span></div><div class="dw-main"><div class="dw-stats"><div><small>이번 달 변환</small><b>128</b></div><div><small>대여 중</small><b>24</b></div><div><small>평균 처리</small><b>9.6분</b></div></div><table style="width:100%"><tbody><tr><td>통계학 3주차.pdf</td><td><span class="st ok">완료</span></td></tr><tr><td>미시경제 6장</td><td><span class="st run">변환 중</span></td></tr></tbody></table></div></div>';
-    return '<img class="art-ph" src="assets/'+(m[kind]||"relief-stand")+'.jpg" alt="" loading="lazy">';
+    return '<img class="art-cut" src="assets/'+(m[kind]||"relief-stand")+'-cut.webp" alt="" loading="lazy">';
   }
 
 
@@ -1293,10 +1302,8 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
     {id:"pad",name:"Relief pad",type:"기기",compat:["pad"],price:1590000,from:true,isNew:true,rank:1,art:"pad",colors:[["스카이","#A9CFEA"],["스페이스 그레이","#6E7681"]]},
     {id:"mini",name:"Relief pad mini",type:"기기",compat:["mini"],price:1490000,from:true,isNew:false,rank:2,art:"mini",colors:[["스페이스 그레이","#6E7681"],["스타라이트","#E6DCC8"]]},
     {id:"cloud",name:"Relief Cloud 기관 구독",type:"소프트웨어",compat:["pad","mini"],price:59000,unit:"/월",from:true,isNew:false,rank:3,art:"cloud",colors:[]},
-    {id:"kbd",name:"점자 키보드 커버",type:"액세서리",compat:["pad"],price:189000,isNew:true,rank:4,art:"kbd",colors:[["차콜","#3A3F45"],["오프화이트","#EDEBE4"]]},
     {id:"folio",name:"휴대용 폴리오 케이스",type:"액세서리",compat:["pad","mini"],price:129000,isNew:true,rank:5,art:"folio",colors:[["스카이","#7FB0D6"],["미드나이트","#2C3A57"]]},
-    {id:"overlay",name:"촉각 그래픽 오버레이 세트 (20매)",type:"액세서리",compat:["pad","mini"],price:79000,isNew:false,rank:6,art:"overlay",colors:[]},
-    {id:"dock",name:"충전 거치대",type:"액세서리",compat:["pad","mini"],price:99000,isNew:false,rank:7,art:"dock",colors:[["실버","#C9D3DC"]]}
+    {id:"overlay",name:"촉각 그래픽 오버레이 세트 (20매)",type:"액세서리",compat:["pad","mini"],price:79000,isNew:false,rank:6,art:"overlay",colors:[]}
   ];
   var compatName={pad:"Relief pad",mini:"Relief pad mini"};
 
@@ -1355,7 +1362,7 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
   function frameHTML(pat,label){return '<div class="frame ph"><img src="assets/'+(PH[pat]||"relief-pad-silver")+'.jpg" alt="" loading="lazy"></div>'}
   function renderPV(p){
     pvCur=p;var d=DETAIL[p.id],isPad=p.id==="pad"||p.id==="mini",others=["pad","mini","cloud"];
-    var hero=isPad?'<div class="trio" aria-hidden="true"><div class="tri l">'+frameHTML("curve","CURVE")+'</div><div class="tri c">'+frameHTML(d.feats[0][0],"32×18 PINS")+'</div><div class="tri r">'+frameHTML("map","MAP")+'</div></div>':'<div class="flat svg-art" aria-hidden="true">'+art(p.art,p.colors[0]&&p.colors[0][1])+'</div>';
+    var cut=function(n){return '<img class="cut" src="assets/'+n+'-cut.webp" alt="">'};var hero=isPad?'<div class="trio" aria-hidden="true"><div class="tri l">'+cut("relief-pad-gray")+'</div><div class="tri c">'+cut(p.id==="mini"?"relief-pad-gold":"relief-graph")+'</div><div class="tri r">'+cut("relief-pad-hero")+'</div></div>':'<div class="flat svg-art" aria-hidden="true">'+art(p.art,p.colors[0]&&p.colors[0][1])+'</div>';
     var slides=d.feats.map(function(f,i){return '<div class="pv-slide" role="group" aria-roledescription="슬라이드" aria-label="'+(i+1)+' / '+d.feats.length+'"><div aria-hidden="true" style="width:100%;display:flex;justify-content:center">'+frameHTML(f[0],f[0].toUpperCase()+" MODE")+'</div><p>'+f[1]+'</p></div>'}).join("");
     var dots=d.feats.length>1?'<div class="pv-ctrl"><div class="pv-dots" id="pv-dots" role="group" aria-label="슬라이드 선택">'+d.feats.map(function(f,i){return '<button type="button" aria-label="'+(i+1)+'번째 기능 보기"></button>'}).join("")+'</div><button class="pv-play" type="button" id="pv-play" aria-label="자동 넘김 일시정지">'+PAUSE.replace('viewBox','aria-hidden="true" viewBox')+'</button></div>':'';
     var models=others.map(function(id){var m=products.filter(function(x){return x.id===id})[0],dd=DETAIL[id],me=id===p.id;
