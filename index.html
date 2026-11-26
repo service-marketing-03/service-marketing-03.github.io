@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>닿음 촉각 학습 패드</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="닿음은 시각 정보를 손끝으로 읽는 촉각 정보로 바꿔, 시각장애 대학생이 스스로 학습하도록 돕는 촉각 학습 기기입니다. 대학과 공공기관 도입 문의를 받습니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@800;900&family=IBM+Plex+Mono:wght@500&family=Gaegu:wght@700&display=swap">
+<style>
+/* Layout: 스토어형 단일 페이지. 큰 두 톤 헤드라인, 카테고리 가로 레일, 색 카드 레일, 가운데 정렬 각인 섹션, 기관 도입 폼 */
+:root{
+  --bg:#F1F4F2; --surface:#FFFFFF; --ink:#121716; --muted:#4A5552; --line:#D5DDD9;
+  --accent:#0A6B59; --accent-ink:#FFFFFF; --head:#0B4F43;
+  --c-mint:#CBEADC; --c-sun:#F5E2A0; --c-coral:#F7CDBD; --c-sky:#CCDFF2; --c-lilac:#DDD5F1;
+  --device:#1C2422; --pin:#3A4744; --pin-up:#F2C14E; --focus:#C2410C;
+  --hero-a:#BFE3EA; --hero-b:#E4F1F1; --grad-a:#0D3F7A; --grad-b:#2F7FB8; --back:#A8D8D0; --bezel:#E9EEF0;
+  --f-script:"Gaegu","Comic Sans MS",cursive;
+  --f-display:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --f-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --fs:1rem;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1312; --surface:#171E1C; --ink:#EDF2F0; --muted:#A8B5B1; --line:#2C3633;
+  --accent:#5ED1B4; --accent-ink:#06201A; --head:#8BE3CC;
+  --c-mint:#1C3B31; --c-sun:#3F361A; --c-coral:#46281F; --c-sky:#1B2F46; --c-lilac:#2C2645;
+  --device:#0A0E0D; --pin:#2E3A37; --pin-up:#F2C14E; --focus:#FDBA74; --hero-a:#14343B; --hero-b:#101E21; --grad-a:#9FE3F0; --grad-b:#4FA9D9; --back:#24504A; --bezel:#2A3437; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1312; --surface:#171E1C; --ink:#EDF2F0; --muted:#A8B5B1; --line:#2C3633;
+  --accent:#5ED1B4; --accent-ink:#06201A; --head:#8BE3CC;
+  --c-mint:#1C3B31; --c-sun:#3F361A; --c-coral:#46281F; --c-sky:#1B2F46; --c-lilac:#2C2645;
+  --device:#0A0E0D; --pin:#2E3A37; --pin-up:#F2C14E; --focus:#FDBA74; --hero-a:#14343B; --hero-b:#101E21; --grad-a:#9FE3F0; --grad-b:#4FA9D9; --back:#24504A; --bezel:#2A3437; color-scheme:dark}
+/* 저시력 사용자를 위한 고대비 모드 (사이트 자체 토글) */
+:root[data-contrast="high"]{
+  --bg:#000; --surface:#000; --ink:#FFF; --muted:#FFF; --line:#FFF;
+  --accent:#FFE14D; --accent-ink:#000; --head:#FFE14D;
+  --c-mint:#000; --c-sun:#000; --c-coral:#000; --c-sky:#000; --c-lilac:#000;
+  --device:#000; --pin:#555; --pin-up:#FFE14D; --focus:#FFE14D; --hero-a:#000; --hero-b:#000; --grad-a:#FFE14D; --grad-b:#FFE14D; --back:#333; --bezel:#FFF; color-scheme:dark}
+:root[data-size="large"]{--fs:1.2rem}
+
+*{box-sizing:border-box}
+html{font-size:var(--fs);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1rem;line-height:1.65;word-break:keep-all;overflow-wrap:anywhere}
+.wrap{max-width:1180px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:16px;top:-60px;background:var(--accent);color:var(--accent-ink);padding:.6rem 1rem;border-radius:8px;font-weight:700;z-index:50}
+.skip:focus{top:calc(env(safe-area-inset-top,0px) + 8px)}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.2;letter-spacing:-.02em}
+p{margin:0}
+.eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+
+/* 헤더 */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:1rem;min-height:56px;flex-wrap:wrap;padding-block:.4rem}
+.logo{display:flex;align-items:center;gap:.5rem;font-family:var(--f-display);font-weight:900;font-size:1.25rem;color:var(--ink);text-decoration:none}
+.logo svg{width:28px;height:28px}
+.top nav{flex:1;min-width:0}
+.top nav ul{display:flex;gap:1.25rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.top nav a{color:var(--ink);text-decoration:none;font-size:.9rem;white-space:nowrap}
+.top nav a:hover{color:var(--accent);text-decoration:underline}
+.a11y-tools{display:flex;gap:.4rem}
+.chip{font:inherit;font-size:.8rem;font-weight:600;border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:.3rem .75rem;cursor:pointer;min-height:36px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+@media (max-width:760px){.top nav{order:3;flex-basis:100%}.top nav ul{gap:.9rem;overflow-x:auto;flex-wrap:nowrap;padding-bottom:.3rem}.a11y-tools{margin-left:auto}}
+
+.promo{background:var(--surface);border-bottom:1px solid var(--line);text-align:center;font-size:.92rem}
+.promo .wrap{padding-block:.85rem}
+.promo a{font-weight:600}
+
+/* 히어로 */
+.hero{background:linear-gradient(180deg,var(--hero-a) 0%,var(--hero-b) 62%,var(--bg) 100%);overflow:hidden}
+.hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center;padding-block:3.5rem 4rem}
+.prod-name{font-family:var(--f-display);font-weight:800;font-size:clamp(1.6rem,3.6vw,2.6rem);letter-spacing:-.02em;color:var(--ink);line-height:1}
+.prod-name em{font-family:var(--f-script);font-style:normal;font-weight:700;color:var(--grad-b);font-size:1.12em;margin-left:.05em}
+.hero h1{font-size:clamp(6rem,24vw,16rem);font-weight:900;letter-spacing:-.06em;line-height:.95;margin-top:.1em}
+.onoma{background:linear-gradient(180deg,var(--grad-a) 20%,var(--grad-b) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block;padding-inline:.04em}
+:root[data-contrast="high"] .onoma{background:none;color:var(--head)}
+.hero-device{margin:clamp(-4.5rem,-6vw,-1.6rem) 0 0;width:min(600px,100%);position:relative;z-index:1}
+.tilt{position:relative;transform:rotate(-10deg);transform-origin:50% 60%;margin-inline:auto;width:86%}
+.tilt::before{content:"";position:absolute;inset:12% 24% -2% -4%;border-radius:30px;background:var(--back);transform:rotate(18deg);z-index:-1;box-shadow:0 20px 40px -24px rgba(10,40,60,.35)}
+.hero-device .pad{border-radius:30px;border:6px solid var(--bezel);box-shadow:0 40px 70px -30px rgba(10,40,60,.55)}
+.pad-modes{display:flex;justify-content:center;gap:.4rem;flex-wrap:wrap;margin-top:clamp(2.5rem,6vw,4rem)}
+.pad-modes button{font:inherit;font-size:.85rem;font-weight:600;background:var(--surface);color:var(--ink);border:1.5px solid var(--line);border-radius:999px;padding:.4rem .9rem;cursor:pointer;min-height:40px}
+.pad-modes button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.hero .lede{font-size:clamp(1.3rem,2.6vw,1.85rem);font-family:var(--f-display);font-weight:800;line-height:1.35;margin-top:2.5rem;color:var(--ink);text-wrap:balance}
+.hero-sub{color:var(--muted);margin-top:.6rem;font-weight:600}
+.hero .links{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem 1rem;margin-top:1.5rem}
+.btn{display:inline-flex;align-items:center;gap:.4rem;font:inherit;font-weight:700;background:var(--accent);color:var(--accent-ink);border:2px solid var(--accent);padding:.7rem 1.3rem;border-radius:999px;text-decoration:none;cursor:pointer;min-height:44px}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn:hover{filter:brightness(1.08)}
+
+/* 촉각 패드 목업 */
+.pad{background:var(--device);border-radius:28px;padding:1.1rem;box-shadow:0 30px 60px -30px rgba(0,0,0,.45);border:1px solid var(--line);max-width:100%}
+.pad-grid{display:grid;grid-template-columns:repeat(var(--cols),1fr);gap:5px}
+.pin{aspect-ratio:1;border-radius:50%;background:var(--pin);transition:background .4s,transform .4s}
+.pin.up{background:var(--pin-up);transform:scale(1.12);box-shadow:0 0 0 2px rgba(242,193,78,.18)}
+.pad-bar{display:flex;justify-content:space-between;align-items:center;margin-top:.8rem;color:#C8D3CF;font-family:var(--f-mono);font-size:.75rem;gap:.5rem;flex-wrap:wrap}
+:root[data-contrast="high"] .pad-bar{color:#fff}
+.pad-caption{font-size:.9rem;color:var(--muted);margin-top:.6rem}
+
+/* 섹션 공통 */
+section{scroll-margin-top:80px}
+.sec{padding-block:3.5rem}
+.sec-head{font-size:clamp(1.6rem,3.6vw,2.5rem);font-weight:800;margin-bottom:1.75rem}
+.sec-head b{color:var(--head)}
+.sec-head span{color:var(--muted)}
+
+/* 카테고리 레일 */
+.rail-wrap{position:relative}
+.rail{display:flex;gap:1rem;list-style:none;margin:0;padding:.5rem .25rem 1rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.rail>li{scroll-snap-align:start;flex:0 0 auto}
+.cat a{display:flex;flex-direction:column;align-items:center;gap:.6rem;width:136px;padding:1rem .5rem;border-radius:20px;color:var(--ink);text-decoration:none;text-align:center;font-weight:600;font-size:.95rem}
+.cat a:hover{background:var(--surface)}
+.cat svg{width:84px;height:84px}
+.rail-ctrl{display:flex;justify-content:flex-end;gap:.5rem;margin-top:.25rem}
+.round{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--ink);background:var(--surface);color:var(--ink);font-size:1.1rem;cursor:pointer;display:grid;place-items:center}
+
+/* 색 카드 */
+.rail>li.card{flex:0 0 min(360px,82vw);width:min(360px,82vw);}
+.card{border-radius:28px;padding:1.75rem;min-height:440px;display:flex;flex-direction:column;gap:.75rem;color:var(--ink);position:relative;overflow:hidden}
+:root[data-contrast="high"] .card,:root[data-contrast="high"] .tile,:root[data-contrast="high"] .plan{border:2px solid #fff}
+.card .eyebrow{color:var(--muted)}
+.card h3{font-size:1.75rem;font-weight:900}
+.card p{color:var(--ink);font-size:1rem}
+.card .art{margin-top:auto;display:flex;justify-content:center}
+.card .art svg{width:100%;max-width:280px;height:auto}
+.mint{background:var(--c-mint)}.sun{background:var(--c-sun)}.coral{background:var(--c-coral)}.sky{background:var(--c-sky)}.lilac{background:var(--c-lilac)}
+
+/* 가치 */
+.value{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.tile{background:var(--surface);border-radius:24px;padding:1.6rem;display:flex;flex-direction:column;gap:.6rem;border:1px solid var(--line)}
+.tile h3{font-size:1.25rem;font-weight:800}
+.tile p{color:var(--muted)}
+.big-quote{font-family:var(--f-display);font-weight:800;font-size:clamp(1.4rem,3vw,2.1rem);line-height:1.35;max-width:30ch;margin-bottom:2rem;text-wrap:balance}
+.big-quote mark{background:none;color:var(--head)}
+@media (max-width:860px){.value{grid-template-columns:1fr}}
+
+/* 작동 방식 */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;counter-reset:s}
+.steps li{counter-increment:s;border-top:3px solid var(--ink);padding-top:1rem;display:flex;flex-direction:column;gap:.5rem}
+.steps li::before{content:"STEP " counter(s);font-family:var(--f-mono);font-size:.8rem;color:var(--muted)}
+.steps h3{font-size:1.3rem;font-weight:800}
+.steps p{color:var(--muted)}
+@media (max-width:760px){.steps{grid-template-columns:1fr}}
+
+/* 각인 */
+.engrave{background:var(--surface);text-align:center}
+.engrave .eyebrow{color:var(--muted);font-size:1rem;letter-spacing:0;text-transform:none;font-weight:700}
+.engrave h2{font-size:clamp(2.2rem,6.5vw,4.6rem);font-weight:900;margin-top:.5rem}
+.engrave h2 .dots{display:inline-block;color:var(--accent);font-family:var(--f-body);letter-spacing:.05em}
+.engrave .sub{max-width:42rem;margin:1.25rem auto 0;font-size:1.1rem;color:var(--ink)}
+.maker{margin:2.5rem auto 0;max-width:720px;display:grid;gap:1rem;text-align:left}
+.maker label{font-weight:700}
+.maker input{font:inherit;font-size:1.1rem;padding:.75rem 1rem;border-radius:14px;border:2px solid var(--ink);background:var(--bg);color:var(--ink);width:100%}
+.plate{background:var(--device);border-radius:22px;padding:1.5rem;display:flex;flex-direction:column;gap:.75rem;align-items:center}
+.plate-braille{font-size:clamp(2rem,6vw,3rem);letter-spacing:.12em;color:var(--pin-up);line-height:1.2;min-height:1.3em;text-align:center;word-break:break-all}
+.plate-text{color:#D9E3DF;font-family:var(--f-mono);font-size:.85rem}
+:root[data-contrast="high"] .plate-text{color:#fff}
+.hint{font-size:.85rem;color:var(--muted)}
+
+/* 기관 도입 */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;align-items:stretch}
+.plan{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:1.6rem;display:flex;flex-direction:column;gap:.8rem}
+.plan.feature{border:2px solid var(--accent)}
+.plan h3{font-size:1.35rem;font-weight:800}
+.plan .who{color:var(--muted);font-size:.92rem}
+.plan .price{font-family:var(--f-display);font-weight:800;font-size:1.6rem}
+.plan ul{margin:0;padding-left:1.1rem;display:grid;gap:.35rem}
+.plan .btn{margin-top:auto;align-self:flex-start}
+.tag{display:inline-block;background:var(--accent);color:var(--accent-ink);font-size:.75rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;align-self:flex-start}
+.targets{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:0 0 1.75rem}
+.targets li{border:1.5px solid var(--line);background:var(--surface);border-radius:999px;padding:.4rem .9rem;font-weight:600;font-size:.92rem}
+@media (max-width:900px){.plans{grid-template-columns:1fr}}
+
+/* FAQ */
+.faq{display:grid;gap:.75rem;max-width:860px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1rem 1.25rem}
+.faq summary{font-weight:700;cursor:pointer;font-size:1.05rem}
+.faq details p{margin-top:.6rem;color:var(--muted)}
+
+/* 문의 폼 */
+.contact{background:var(--c-mint)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:2.5rem;align-items:start}
+.contact h2{font-size:clamp(2rem,5vw,3.2rem);font-weight:900}
+.contact .lead{margin-top:1rem;font-size:1.1rem}
+form{display:grid;grid-template-columns:1fr 1fr;gap:1rem;background:var(--surface);padding:1.75rem;border-radius:24px}
+.field{display:flex;flex-direction:column;gap:.35rem;min-width:0}
+.field.full{grid-column:1/-1}
+.field label,.field legend{font-weight:700;font-size:.95rem}
+.field input,.field select,.field textarea{font:inherit;padding:.7rem .85rem;border-radius:12px;border:1.5px solid var(--muted);background:var(--bg);color:var(--ink);width:100%;min-height:44px}
+.field textarea{min-height:110px;resize:vertical}
+.field .err{color:var(--focus);font-size:.85rem;font-weight:600;min-height:0}
+fieldset.field{border:0;padding:0;margin:0}
+.checks{display:flex;flex-wrap:wrap;gap:.5rem 1rem}
+.checks label{font-weight:500;display:flex;align-items:center;gap:.4rem}
+.checks input{width:20px;height:20px;min-height:0}
+.req{color:var(--focus)}
+#form-status{grid-column:1/-1;font-weight:700;padding:.8rem 1rem;border-radius:12px;background:var(--c-mint)}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}form{grid-template-columns:1fr}}
+
+
+/* 스토어 */
+.shop-bar{display:flex;flex-wrap:wrap;gap:.75rem 1rem;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:1.25rem}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.filters .grp{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
+.filters .grp-label{font-size:.85rem;color:var(--muted);font-weight:600;margin-right:.15rem}
+.fchip{font:inherit;font-size:.9rem;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:.45rem 1rem;cursor:pointer;min-height:40px}
+.fchip[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.sort{display:flex;align-items:center;gap:.4rem;font-size:.9rem;color:var(--muted)}
+.sort select{font:inherit;font-weight:600;color:var(--ink);background:transparent;border:0;padding:.4rem .2rem;min-height:40px;cursor:pointer}
+.shop-count{font-size:.9rem;color:var(--muted);margin:1rem 0 0}
+.grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));border-left:1px solid var(--line)}
+.prod{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:1.75rem 1.25rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.55rem;min-width:0}
+.prod .shot{width:100%;aspect-ratio:4/3;max-width:100%;display:grid;place-items:center;background:var(--surface);border-radius:18px}
+.prod .shot svg{width:78%;height:auto}
+.swatches{display:flex;gap:.45rem;min-height:22px;margin-top:.4rem}
+.sw{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--line);padding:0;cursor:pointer}
+.sw[aria-pressed="true"]{outline:2px solid var(--ink);outline-offset:2px}
+.new{color:var(--focus);font-size:.85rem;font-weight:700;min-height:1.2em}
+.prod h3{font-family:var(--f-body);font-size:1.05rem;font-weight:600;letter-spacing:0}
+.prod .price{font-size:1.15rem;font-variant-numeric:tabular-nums}
+.prod .compat{font-size:.82rem;color:var(--muted)}
+
+footer{border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+footer .wrap{padding-block:2rem;display:grid;gap:.6rem}
+.note{font-size:.85rem;color:var(--muted);margin-top:1rem}
+</style>
+
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="닿음 홈">
+      <svg viewBox="0 0 28 28" aria-hidden="true" focusable="false"><rect width="28" height="28" rx="8" fill="var(--accent)"/><circle cx="10" cy="8" r="2.6" fill="var(--accent-ink)"/><circle cx="18" cy="8" r="2.6" fill="var(--accent-ink)"/><circle cx="10" cy="14" r="2.6" fill="var(--accent-ink)"/><circle cx="18" cy="20" r="2.6" fill="var(--accent-ink)"/></svg>
+      닿음
+    </a>
+    <nav aria-label="주요 메뉴">
+      <ul>
+        <li><a href="#products">제품</a></li>
+        <li><a href="#shop">스토어</a></li>
+        <li><a href="#why">왜 닿음인가</a></li>
+        <li><a href="#how">작동 방식</a></li>
+        <li><a href="#engrave">점자 각인</a></li>
+        <li><a href="#institutions">기관 도입</a></li>
+        <li><a href="#faq">자주 묻는 질문</a></li>
+      </ul>
+    </nav>
+    <div class="a11y-tools" role="group" aria-label="보기 설정">
+      <button class="chip" id="t-size" type="button" aria-pressed="false">큰 글씨</button>
+      <button class="chip" id="t-contrast" type="button" aria-pressed="false">고대비</button>
+    </div>
+  </div>
+</header>
+
+<aside class="promo" aria-label="도입 프로모션">
+  <div class="wrap">2027학년도 1학기 도입 기관 대상, <strong>시범 도입 3개월 무상 제공</strong>과 교직원 교육을 함께 지원합니다. <a href="#contact">신청하기 <span aria-hidden="true">›</span></a></div>
+</aside>
+
+<main id="main" tabindex="-1">
+
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="wrap hero-inner">
+    <p class="prod-name" aria-hidden="true">닿음 <em>pad</em></p>
+    <h1 id="hero-title"><span class="sr-only">닿음 패드, </span><span class="onoma">톡톡.</span></h1>
+    <figure class="hero-device">
+      <div class="tilt">
+        <div class="pad" role="img" id="pad" aria-label="닿음 패드 화면 예시. 핀이 솟아올라 막대그래프를 손으로 만질 수 있게 표현하고 있습니다.">
+          <div class="pad-grid" id="pad-grid" aria-hidden="true"></div>
+          <div class="pad-bar" aria-hidden="true"><span>DAHEUM PAD</span><span>32×18 PINS</span></div>
+        </div>
+      </div>
+      <div class="pad-modes" role="group" aria-label="패드 표시 예시 바꾸기">
+        <button type="button" data-mode="bars" aria-pressed="true">막대그래프</button>
+        <button type="button" data-mode="curve" aria-pressed="false">함수 곡선</button>
+        <button type="button" data-mode="map" aria-pressed="false">캠퍼스 지도</button>
+      </div>
+      <figcaption class="pad-caption" id="pad-caption" aria-live="polite">지금 표시: 막대그래프. 강의 자료 속 통계 그래프를 높이가 다른 핀 기둥으로 보여줍니다.</figcaption>
+    </figure>
+    <p class="lede">보이지 않던 도표와 수식이 손끝에 닿는 순간,<br>혼자서도 공부가 됩니다.</p>
+    <p class="hero-sub">시각장애 대학생을 위한 촉각 학습 패드</p>
+    <div class="links">
+      <a class="btn" href="#contact">기관 도입·데모 신청</a>
+      <a class="btn ghost" href="#how">작동 방식 보기</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="products" aria-labelledby="cat-title">
+  <div class="wrap">
+    <h2 class="sec-head" id="cat-title"><b>제품 둘러보기.</b> <span>필요한 것부터 골라 보세요.</span></h2>
+    <div class="rail-wrap">
+      <ul class="rail" id="cat-rail" aria-label="제품 카테고리">
+        <li class="cat"><a href="#p-pad"><svg viewBox="0 0 84 84" aria-hidden="true"><rect x="6" y="18" width="72" height="48" rx="10" fill="var(--device)"/><g fill="var(--pin-up)"><circle cx="20" cy="50" r="3"/><circle cx="20" cy="42" r="3"/><circle cx="32" cy="50" r="3"/><circle cx="32" cy="42" r="3"/><circle cx="32" cy="34" r="3"/><circle cx="44" cy="50" r="3"/><circle cx="56" cy="50" r="3"/><circle cx="56" cy="42" r="3"/><circle cx="56" cy="34" r="3"/><circle cx="56" cy="26" r="3"/><circle cx="68" cy="50" r="3"/><circle cx="68" cy="42" r="3"/></g></svg>닿음 패드</a></li>
+        <li class="cat"><a href="#p-studio"><svg viewBox="0 0 84 84" aria-hidden="true"><rect x="14" y="10" width="40" height="54" rx="6" fill="var(--c-sky)" stroke="var(--ink)" stroke-width="2"/><path d="M22 24h24M22 32h24M22 40h16" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"/><circle cx="58" cy="56" r="16" fill="var(--accent)"/><path d="M51 56h14M59 50l6 6-6 6" stroke="var(--accent-ink)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>변환 스튜디오</a></li>
+        <li class="cat"><a href="#p-math"><svg viewBox="0 0 84 84" aria-hidden="true"><rect x="8" y="12" width="68" height="60" rx="14" fill="var(--c-sun)"/><path d="M16 60 Q32 10 42 42 T70 22" stroke="var(--ink)" stroke-width="3" fill="none"/><path d="M14 64h58M16 66V18" stroke="var(--muted)" stroke-width="2"/></svg>수식·그래프 모드</a></li>
+        <li class="cat"><a href="#p-voice"><svg viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="32" fill="var(--c-coral)"/><rect x="34" y="20" width="16" height="30" rx="8" fill="var(--ink)"/><path d="M26 42a16 16 0 0 0 32 0M42 58v8" stroke="var(--ink)" stroke-width="3" fill="none" stroke-linecap="round"/></svg>음성 동시 안내</a></li>
+        <li class="cat"><a href="#engrave"><svg viewBox="0 0 84 84" aria-hidden="true"><rect x="10" y="26" width="64" height="32" rx="16" fill="var(--c-lilac)" stroke="var(--ink)" stroke-width="2"/><g fill="var(--ink)"><circle cx="26" cy="36" r="2.6"/><circle cx="26" cy="44" r="2.6"/><circle cx="33" cy="36" r="2.6"/><circle cx="42" cy="44" r="2.6"/><circle cx="49" cy="36" r="2.6"/><circle cx="49" cy="48" r="2.6"/><circle cx="58" cy="36" r="2.6"/><circle cx="58" cy="44" r="2.6"/><circle cx="58" cy="52" r="2.6"/></g></svg>점자 각인</a></li>
+        <li class="cat"><a href="#institutions"><svg viewBox="0 0 84 84" aria-hidden="true"><path d="M12 34 42 16l30 18z" fill="var(--accent)"/><rect x="16" y="34" width="52" height="30" fill="var(--c-mint)" stroke="var(--ink)" stroke-width="2"/><path d="M26 40v18M38 40v18M50 40v18M62 40v18" stroke="var(--ink)" stroke-width="3"/><rect x="10" y="64" width="64" height="6" fill="var(--ink)"/></svg>기관 관리 콘솔</a></li>
+        <li class="cat"><a href="#faq"><svg viewBox="0 0 84 84" aria-hidden="true"><rect x="12" y="20" width="60" height="44" rx="10" fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/><g fill="var(--ink)"><rect x="20" y="30" width="8" height="8" rx="2"/><rect x="32" y="30" width="8" height="8" rx="2"/><rect x="44" y="30" width="8" height="8" rx="2"/><rect x="56" y="30" width="8" height="8" rx="2"/><rect x="26" y="44" width="32" height="8" rx="2"/></g></svg>점자 키보드 커버</a></li>
+      </ul>
+      <div class="rail-ctrl">
+        <button class="round" type="button" data-rail="cat-rail" data-dir="-1" aria-label="이전 제품 카테고리 보기">‹</button>
+        <button class="round" type="button" data-rail="cat-rail" data-dir="1" aria-label="다음 제품 카테고리 보기">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="new-title" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="sec-head" id="new-title"><b>새로운 닿음.</b> <span>손끝으로 읽는 모든 강의.</span></h2>
+    <ul class="rail" id="card-rail" aria-label="주요 기능 카드">
+      <li class="card mint" id="p-pad">
+        <p class="eyebrow">신제품</p>
+        <h3>닿음 패드</h3>
+        <p>576개의 핀이 오르내리며 그래프, 도형, 지도를 손으로 만질 수 있는 화면으로 바꿉니다. 한 손에 드는 크기로 강의실에 그대로 가져갈 수 있습니다.</p>
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 280 170"><rect x="10" y="10" width="260" height="150" rx="22" fill="var(--device)"/><g id="mini-pins"></g></svg></div>
+      </li>
+      <li class="card sky" id="p-studio">
+        <p class="eyebrow">소프트웨어</p>
+        <h3>변환 스튜디오</h3>
+        <p>PDF, 발표 자료, 교재 사진을 올리면 표와 도표를 촉각 그래픽으로 자동 변환합니다. 장애학생지원센터의 자료 제작 시간을 줄여 줍니다.</p>
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 280 170"><rect x="20" y="20" width="100" height="130" rx="10" fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/><rect x="36" y="80" width="14" height="50" fill="var(--accent)"/><rect x="56" y="60" width="14" height="70" fill="var(--accent)"/><rect x="76" y="95" width="14" height="35" fill="var(--accent)"/><path d="M130 85h30m-10-10 10 10-10 10" stroke="var(--ink)" stroke-width="4" fill="none" stroke-linecap="round"/><rect x="170" y="20" width="96" height="130" rx="14" fill="var(--device)"/><g fill="var(--pin-up)"><circle cx="192" cy="126" r="5"/><circle cx="192" cy="112" r="5"/><circle cx="192" cy="98" r="5"/><circle cx="218" cy="126" r="5"/><circle cx="218" cy="112" r="5"/><circle cx="218" cy="98" r="5"/><circle cx="218" cy="84" r="5"/><circle cx="218" cy="70" r="5"/><circle cx="244" cy="126" r="5"/><circle cx="244" cy="112" r="5"/></g></svg></div>
+      </li>
+      <li class="card sun" id="p-math">
+        <p class="eyebrow">전공 학습</p>
+        <h3>수식·그래프 모드</h3>
+        <p>함수 곡선을 따라가며 손가락 위치의 좌표를 읽어 줍니다. 공학, 통계, 경제 수업의 그래프를 스스로 확인할 수 있습니다.</p>
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 280 170"><path d="M20 150h240M30 160V15" stroke="var(--muted)" stroke-width="3"/><path d="M30 140 C80 140 100 30 150 30 S220 140 260 140" stroke="var(--ink)" stroke-width="5" fill="none" stroke-dasharray="2 12" stroke-linecap="round"/><circle cx="150" cy="30" r="10" fill="var(--accent)"/></svg></div>
+      </li>
+      <li class="card coral" id="p-voice">
+        <p class="eyebrow">함께 쓰는 기능</p>
+        <h3>음성 동시 안내</h3>
+        <p>손끝이 닿은 요소의 이름과 값을 화면낭독기와 함께 읽어 줍니다. 촉각과 소리로 같은 내용을 두 번 확인합니다.</p>
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 280 170"><circle cx="110" cy="90" r="40" fill="var(--ink)"/><path d="M170 60a50 50 0 0 1 0 60M190 40a80 80 0 0 1 0 100" stroke="var(--ink)" stroke-width="6" fill="none" stroke-linecap="round"/></svg></div>
+      </li>
+      <li class="card lilac" id="p-console">
+        <p class="eyebrow">기관용</p>
+        <h3>관리 콘솔</h3>
+        <p>기기 대여, 자료 변환 요청, 학생별 지원 내역을 한곳에서 관리합니다. 학기별 운영 보고서를 바로 내려받을 수 있습니다.</p>
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 280 170"><rect x="20" y="20" width="240" height="130" rx="14" fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/><rect x="36" y="40" width="70" height="10" rx="5" fill="var(--ink)"/><rect x="36" y="66" width="208" height="10" rx="5" fill="var(--muted)" opacity=".5"/><rect x="36" y="88" width="160" height="10" rx="5" fill="var(--muted)" opacity=".5"/><rect x="36" y="110" width="190" height="10" rx="5" fill="var(--accent)"/></svg></div>
+      </li>
+    </ul>
+    <div class="rail-ctrl">
+      <button class="round" type="button" data-rail="card-rail" data-dir="-1" aria-label="이전 기능 카드 보기">‹</button>
+      <button class="round" type="button" data-rail="card-rail" data-dir="1" aria-label="다음 기능 카드 보기">›</button>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="shop" aria-labelledby="shop-title">
+  <div class="wrap">
+    <h2 class="sec-head" id="shop-title"><b>스토어.</b> <span>기기와 액세서리를 기관 단위로 주문하세요.</span></h2>
+    <div class="shop-bar">
+      <div class="filters">
+        <div class="grp" role="group" aria-labelledby="g-type"><span class="grp-label" id="g-type">유형</span>
+          <button type="button" class="fchip" data-f="type" data-v="all" aria-pressed="true">전체</button>
+          <button type="button" class="fchip" data-f="type" data-v="기기" aria-pressed="false">기기</button>
+          <button type="button" class="fchip" data-f="type" data-v="소프트웨어" aria-pressed="false">소프트웨어</button>
+          <button type="button" class="fchip" data-f="type" data-v="액세서리" aria-pressed="false">액세서리</button>
+        </div>
+        <div class="grp" role="group" aria-labelledby="g-compat"><span class="grp-label" id="g-compat">호환성</span>
+          <button type="button" class="fchip" data-f="compat" data-v="all" aria-pressed="true">전체</button>
+          <button type="button" class="fchip" data-f="compat" data-v="pad" aria-pressed="false">닿음 패드</button>
+          <button type="button" class="fchip" data-f="compat" data-v="mini" aria-pressed="false">닿음 패드 미니</button>
+        </div>
+      </div>
+      <div class="sort"><label for="shop-sort">정렬 기준:</label>
+        <select id="shop-sort"><option value="rec">추천 항목</option><option value="new">신제품 먼저</option><option value="low">낮은 가격순</option><option value="high">높은 가격순</option></select>
+      </div>
+    </div>
+    <p class="shop-count" id="shop-count" role="status" aria-live="polite"></p>
+    <ul class="grid" id="shop-grid" aria-label="상품 목록"></ul>
+    <p class="note">표시 가격은 기획안 예시이며 부가세 포함 기준입니다. 기관 도입 시 수량에 따라 견적이 달라집니다.</p>
+  </div>
+</section>
+
+<section class="sec" id="why" aria-labelledby="why-title">
+  <div class="wrap">
+    <h2 class="sec-head" id="why-title"><b>왜 닿음인가.</b> <span>모두를 위한 기기 말고, 한 사람을 위한 기기.</span></h2>
+    <p class="big-quote">대부분의 노트북과 태블릿은 화면을 봐야 쓸 수 있습니다. 닿음은 <mark>시각 정보를 촉각 정보로</mark> 바꿔, 시각장애 대학생이 스스로 배우는 환경을 만듭니다.</p>
+    <div class="value">
+      <article class="tile">
+        <p class="eyebrow" style="color:var(--accent)">문제</p>
+        <h3>강의 자료의 절반은 그림입니다</h3>
+        <p>그래프, 도식, 표처럼 시각 중심으로 만들어진 자료는 화면낭독기만으로는 구조를 이해하기 어렵습니다.</p>
+      </article>
+      <article class="tile">
+        <p class="eyebrow" style="color:var(--accent)">가치</p>
+        <h3>도움을 기다리지 않는 예습</h3>
+        <p>자료를 직접 변환하고 손으로 확인하니, 다른 사람의 설명을 기다리는 시간이 줄어듭니다.</p>
+      </article>
+      <article class="tile">
+        <p class="eyebrow" style="color:var(--accent)">변화</p>
+        <h3>수업에 먼저 참여하는 학생</h3>
+        <p>같은 그래프를 같은 시간에 이해하면, 토론과 과제에 능동적으로 참여할 수 있습니다.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <h2 class="sec-head" id="how-title"><b>작동 방식.</b> <span>세 단계면 충분합니다.</span></h2>
+    <ol class="steps">
+      <li><h3>자료 올리기</h3><p>학생이나 지원센터가 강의 PDF, 발표 자료, 교재 사진을 변환 스튜디오에 올립니다.</p></li>
+      <li><h3>촉각으로 변환</h3><p>도표와 그래프를 인식해 핀 높이와 점자 라벨로 바꾸고, 본문은 점자와 음성으로 정리합니다.</p></li>
+      <li><h3>손끝으로 학습</h3><p>닿음 패드에서 그래프를 따라가고, 궁금한 지점은 눌러서 값과 설명을 듣습니다.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec engrave" id="engrave" aria-labelledby="engrave-title">
+  <div class="wrap">
+    <p class="eyebrow">닿음 점자 각인</p>
+    <h2 id="engrave-title">점자 각인으로 좀 더 <span class="dots" aria-hidden="true">⠉⠼</span>내 것답게.</h2>
+    <p class="sub">이름, 학번, 학과를 점자로 새겨 손으로 바로 내 기기를 찾을 수 있게 만드세요. 기관 도입 시 모든 기기에 무료로 제공됩니다.</p>
+    <div class="maker">
+      <label for="engrave-input">새길 이름 미리 보기 (영문과 숫자, 최대 12자)</label>
+      <input id="engrave-input" type="text" maxlength="12" value="MINJI 2027" autocomplete="off" aria-describedby="engrave-hint">
+      <p class="hint" id="engrave-hint">미리 보기는 영문 점자(약자 없는 1급) 기준입니다. 한글 점자 각인은 주문 시 함께 신청할 수 있습니다.</p>
+      <div class="plate" role="img" id="plate" aria-label="각인 미리 보기: MINJI 2027">
+        <div class="plate-braille" id="plate-braille" aria-hidden="true"></div>
+        <div class="plate-text" id="plate-text" aria-hidden="true">MINJI 2027</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="institutions" aria-labelledby="inst-title">
+  <div class="wrap">
+    <h2 class="sec-head" id="inst-title"><b>기관 도입.</b> <span>학생 한 명부터 캠퍼스 전체까지.</span></h2>
+    <ul class="targets" aria-label="도입 대상 기관">
+      <li>대학 장애학생지원센터</li><li>특수교육 기관</li><li>공공도서관·점자도서관</li><li>지자체 장애인 복지 기관</li>
+    </ul>
+    <div class="plans">
+      <article class="plan feature" aria-labelledby="plan1">
+        <span class="tag">2027년 1학기 프로모션</span>
+        <h3 id="plan1">시범 도입</h3>
+        <p class="who">도입을 검토 중인 기관</p>
+        <p class="price">3개월 무상</p>
+        <ul><li>닿음 패드 2대 대여</li><li>변환 스튜디오 기관 계정</li><li>교직원 사용 교육 1회</li></ul>
+        <a class="btn" href="#contact" data-plan="시범 도입">시범 도입 신청</a>
+      </article>
+      <article class="plan" aria-labelledby="plan2">
+        <h3 id="plan2">학과 패키지</h3>
+        <p class="who">지원 학생이 10명 이하인 학과·센터</p>
+        <p class="price">견적 문의</p>
+        <ul><li>닿음 패드 최대 10대</li><li>무료 점자 각인</li><li>학기별 운영 보고서</li></ul>
+        <a class="btn ghost" href="#contact" data-plan="학과 패키지">견적 요청</a>
+      </article>
+      <article class="plan" aria-labelledby="plan3">
+        <h3 id="plan3">캠퍼스 라이선스</h3>
+        <p class="who">대학 전체, 도서관, 공공기관</p>
+        <p class="price">견적 문의</p>
+        <ul><li>기기 수량 맞춤 구성</li><li>관리 콘솔과 통합 인증</li><li>전담 매니저와 현장 점검</li></ul>
+        <a class="btn ghost" href="#contact" data-plan="캠퍼스 라이선스">상담 요청</a>
+      </article>
+    </div>
+    <p class="note">보조공학기기 지원사업 등 공공 지원 제도 연계가 가능한지 상담에서 함께 안내합니다.</p>
+  </div>
+</section>
+
+<section class="sec" id="faq" aria-labelledby="faq-title" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="sec-head" id="faq-title"><b>자주 묻는 질문.</b></h2>
+    <div class="faq">
+      <details><summary>화면낭독기와 함께 쓸 수 있나요?</summary><p>네. 닿음 패드는 일반적인 화면낭독기와 함께 쓰도록 설계하며, 손이 닿은 요소를 음성으로도 안내합니다.</p></details>
+      <details><summary>점자를 잘 모르는 학생도 쓸 수 있나요?</summary><p>그래프와 도형은 점자 없이 모양으로 읽을 수 있고, 라벨은 음성으로 들을 수 있습니다. 처음 쓰는 학생을 위한 연습 콘텐츠를 함께 제공합니다.</p></details>
+      <details><summary>시범 도입 후 꼭 구매해야 하나요?</summary><p>아닙니다. 3개월 사용 후 기기를 반납하면 되고, 사용 결과 보고서를 드립니다.</p></details>
+      <details><summary>개인도 구매할 수 있나요?</summary><p>현재는 교육기관과 공공기관을 대상으로 공급합니다. 개인 사용자는 소속 대학의 장애학생지원센터를 통해 이용할 수 있습니다.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap contact-grid">
+    <div>
+      <h2 id="contact-title">우리 기관에도<br>닿음을 들여보세요.</h2>
+      <p class="lead">담당자가 영업일 기준 2일 안에 연락드리고, 원하시면 기관을 방문해 직접 시연합니다.</p>
+    </div>
+    <form id="demo-form" novalidate aria-describedby="form-desc">
+      <p id="form-desc" class="field full" style="font-size:.9rem;color:var(--muted)"><span><span class="req" aria-hidden="true">*</span> 표시는 필수 항목입니다.</span></p>
+      <div class="field">
+        <label for="f-org">기관명 <span class="req" aria-hidden="true">*</span></label>
+        <input id="f-org" name="org" required autocomplete="organization" aria-describedby="e-org">
+        <span class="err" id="e-org"></span>
+      </div>
+      <div class="field">
+        <label for="f-type">기관 유형</label>
+        <select id="f-type" name="type">
+          <option>대학 장애학생지원센터</option><option>특수교육 기관</option><option>공공도서관·점자도서관</option><option>공공기관</option><option>기타</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-name">담당자 이름 <span class="req" aria-hidden="true">*</span></label>
+        <input id="f-name" name="name" required autocomplete="name" aria-describedby="e-name">
+        <span class="err" id="e-name"></span>
+      </div>
+      <div class="field">
+        <label for="f-email">이메일 <span class="req" aria-hidden="true">*</span></label>
+        <input id="f-email" name="email" type="email" required autocomplete="email" aria-describedby="e-email">
+        <span class="err" id="e-email"></span>
+      </div>
+      <div class="field">
+        <label for="f-plan">관심 있는 도입 방식</label>
+        <select id="f-plan" name="plan"><option>시범 도입</option><option>학과 패키지</option><option>캠퍼스 라이선스</option></select>
+      </div>
+      <div class="field">
+        <label for="f-count">예상 이용 학생 수</label>
+        <input id="f-count" name="count" type="number" min="1" inputmode="numeric">
+      </div>
+      <fieldset class="field full">
+        <legend>원하는 진행 방식</legend>
+        <div class="checks">
+          <label><input type="checkbox" id="f-visit" name="visit" checked> 방문 시연</label>
+          <label><input type="checkbox" id="f-online" name="online"> 온라인 상담</label>
+          <label><input type="checkbox" id="f-docs" name="docs"> 제안서 받기</label>
+        </div>
+      </fieldset>
+      <div class="field full">
+        <label for="f-msg">문의 내용</label>
+        <textarea id="f-msg" name="msg" placeholder="예: 다음 학기 통계학 수강 시각장애 학생 2명 지원 예정"></textarea>
+      </div>
+      <div class="field full"><button class="btn" type="submit">데모 신청 보내기</button></div>
+      <p id="form-status" role="status" aria-live="polite" hidden></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>닿음</strong>은 서비스 마케팅 과제용 임시 브랜드명이며, 제품 사양과 프로모션 내용은 기획안 예시입니다.</p>
+    <p>이 사이트는 키보드와 화면낭독기로 모든 기능을 쓸 수 있도록 만들었습니다. 접근성 의견은 문의 양식으로 보내 주세요.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+  // 보기 설정 토글
+  [["t-size","data-size","large"],["t-contrast","data-contrast","high"]].forEach(function(t){
+    var b=document.getElementById(t[0]);
+    function apply(on){if(on)root.setAttribute(t[1],t[2]);else root.removeAttribute(t[1]);b.setAttribute("aria-pressed",on?"true":"false")}
+    apply(store("daheum-"+t[1])==="1");
+    b.addEventListener("click",function(){var on=b.getAttribute("aria-pressed")!=="true";apply(on);store("daheum-"+t[1],on?"1":"0")});
+  });
+
+  // 촉각 패드 목업
+  var COLS=32,ROWS=18,grid=document.getElementById("pad-grid");
+  grid.style.setProperty("--cols",COLS);
+  var pins=[];
+  for(var i=0;i<COLS*ROWS;i++){var d=document.createElement("span");d.className="pin";grid.appendChild(d);pins.push(d)}
+  var patterns={
+    bars:function(x,y){var h=[0,5,5,5,0,9,9,9,0,13,13,13,0,7,7,7,0,15,15,15,0,11,11,11,0,4,4,4,0,0,0,0][x];return y===ROWS-1||(h&&ROWS-1-y<=h)||x===0},
+    curve:function(x,y){var fy=Math.round(ROWS/2-6*Math.sin((x/COLS)*Math.PI*2));return y===fy||y===Math.round(ROWS/2)&&x%2===0||x===1&&y%2===0},
+    map:function(x,y){return y===6||x===10||x===22&&y>6||(x>=3&&x<=7&&y>=10&&y<=14&&(x===3||x===7||y===10||y===14))||(x>=14&&x<=19&&y>=1&&y<=4)||(x>=25&&x<=29&&y>=10&&y<=15&&(x===25||x===29||y===10||y===15))}
+  };
+  var captions={bars:"지금 표시: 막대그래프. 강의 자료 속 통계 그래프를 높이가 다른 핀 기둥으로 보여줍니다.",curve:"지금 표시: 함수 곡선. 사인 곡선과 가로축을 따라가며 손으로 모양을 확인합니다.",map:"지금 표시: 캠퍼스 지도. 길과 건물 윤곽을 만져서 강의실까지 가는 길을 익힙니다."};
+  var labels={bars:"막대그래프",curve:"함수 곡선",map:"캠퍼스 지도"};
+  function draw(mode){
+    pins.forEach(function(p,i){p.classList.toggle("up",!!patterns[mode](i%COLS,Math.floor(i/COLS)))});
+    document.getElementById("pad-caption").textContent=captions[mode];
+    document.getElementById("pad").setAttribute("aria-label","닿음 패드 화면 예시. 핀이 솟아올라 "+labels[mode]+"을(를) 손으로 만질 수 있게 표현하고 있습니다.");
+    document.querySelectorAll(".pad-modes button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.mode===mode?"true":"false")});
+  }
+  document.querySelectorAll(".pad-modes button").forEach(function(b){b.addEventListener("click",function(){draw(b.dataset.mode)})});
+  draw("bars");
+
+  // 카드 안 작은 핀 그림
+  var g=document.getElementById("mini-pins"),ns="http://www.w3.org/2000/svg";
+  for(var x=0;x<16;x++)for(var y=0;y<8;y++){var c=document.createElementNS(ns,"circle");c.setAttribute("cx",34+x*14.5);c.setAttribute("cy",34+y*14.5);c.setAttribute("r",4.5);var up=y===7||7-y<=[0,2,2,0,4,4,0,6,6,0,3,3,0,5,5,0][x];c.setAttribute("fill",up?"var(--pin-up)":"var(--pin)");g.appendChild(c)}
+
+  // 레일 버튼
+  document.querySelectorAll("[data-rail]").forEach(function(b){b.addEventListener("click",function(){var r=document.getElementById(b.dataset.rail);var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;r.scrollBy({left:Number(b.dataset.dir)*r.clientWidth*.8,behavior:reduce?"auto":"smooth"})})});
+
+  // 점자 각인 미리 보기 (영문 1급 점자)
+  var map={a:"⠁",b:"⠃",c:"⠉",d:"⠙",e:"⠑",f:"⠋",g:"⠛",h:"⠓",i:"⠊",j:"⠚",k:"⠅",l:"⠇",m:"⠍",n:"⠝",o:"⠕",p:"⠏",q:"⠟",r:"⠗",s:"⠎",t:"⠞",u:"⠥",v:"⠧",w:"⠺",x:"⠭",y:"⠽",z:"⠵"};
+  var digit={"1":"a","2":"b","3":"c","4":"d","5":"e","6":"f","7":"g","8":"h","9":"i","0":"j"};
+  function toBraille(s){var out="",num=false;for(var ch of s){if(/[0-9]/.test(ch)){if(!num){out+="⠼";num=true}out+=map[digit[ch]]}else if(/[a-z]/i.test(ch)){num=false;if(ch!==ch.toLowerCase())out+="⠠";out+=map[ch.toLowerCase()]}else if(ch===" "){num=false;out+="⠀"}}return out}
+  var inp=document.getElementById("engrave-input");
+  function upd(){var v=inp.value.replace(/[^A-Za-z0-9 ]/g,"").slice(0,12);if(v!==inp.value)inp.value=v;var t=v.trim()||"이름을 입력하세요";document.getElementById("plate-braille").textContent=toBraille(v);document.getElementById("plate-text").textContent=t;document.getElementById("plate").setAttribute("aria-label","각인 미리 보기: "+t)}
+  inp.addEventListener("input",upd);upd();
+
+
+  // 스토어
+  var products=[
+    {id:"pad",name:"닿음 패드",type:"기기",compat:["pad"],price:2490000,isNew:true,rank:1,art:"pad",colors:[["그래파이트","#2A3331"],["세이지","#8FA99C"]]},
+    {id:"mini",name:"닿음 패드 미니",type:"기기",compat:["mini"],price:1690000,isNew:false,rank:2,art:"mini",colors:[["그래파이트","#2A3331"],["샌드","#D8CBB0"]]},
+    {id:"studio",name:"변환 스튜디오 기관 라이선스 (연간)",type:"소프트웨어",compat:["pad","mini"],price:3600000,isNew:false,rank:3,art:"studio",colors:[]},
+    {id:"kbd",name:"점자 키보드 커버",type:"액세서리",compat:["pad"],price:189000,isNew:true,rank:4,art:"kbd",colors:[["차콜","#3A3F3E"],["오프화이트","#EDEBE4"]]},
+    {id:"folio",name:"휴대용 폴리오 케이스",type:"액세서리",compat:["pad","mini"],price:129000,isNew:true,rank:5,art:"folio",colors:[["올리브","#7C7A55"],["네이비","#2C3A57"]]},
+    {id:"overlay",name:"촉각 그래픽 오버레이 세트 (20매)",type:"액세서리",compat:["pad","mini"],price:79000,isNew:false,rank:6,art:"overlay",colors:[]},
+    {id:"dock",name:"충전 거치대",type:"액세서리",compat:["pad","mini"],price:99000,isNew:false,rank:7,art:"dock",colors:[["그래파이트","#2A3331"]]}
+  ];
+  var compatName={pad:"닿음 패드",mini:"닿음 패드 미니"};
+  function art(kind,col){col=col||"#2A3331";var pins="";
+    if(kind==="pad"||kind==="mini"){var w=kind==="pad"?220:160,x0=(260-w)/2,n=kind==="pad"?12:8;
+      for(var i=0;i<n;i++)for(var j=0;j<6;j++){var up=j>=6-[2,3,3,5,5,2,4,4,6,3,3,1][i%12];pins+='<circle cx="'+(x0+18+i*((w-36)/(n-1)))+'" cy="'+(60+j*16)+'" r="4.5" fill="'+(up?"#F2C14E":"#46524F")+'"/>'}
+      return '<svg viewBox="0 0 260 195"><rect x="'+x0+'" y="35" width="'+w+'" height="130" rx="20" fill="'+col+'"/><rect x="'+(x0+8)+'" y="43" width="'+(w-16)+'" height="114" rx="14" fill="#1C2422"/>'+pins+'</svg>'}
+    if(kind==="studio")return '<svg viewBox="0 0 260 195"><rect x="40" y="30" width="180" height="120" rx="12" fill="var(--c-sky)" stroke="var(--ink)" stroke-width="2"/><rect x="60" y="95" width="18" height="40" fill="var(--accent)"/><rect x="88" y="70" width="18" height="65" fill="var(--accent)"/><rect x="116" y="105" width="18" height="30" fill="var(--accent)"/><path d="M150 60h50M150 80h40M150 100h50" stroke="var(--ink)" stroke-width="5" stroke-linecap="round"/><rect x="110" y="150" width="40" height="18" fill="var(--ink)"/></svg>';
+    if(kind==="kbd"){var k="";for(var r=0;r<3;r++)for(var c=0;c<10;c++)k+='<rect x="'+(42+c*18)+'" y="'+(78+r*20)+'" width="14" height="14" rx="3" fill="'+(col==="#EDEBE4"?"#C9C5B8":"#555B5A")+'"/>';return '<svg viewBox="0 0 260 195"><rect x="30" y="62" width="200" height="90" rx="14" fill="'+col+'" stroke="var(--line)" stroke-width="2"/>'+k+'</svg>'}
+    if(kind==="folio")return '<svg viewBox="0 0 260 195"><path d="M70 40h120a14 14 0 0 1 14 14v100a14 14 0 0 1-14 14H70z" fill="'+col+'"/><path d="M70 40 40 168h40l30-128z" fill="'+col+'" opacity=".75"/><circle cx="170" cy="70" r="6" fill="#F2C14E"/><circle cx="170" cy="86" r="6" fill="#F2C14E"/></svg>';
+    if(kind==="overlay")return '<svg viewBox="0 0 260 195"><rect x="70" y="40" width="130" height="120" rx="8" fill="var(--surface)" stroke="var(--ink)" stroke-width="2" transform="rotate(-8 135 100)"/><rect x="62" y="38" width="130" height="120" rx="8" fill="var(--c-sun)" stroke="var(--ink)" stroke-width="2"/><path d="M80 130 Q110 60 130 100 T178 70" stroke="var(--ink)" stroke-width="4" fill="none" stroke-dasharray="2 9" stroke-linecap="round"/></svg>';
+    return '<svg viewBox="0 0 260 195"><path d="M60 150h140l-20-30H80z" fill="'+col+'"/><rect x="88" y="40" width="84" height="84" rx="12" fill="#1C2422" transform="skewX(-8)"/><circle cx="130" cy="138" r="4" fill="#5ED1B4"/></svg>';
+  }
+  var won=function(n){return "₩"+n.toLocaleString("ko-KR")};
+  var state={type:"all",compat:"all",sort:"rec"},chosen={};
+  var gridEl=document.getElementById("shop-grid");
+  function render(){
+    var list=products.filter(function(p){return (state.type==="all"||p.type===state.type)&&(state.compat==="all"||p.compat.indexOf(state.compat)>-1)});
+    list.sort(function(a,b){return state.sort==="low"?a.price-b.price:state.sort==="high"?b.price-a.price:state.sort==="new"?(b.isNew-a.isNew)||a.rank-b.rank:a.rank-b.rank});
+    gridEl.innerHTML="";
+    list.forEach(function(p){
+      var ci=chosen[p.id]||0,col=p.colors[ci];
+      var li=document.createElement("li");li.className="prod";
+      var title=p.name+(col?" - "+col[0]:"");
+      var sw=p.colors.length>1?'<div class="swatches" role="group" aria-label="'+p.name+' 색상 선택">'+p.colors.map(function(c,i){return '<button type="button" class="sw" style="background:'+c[1]+'" aria-label="'+c[0]+'" aria-pressed="'+(i===ci)+'" data-p="'+p.id+'" data-i="'+i+'"></button>'}).join("")+'</div>':'<div class="swatches"></div>';
+      li.innerHTML='<div class="shot" role="img" aria-label="'+title+' 제품 이미지">'+art(p.art,col&&col[1])+'</div>'+sw+'<p class="new">'+(p.isNew?"New":"")+'</p><h3>'+title+'</h3><p class="compat">호환: '+p.compat.map(function(c){return compatName[c]}).join(", ")+'</p><p class="price">'+won(p.price)+'</p>';
+      gridEl.appendChild(li);
+    });
+    document.getElementById("shop-count").textContent="상품 "+list.length+"개";
+  }
+  gridEl.addEventListener("click",function(e){var b=e.target.closest(".sw");if(!b)return;chosen[b.dataset.p]=Number(b.dataset.i);render();var nb=gridEl.querySelector('.sw[data-p="'+b.dataset.p+'"][data-i="'+b.dataset.i+'"]');if(nb)nb.focus()});
+  document.querySelectorAll(".fchip").forEach(function(b){b.addEventListener("click",function(){state[b.dataset.f]=b.dataset.v;document.querySelectorAll('.fchip[data-f="'+b.dataset.f+'"]').forEach(function(o){o.setAttribute("aria-pressed",o===b?"true":"false")});render()})});
+  document.getElementById("shop-sort").addEventListener("change",function(e){state.sort=e.target.value;render()});
+  render();
+
+  // 요금제 버튼이 폼에 도입 방식 채우기
+  document.querySelectorAll("[data-plan]").forEach(function(a){a.addEventListener("click",function(){document.getElementById("f-plan").value=a.dataset.plan;setTimeout(function(){document.getElementById("f-org").focus()},400)})});
+
+  // 폼 검증 (실제 전송 없음: 데모 사이트)
+  var form=document.getElementById("demo-form"),status=document.getElementById("form-status");
+  form.addEventListener("submit",function(e){
+    e.preventDefault();var first=null;
+    [["f-org","e-org","기관명을 입력해 주세요."],["f-name","e-name","담당자 이름을 입력해 주세요."],["f-email","e-email","연락받을 이메일을 입력해 주세요. 예: name@univ.ac.kr"]].forEach(function(f){
+      var el=document.getElementById(f[0]),er=document.getElementById(f[1]);var bad=!el.value.trim()||(el.type==="email"&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value));
+      er.textContent=bad?f[2]:"";el.setAttribute("aria-invalid",bad?"true":"false");if(bad&&!first)first=el});
+    if(first){status.hidden=false;status.textContent="입력하지 않은 필수 항목이 있습니다. 표시된 칸을 확인해 주세요.";first.focus();return}
+    status.hidden=false;status.textContent=document.getElementById("f-org").value.trim()+"의 "+document.getElementById("f-plan").value+" 신청 내용을 확인했습니다. 이 페이지는 시연용이라 실제로 전송되지는 않습니다.";
+  });
+})();
+</script>
+
+</body>
+</html>
