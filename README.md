@@ -23,7 +23,8 @@
 | v17 | [/versions/v17/](https://service-marketing-03.github.io/versions/v17/) | 공공기관 대여·QR 할인 카드에 도서관 대여 데스크+QR 사진 |
 | v18 | [/versions/v18/](https://service-marketing-03.github.io/versions/v18/) | 핵심 기능을 큰 카드가 한 장씩 넘어가는 밝은 캐러셀로(점 표시·재생/일시정지, 5초 자동 넘김) |
 | v19 | [/versions/v19/](https://service-marketing-03.github.io/versions/v19/) | 신학기 프로모션을 애플 교육 페이지식 흰 카드(위 글·아래 사진·↗ 버튼)로, 새 사진 5장(보청기·QR·박람회·파일럿·캠퍼스 부스) |
-| v20 (현재) | [/versions/v20/](https://service-marketing-03.github.io/versions/v20/) | 음성으로 듣기 버튼 섹션마다 다시 표시, 새 캠퍼스 사진 6장, 프로모션 카드를 애플 교육 카드 비율(4:5, 사진 60%)로, 스토어 5대·대여·개인 타일을 실사 사진으로 |
+| v20 | [/versions/v20/](https://service-marketing-03.github.io/versions/v20/) | 음성으로 듣기 버튼 섹션마다 다시 표시, 새 캠퍼스 사진 6장, 프로모션 카드를 애플 교육 카드 비율(4:5, 사진 60%)로, 스토어 5대·대여·개인 타일을 실사 사진으로 |
+| v21 (현재) | [/versions/v21/](https://service-marketing-03.github.io/versions/v21/) | 스토어 타일 6장 모두 흰 카드+아래 사진, 주황 라벨 제거, 프로모션 1·2번째 카드 이전 사진으로, 핵심 기능 3번째 사진 교체 |
 | v5 | [/versions/v5/](https://service-marketing-03.github.io/versions/v5/) | 판매촉진을 애플식 카드·일러스트 레이아웃으로(ACCESS FOR ALL, 체험에서 도입까지, 가격·비가격 혜택), 가장 좋은 이유 카드를 우리 판매촉진으로, 한글 점자 각인과 접이식 각인 미리 보기, 제품 페이지 음성으로 안내 듣기 버튼, 핵심 기능 제목, 애플식 시스템 글꼴 |
 | v4 | [/versions/v4/](https://service-marketing-03.github.io/versions/v4/) | 스토어 상품 더 알아보기 제품 상세 페이지(사양 비교·모델 비교), 판매촉진을 기획안대로(ACCESS FOR ALL, 체험에서 도입까지, 비가격·가격 혜택, 체험형·기본형·확장형), 새 음성 듣기 버튼, 홍보물 태블릿 고정 오류와 모바일 화면 수정 |
 | v3 | [/versions/v3/](https://service-marketing-03.github.io/versions/v3/) | 홍보물 바로가기와 스크롤 3D 태블릿, 판매촉진(시범 도입·니어 팩·시리즈 팩·프리미엄·다수 구매 할인, 혜택 계산기), 도입 혜택 카드, 차별점, 실사풍 기기·상품 그림, 인터랙션 |
