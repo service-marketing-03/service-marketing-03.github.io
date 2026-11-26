@@ -26,7 +26,8 @@
 | v20 | [/versions/v20/](https://service-marketing-03.github.io/versions/v20/) | 음성으로 듣기 버튼 섹션마다 다시 표시, 새 캠퍼스 사진 6장, 프로모션 카드를 애플 교육 카드 비율(4:5, 사진 60%)로, 스토어 5대·대여·개인 타일을 실사 사진으로 |
 | v21 | [/versions/v21/](https://service-marketing-03.github.io/versions/v21/) | 스토어 타일 6장 모두 흰 카드+아래 사진, 주황 라벨 제거, 프로모션 1·2번째 카드 이전 사진으로, 핵심 기능 3번째 사진 교체 |
 | v22 | [/versions/v22/](https://service-marketing-03.github.io/versions/v22/) | 스토어(기관 할인) 카드 6장을 이전 모양(색 배경·기기 컷·×5·달력·앱 배지)으로 되돌리고 주황 라벨만 제거 |
-| v25 (현재) | [/versions/v25/](https://service-marketing-03.github.io/versions/v25/) | ACCESS FOR ALL 카드를 태블릿+보청기 누끼로, 프로모션 사진 세로 길이 늘림 |
+| v26 (현재) | [/versions/v26/](https://service-marketing-03.github.io/versions/v26/) | 모바일 최종 정리(스토어 2열, 사양 비교 3열, 상세 스토리 축소), 카드 호버·터치 반응, FAQ 열기 애니메이션 |
+| v25 | [/versions/v25/](https://service-marketing-03.github.io/versions/v25/) | ACCESS FOR ALL 카드를 태블릿+보청기 누끼로, 프로모션 사진 세로 길이 늘림 |
 | v24 | [/versions/v24/](https://service-marketing-03.github.io/versions/v24/) | 제품 상세 하단 홍보 스토리 추가, 핵심 기능 카드 축소, 인물 사진 교체, 무료 파일럿 카드 제품 컷, 접근성·각인 섹션을 프로모션 아래로 |
 | v23 | [/versions/v23/](https://service-marketing-03.github.io/versions/v23/) | QR 대여 프로모션 카드를 기기+QR 스탠드 누끼로, 대여 스토어 카드의 달력 삭제 |
 | v5 | [/versions/v5/](https://service-marketing-03.github.io/versions/v5/) | 판매촉진을 애플식 카드·일러스트 레이아웃으로(ACCESS FOR ALL, 체험에서 도입까지, 가격·비가격 혜택), 가장 좋은 이유 카드를 우리 판매촉진으로, 한글 점자 각인과 접이식 각인 미리 보기, 제품 페이지 음성으로 안내 듣기 버튼, 핵심 기능 제목, 애플식 시스템 글꼴 |

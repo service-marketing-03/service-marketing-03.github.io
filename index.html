@@ -979,6 +979,44 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
 .eng-logo{color:rgba(255,255,255,.0)!important;background:linear-gradient(180deg,#d9dce0,#8d9298);-webkit-background-clip:text;background-clip:text;font-size:clamp(1.2rem,2.2vw,1.7rem)!important;top:36%!important;filter:drop-shadow(0 1px 0 rgba(0,0,0,.4))}
 .eng-txt{color:rgba(230,233,238,.78)!important;font-family:var(--f-sans)!important;letter-spacing:.06em!important;font-weight:500;text-shadow:0 -1px 0 rgba(0,0,0,.4)}
 .eng-dots circle{fill:rgba(235,238,242,.85)!important;filter:drop-shadow(0 -1px 0 rgba(0,0,0,.5))!important}
+
+/* v26: interaction polish */
+.pcard.pq,.kf-card,.prod,.st-tile,.scol{-webkit-tap-highlight-color:transparent}
+.pcard.pq{transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+@media (hover:hover){.pcard.pq:hover{transform:translateY(-6px);box-shadow:0 18px 40px -12px rgba(0,0,0,.18)}
+ .pq:hover .pq-cut{transform:translateX(-50%) translateY(-16px) scale(1.03)}
+ .pq:hover .pq-duo .pq-t{transform:translateY(-14px)}.pq:hover .pq-duo .pq-q{transform:translateY(-10px) rotate(-6deg)}}
+.pq-go{transition:transform .3s,background .3s}.pq-go:hover{transform:scale(1.1)}
+.pcard.pq:active,.kf-card:active,.prod:active{transform:scale(.985)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#e8e8ed;color:#1d1d1f;font-weight:500;font-size:20px;line-height:1;transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s}
+.faq details[open] summary::after{transform:rotate(45deg);background:#1d1d1f;color:#fff}
+.faq details[open] p{animation:faqIn .4s ease}
+@keyframes faqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+/* v26: mobile final */
+@media (max-width:640px){
+ .grid{grid-template-columns:1fr 1fr}
+ .prod{padding:1.1rem .55rem 1.3rem;gap:.3rem}
+ .prod h3{font-size:.86rem;line-height:1.35}
+ .prod .price{font-size:.92rem}
+ .prod .compat{font-size:.7rem}
+ .kf-card{height:440px}.kf-img{height:70%}
+ .pvp-s{padding-top:64px}
+ .pvp-h{font-size:26px;margin-bottom:24px}
+ .pvp-p{font-size:16px;margin-top:20px}
+ .pvp figure{border-radius:20px}
+ .pvp-two{grid-template-columns:1fr 1fr;gap:10px}
+ .pvp-two figure{aspect-ratio:3/4}
+ .pvp-p.sm{font-size:14px;margin-top:12px}
+ .spec-cols{grid-template-columns:repeat(3,1fr)!important;gap:4px}
+ .scol{padding:1rem .2rem 1.2rem;border-radius:16px}
+ .scol .snm{font-size:.72rem}
+ .scol .sbig{font-size:1rem;margin-bottom:.4rem}
+ .scol ul{font-size:.78rem;gap:.55rem}
+ .scol .sic{transform:scale(.6);margin:1rem auto 0;height:52px}
+ .faq summary{font-size:.98rem}
+}
 </style>
 
 <div class="vfab" id="vfab" style="right:20px;bottom:96px">
