@@ -19,7 +19,8 @@
 | v13 | [/versions/v13/](https://service-marketing-03.github.io/versions/v13/) | 히어로 "톡톡." 글씨 삭제, ACCESS FOR ALL 줄 가운데 정렬, SaaS 글자 카드 줄바꿈 깨짐 수정, "기관이 도입하고, 학생이 씁니다." 학생 사용 사진, pad mini 타일을 한 손에 든 사진으로 |
 | v14 | [/versions/v14/](https://service-marketing-03.github.io/versions/v14/) | 비가격·가격 판매촉진을 "Relief, 지금 도입하면 가장 좋은 이유." 어두운 카드 6장(아이콘·제목·회색 설명·+ 펼치기)으로 |
 | v15 | [/versions/v15/](https://service-marketing-03.github.io/versions/v15/) | 학생 사용 사진(ACCESS FOR ALL·"학생이 씁니다"), 도입 혜택 카드를 흰색으로, 스토어 Relief Cloud 이미지를 실사 컷으로 |
-| v16 (현재) | [/versions/v16/](https://service-marketing-03.github.io/versions/v16/) | 받은 실사 사진 5장 반영(캠퍼스 부스·박람회·강의실 보청기·파일럿 그래프·점자 키보드), 점자 키보드 커버 상품 복귀, 음성 버튼 파란색·크게 |
+| v16 | [/versions/v16/](https://service-marketing-03.github.io/versions/v16/) | 받은 실사 사진 5장 반영(캠퍼스 부스·박람회·강의실 보청기·파일럿 그래프·점자 키보드), 점자 키보드 커버 상품 복귀, 음성 버튼 파란색·크게 |
+| v17 (현재) | [/versions/v17/](https://service-marketing-03.github.io/versions/v17/) | 공공기관 대여·QR 할인 카드에 도서관 대여 데스크+QR 사진 |
 | v5 | [/versions/v5/](https://service-marketing-03.github.io/versions/v5/) | 판매촉진을 애플식 카드·일러스트 레이아웃으로(ACCESS FOR ALL, 체험에서 도입까지, 가격·비가격 혜택), 가장 좋은 이유 카드를 우리 판매촉진으로, 한글 점자 각인과 접이식 각인 미리 보기, 제품 페이지 음성으로 안내 듣기 버튼, 핵심 기능 제목, 애플식 시스템 글꼴 |
 | v4 | [/versions/v4/](https://service-marketing-03.github.io/versions/v4/) | 스토어 상품 더 알아보기 제품 상세 페이지(사양 비교·모델 비교), 판매촉진을 기획안대로(ACCESS FOR ALL, 체험에서 도입까지, 비가격·가격 혜택, 체험형·기본형·확장형), 새 음성 듣기 버튼, 홍보물 태블릿 고정 오류와 모바일 화면 수정 |
 | v3 | [/versions/v3/](https://service-marketing-03.github.io/versions/v3/) | 홍보물 바로가기와 스크롤 3D 태블릿, 판매촉진(시범 도입·니어 팩·시리즈 팩·프리미엄·다수 구매 할인, 혜택 계산기), 도입 혜택 카드, 차별점, 실사풍 기기·상품 그림, 인터랙션 |

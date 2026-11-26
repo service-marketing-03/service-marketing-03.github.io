@@ -1556,7 +1556,7 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
     setInterval(function(){var sp=false;try{sp=speechSynthesis.speaking}catch(x){}f.classList.toggle("speaking",sp)},400);
   })();
   // 프로모션 카드 그림
-  var PCV={afa:"relief-lecture-aid",pad:"relief-bag",booth:"relief-campus",qr:"relief-hand",fair:"relief-fair",pilot:"relief-pilot"};
+  var PCV={afa:"relief-lecture-aid",pad:"relief-bag",booth:"relief-campus",qr:"relief-library-qr",fair:"relief-fair",pilot:"relief-pilot"};
   document.querySelectorAll(".pc-vis").forEach(function(v){v.innerHTML='<img src="assets/'+(PCV[v.dataset.vis]||"relief-close")+'.jpg" alt="" loading="lazy">';
 });addApps();
   // 점자 각인
