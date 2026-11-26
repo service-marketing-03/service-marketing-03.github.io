@@ -788,6 +788,22 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
 .mk-dash{border-radius:14px!important}
 .dw-stats div{background:#f2f5fa!important;border:1px solid #e4e9f2}
 .b-a figcaption,.b-b figcaption{color:#f5f5f7;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+
+.closer{width:100vw;margin-left:calc(50% - 50vw);background:#000;color:#f5f5f7;padding:5rem 0 3rem}
+.closer-h{font-size:clamp(28px,4.4vw,48px);font-weight:600;letter-spacing:-.02em;color:#86868b}
+.closer-rail{list-style:none;display:flex;gap:20px;margin:2.5rem 0 0;padding:0 max(16px,calc((100vw - 1168px)/2)) 1rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:max(16px,calc((100vw - 1168px)/2));scrollbar-width:none}
+.closer-rail::-webkit-scrollbar{display:none}
+.closer-rail li{flex:0 0 min(880px,84vw);scroll-snap-align:start}
+.closer-rail figure{margin:0;height:min(720px,74vh);border-radius:28px;overflow:hidden;background:#161617}
+.closer-rail img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.closer-rail li:hover img{transform:scale(1.03)}
+.closer-rail p{margin-top:.9rem;font-size:17px;font-weight:600;color:#f5f5f7;letter-spacing:-.01em}
+.rail-ctrl.dark .round{background:#333336;color:#f5f5f7}
+@media (max-width:600px){.closer{padding:3.5rem 0 2rem}.closer-rail figure{height:min(460px,62vh);border-radius:20px}.closer-rail p{font-size:15px}}
+
+.listen{min-height:0!important;height:44px;padding:0 5px 0 18px!important;font-size:15px!important;font-weight:500;gap:.7rem}
+.listen .lc{width:34px!important;height:34px!important}.listen .lc svg{width:12px;height:12px}
+.st-listen{margin-top:1.4rem}.sales .st-h:first-of-type{margin-top:3.5rem}
 </style>
 
 </head>
@@ -877,13 +893,10 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
 <section class="sec slim" id="design" aria-labelledby="design-title" style="padding-top:2rem">
   <div class="wrap">
     <h2 class="sr-only" id="design-title">얇고 가벼운 설계</h2>
-    <div class="bento" role="group" aria-label="Relief pad 디자인 사진">
-      <figure class="b-big"><img src="assets/relief-pad-float.jpg" loading="lazy" alt="공중에 떠 있는 얇은 Relief pad. 알루미늄 측면과 푸른 화면 위 유리알 점자 핀."></figure>
-      <figure class="b-a"><img src="assets/relief-close.jpg" loading="lazy" alt="화면 위로 솟은 점자 핀 확대."><figcaption>솟아오른 핀 하나하나가 손끝에 또렷하게.</figcaption></figure>
-      <figure class="b-b"><img src="assets/relief-hand.jpg" loading="lazy" alt="한 손 위에 올린 아주 얇은 Relief pad."><figcaption>두께 9mm, 무게 690g.</figcaption></figure>
-      <figure class="b-c"><img src="assets/relief-corner.jpg" loading="lazy" alt="둥근 알루미늄 모서리와 점자가 솟은 화면 확대."><figcaption>둥근 알루미늄 테두리.</figcaption></figure>
-      <figure class="b-d"><img src="assets/relief-stand.jpg" loading="lazy" alt="스탠드 커버로 세운 Relief pad 위의 촉각 그래프."><figcaption>스탠드로 세워 책상 위 교재처럼.</figcaption></figure>
-      <figure class="b-e"><img src="assets/relief-pad-gold.jpg" loading="lazy" alt="골드 색상 Relief pad를 위에서 본 모습."><figcaption>실버 · 그래파이트 · 골드.</figcaption></figure>
+    <div class="closer" aria-labelledby="closer-h">
+      <div class="wrap"><h3 class="closer-h" id="closer-h">보다 자세히 들여다보기.</h3></div>
+      <ul class="closer-rail" id="crail"><li><figure><img src="assets/relief-pad-float.jpg" alt="공중에 떠 있는 얇은 Relief pad." loading="lazy"></figure><p>얇고 가벼운 알루미늄 바디.</p></li><li><figure><img src="assets/relief-close.jpg" alt="화면 위로 솟은 점자 핀 확대." loading="lazy"></figure><p>솟아오른 핀 하나하나가 손끝에 또렷하게.</p></li><li><figure><img src="assets/relief-hand.jpg" alt="한 손 위에 올린 아주 얇은 Relief pad." loading="lazy"></figure><p>두께 9mm, 무게 690g.</p></li><li><figure><img src="assets/relief-corner.jpg" alt="둥근 알루미늄 모서리와 점자가 솟은 화면 확대." loading="lazy"></figure><p>둥글게 다듬은 테두리.</p></li><li><figure><img src="assets/relief-stand.jpg" alt="스탠드로 세운 Relief pad 위의 촉각 그래프." loading="lazy"></figure><p>스탠드로 세워 교재처럼.</p></li><li><figure><img src="assets/relief-pad-gold.jpg" alt="골드 색상 Relief pad." loading="lazy"></figure><p>실버 · 그래파이트 · 골드.</p></li></ul>
+      <div class="wrap"><div class="rail-ctrl dark"><button class="round" type="button" data-rail="crail" data-dir="-1" aria-label="이전 사진">‹</button><button class="round" type="button" data-rail="crail" data-dir="1" aria-label="다음 사진">›</button></div></div>
     </div>
     <p class="copy">두께 9mm, 무게 690g의 Relief pad는 강의실 가방에 그대로 들어갑니다. 576개의 핀을 움직이는 저전력 구동부 덕분에 <strong>하루 종일 수업을 들어도 배터리가 버팁니다.</strong> 촉각 디스플레이, 점자 출력, 음성 안내를 한 기기에 담아 노트북과 점자정보단말기를 따로 챙길 필요가 없습니다.</p>
     <button class="more" type="button" aria-expanded="false" aria-controls="more-panel" id="more-btn">Relief pad 기술 사양 알아보기<span class="plus" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></button>
@@ -1015,7 +1028,7 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
   <div class="wrap">
     <div class="st-head"><div><h2 class="st-h1" id="sales-title">도입 스토어</h2><p class="st-sub">가장 강력한 촉각 학습 도구들이 한자리에.</p></div><a class="st-help" href="#contact"><span class="st-av" aria-hidden="true">R</span><span><b>도입 고민이 있나요?</b><br><span class="elink">Relief 스페셜리스트와 상담하기 ›</span></span></a></div>
     <div class="st-listen"><button class="listen" type="button" data-listen="sales" aria-pressed="false"><span class="ll">음성으로 듣기</span><span class="ldots" aria-hidden="true"></span><span class="lc" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 2.8l8.2 5.2L5 13.2z" fill="currentColor"/></svg></span></button></div></div>
-    <ul class="st-cats" aria-label="도입 스토어 바로가기"><li><a href="#p-pad"><img class="cat-ph" src="assets/relief-pad-hero.jpg" alt="" loading="lazy"><span>Relief pad</span></a></li><li><a href="#p-mini"><img class="cat-ph" src="assets/relief-pad-gold.jpg" alt="" loading="lazy"><span>pad mini</span></a></li><li><a href="#p-cloud"><img class="cat-ph" src="assets/relief-layers.jpg" alt="" loading="lazy"><span>Relief Cloud</span></a></li><li><a href="#engrave"><img class="cat-ph" src="assets/relief-stand.jpg" alt="" loading="lazy"><span>액세서리</span></a></li><li><a href="#contact"><img class="cat-ph" src="assets/relief-beads.jpg" alt="" loading="lazy"><span>점자·음성 자료</span></a></li><li><a href="#plans"><svg aria-hidden="true" viewBox="0 0 54 40"><path d="M27 5L9 13h36z" fill="#1d1d1f"/><g fill="#6e6e73"><rect x="13" y="15" width="4" height="15"/><rect x="21" y="15" width="4" height="15"/><rect x="29" y="15" width="4" height="15"/><rect x="37" y="15" width="4" height="15"/></g><rect x="9" y="31" width="36" height="4" rx="1" fill="#1d1d1f"/></svg><span>정부 지원</span></a></li><li><a href="#contact"><svg aria-hidden="true" viewBox="0 0 54 40"><path d="M10 9a5 5 0 0 1 5-5h24a5 5 0 0 1 5 5v14a5 5 0 0 1-5 5H22l-8 7v-7h1a5 5 0 0 1-5-5z" fill="#0071e3"/><g fill="#fff"><circle cx="20" cy="16" r="2"/><circle cx="27" cy="16" r="2"/><circle cx="34" cy="16" r="2"/></g></svg><span>도입 상담</span></a></li></ul>
+    
   </div>
   <div class="wrap"><h3 class="st-h"><b>기관 할인.</b> 대학·특수학교·공공기관을 위한 특별 도입가로.</h3></div>
   <div class="st-rail-wrap"><ul class="st-rail" id="strail" aria-label="기관 할인 제품"><li class="st-tile dk" style="--bg:#1e2638"><a href="#p-pad"><img src="assets/relief-pad-hero.jpg" alt="" loading="lazy"><div class="tx"><p class="eb">NEW</p><h4>Relief pad</h4><p class="t">손끝으로 읽는 그래프.<br>청각 보조기기 증정.</p></div><p class="pr">₩1,790,000/대부터 <small>(교육기관 도입 시)</small></p></a></li><li class="st-tile lt" style="--bg:#cab7ad"><a href="#p-mini"><img src="assets/relief-pad-gold.jpg" alt="" loading="lazy"><div class="tx"><p class="eb"></p><h4>Relief pad mini</h4><p class="t">가볍게 들고 다니는<br>촉각 노트.</p></div><p class="pr">₩1,490,000부터</p></a></li><li class="st-tile lt" style="--bg:#b9becc"><a href="#p-cloud"><img src="assets/relief-layers.jpg" alt="" loading="lazy"><div class="tx"><p class="eb"></p><h4>Relief Cloud</h4><p class="t">자료 변환·배포·관리를<br>한 곳에서.</p></div><p class="pr">₩59,000/월부터 <small>(교육기관 SaaS)</small></p></a></li><li class="st-tile lt" style="--bg:#81838d"><a href="#plans"><img src="assets/relief-pad-gray.jpg" alt="" loading="lazy"><div class="tx"><p class="eb">공공기관</p><h4>5대 이상 도입</h4><p class="t">도서관·복지관을 위한<br>기관 도입가.</p></div><p class="pr">₩1,590,000/대부터 <small>(5대 이상)</small></p></a></li><li class="st-tile dk" style="--bg:#2d333f"><a href="#plans"><img src="assets/relief-pad-tilt.jpg" alt="" loading="lazy"><div class="tx"><p class="eb">렌탈</p><h4>Relief pad 대여</h4><p class="t">구매 부담 없이<br>학기 단위로.</p></div><p class="pr">₩59,000/대·월부터 <small>(공공기관 대여)</small></p></a></li><li class="st-tile lt" style="--bg:#c0cde9"><a href="#p-pad"><img src="assets/relief-pad-silver.jpg" alt="" loading="lazy"><div class="tx"><p class="eb">개인</p><h4>Relief pad 개인 구매</h4><p class="t">앱 1년 이용권 포함.</p></div><p class="pr">₩1,990,000 <small>(2년차 ₩19,000/월)</small></p></a></li></ul><div class="rail-ctrl"><button class="round" type="button" data-rail="strail" data-dir="-1" aria-label="이전 제품">‹</button><button class="round" type="button" data-rail="strail" data-dir="1" aria-label="다음 제품">›</button></div></div>
