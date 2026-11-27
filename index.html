@@ -1058,6 +1058,30 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
 @media (hover:hover){.lu-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px -12px rgba(0,0,0,.18)}.lu-card:hover .lu-img img{transform:translateY(-6px) scale(1.04)}}
 .lu-card:active{transform:scale(.985)}
 :root[data-contrast="high"] .lu-card{border:2px solid #000}
+
+/* v30 */
+.wy-card:hover{transform:none!important}
+.wy-rail{padding-top:12px!important;padding-bottom:28px!important}
+.pvp-dashbox.dk{background:#000;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+.dk .kf-dash{background:#1c1c1e;box-shadow:0 30px 80px -20px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.1)}
+.dk .kfd-bar{background:#2c2c2e}
+.dk .kfd-st div{background:#2c2c2e}.dk .kfd-st small{color:#98989d}.dk .kfd-st b{color:#f5f5f7}
+.dk .kfd-ls li{color:#f5f5f7;border-color:#38383a}
+.dk .kfd-ls .ok{background:rgba(48,209,88,.18);color:#30d158}.dk .kfd-ls .run{background:rgba(10,132,255,.22);color:#64a8ff}
+.cv{position:absolute;inset:0;display:grid;grid-template-columns:1fr auto 1.2fr;align-items:center;gap:clamp(12px,3vw,40px);padding:clamp(20px,5vw,64px);text-align:left}
+.cv-doc{background:#1c1c1e;border-radius:18px;padding:18px;box-shadow:0 0 0 1px rgba(255,255,255,.1);color:#f5f5f7}
+.cv-tag{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:linear-gradient(145deg,#ff6b6b,#c81d4a);border-radius:6px;padding:2px 7px}
+.cv-doc b{display:block;margin-top:10px;font-size:15px}.cv-doc small{display:block;color:#98989d;font-size:12px;margin-top:2px}
+.cv-doc svg{display:block;width:100%;margin-top:12px}
+.cv-arr{display:flex;flex-direction:column;align-items:center;gap:6px;color:#98989d;font-size:12px}
+.cv-arr b{font-size:clamp(20px,2.6vw,30px);color:#f5f5f7;letter-spacing:-.02em}
+.cv-arr::before{content:"";width:clamp(28px,5vw,64px);height:2px;background:linear-gradient(90deg,transparent,#0a84ff)}
+.cv-pins{display:grid;grid-template-columns:repeat(16,1fr);gap:clamp(3px,.6vw,7px);background:#1c1c1e;border-radius:18px;padding:clamp(12px,2vw,22px);box-shadow:0 0 0 1px rgba(255,255,255,.1)}
+.cv-pins i{aspect-ratio:1;border-radius:50%;background:#3a3a3c}
+.cv-pins i.up{background:radial-gradient(circle at 35% 30%,#fff,#9fc3ff 45%,#3b6fd8);box-shadow:0 0 8px rgba(100,168,255,.55)}
+.cloud-hero{width:min(720px,92%);margin:1.5rem auto 0}.cloud-hero .pvp-dashbox{aspect-ratio:16/8}
+@media (max-width:640px){.cv{position:relative;grid-template-columns:1fr;padding:20px}.cv-arr::before{width:2px;height:24px;background:linear-gradient(180deg,transparent,#0a84ff)}.cloud-hero .pvp-dashbox{aspect-ratio:auto}}
+.prod img[src*="relief-aid-cut"]{width:50%!important;max-width:50%!important;margin:0 auto;display:block}
 </style>
 
 <div class="vfab" id="vfab" style="right:20px;bottom:96px">
@@ -1245,7 +1269,7 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
   </div>
   <div class="lu" aria-labelledby="lu-title">
     <div class="lu-head"><h3 id="lu-title">프로모션 제품, 자세히 보기.</h3><p>신학기 프로모션에 담긴 제품을 하나씩 살펴보세요.</p></div>
-    <ul class="lu-rail"><li><a class="lu-card" href="#p-pad"><p class="lu-eb">케이스·파우치 증정</p><h4>Relief pad</h4><p class="lu-t">손끝으로 읽는 모든 수업.</p><span class="lu-img"><img src="assets/relief-pad-hero-cut.webp" alt="" loading="lazy"></span><span class="lu-more">자세히 보기 ›</span></a></li><li><a class="lu-card" href="#p-mini"><p class="lu-eb">가볍게</p><h4>Relief pad mini</h4><p class="lu-t">작아도, 수업 자료는 그대로.</p><span class="lu-img"><img src="assets/relief-pad-gold-cut.webp" alt="" loading="lazy"></span><span class="lu-more">자세히 보기 ›</span></a></li><li><a class="lu-card" href="#p-folio"><p class="lu-eb">신학기 증정</p><h4>폴리오 케이스·파우치</h4><p class="lu-t">들고 다니는 동안 안전하게.</p><span class="lu-img"><img src="assets/relief-stand-cut.webp" alt="" loading="lazy"></span><span class="lu-more">자세히 보기 ›</span></a></li><li><a class="lu-card" href="#p-kbd"><p class="lu-eb">NEW</p><h4>점자 키보드 커버</h4><p class="lu-t">또각또각, 점자 입력.</p><span class="lu-img"><img src="assets/relief-kbd-cut.webp" alt="" loading="lazy"></span><span class="lu-more">자세히 보기 ›</span></a></li><li><a class="lu-card" href="#p-aid"><p class="lu-eb">ACCESS FOR ALL 증정</p><h4>청각 보조기기</h4><p class="lu-t">촉각 태블릿을 사면, 함께.</p><span class="lu-img lu-duo"><img src="assets/relief-pad-float-cut.webp" alt="" loading="lazy"><img class="lu-ear" src="assets/relief-aid-cut.webp" alt="" loading="lazy"></span><span class="lu-more">자세히 보기 ›</span></a></li></ul>
+    <ul class="lu-rail"><li><a class="lu-card" href="#p-pad"><p class="lu-eb">케이스·파우치 증정</p><h4>Relief pad</h4><p class="lu-t">손끝으로 읽는 모든 수업.</p><span class="lu-img"><img src="assets/relief-graph-cut.webp" alt="" loading="lazy"></span><span class="lu-more">자세히 보기 ›</span></a></li><li><a class="lu-card" href="#p-mini"><p class="lu-eb">가볍게</p><h4>Relief pad mini</h4><p class="lu-t">작아도, 수업 자료는 그대로.</p><span class="lu-img"><img src="assets/relief-pad-gold-cut.webp" alt="" loading="lazy"></span><span class="lu-more">자세히 보기 ›</span></a></li><li><a class="lu-card" href="#p-folio"><p class="lu-eb">신학기 증정</p><h4>폴리오 케이스·파우치</h4><p class="lu-t">들고 다니는 동안 안전하게.</p><span class="lu-img"><img src="assets/relief-pad-hero-cut.webp" alt="" loading="lazy"></span><span class="lu-more">자세히 보기 ›</span></a></li><li><a class="lu-card" href="#p-kbd"><p class="lu-eb">NEW</p><h4>점자 키보드 커버</h4><p class="lu-t">또각또각, 점자 입력.</p><span class="lu-img"><img src="assets/relief-kbd-cut.webp" alt="" loading="lazy"></span><span class="lu-more">자세히 보기 ›</span></a></li><li><a class="lu-card" href="#p-aid"><p class="lu-eb">ACCESS FOR ALL 증정</p><h4>청각 보조기기</h4><p class="lu-t">촉각 태블릿을 사면, 함께.</p><span class="lu-img lu-duo"><img src="assets/relief-pad-float-cut.webp" alt="" loading="lazy"><img class="lu-ear" src="assets/relief-aid-cut.webp" alt="" loading="lazy"></span><span class="lu-more">자세히 보기 ›</span></a></li></ul>
   </div>
   <div class="afa-row">
     <figure class="afa-fig"><img class="afa-ph" src="assets/relief-q-aid.jpg" loading="lazy" alt="보청기를 낀 학생이 캠퍼스에서 Relief pad의 점자를 읽습니다.">
@@ -1492,7 +1516,7 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
       g+=up?'<circle cx="'+(px+i*sw)+'" cy="'+(py+j*sh)+'" r="'+(r*1.12)+'" fill="url(#pu'+id+')" filter="url(#ds'+id+')"/>':'<circle cx="'+(px+i*sw)+'" cy="'+(py+j*sh)+'" r="'+(r*.9)+'" fill="url(#pd'+id+')"/>'}
     g+='<rect x="'+(x+6)+'" y="'+(y+6)+'" width="'+(W-12)+'" height="'+(H-12)+'" rx="'+(H*.11)+'" fill="url(#hl'+id+')"/>';
     return {defs:defs(id,col),g:g,id:id}}
-  function art(kind,col){var m={pad:"relief-pad-light",mini:"relief-pad-gold",overlay:"relief-layers",folio:"relief-stand",cloud:"relief-layers",kbd:"relief-kbd"};
+  function art(kind,col){var m={pad:"relief-pad-light",mini:"relief-pad-gold",overlay:"relief-graph",folio:"relief-pad-hero",cloud:"relief-layers",kbd:"relief-kbd",aid:"relief-aid"};
     return '<img class="art-cut" src="assets/'+(m[kind]||"relief-stand")+'-cut.webp" alt="" loading="lazy">';
   }
 
@@ -1557,7 +1581,7 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
     {id:"kbd",name:"점자 키보드 커버",type:"액세서리",compat:["pad"],price:189000,isNew:true,rank:4,art:"kbd",colors:[["차콜","#3A3F45"]]},
     {id:"folio",name:"휴대용 폴리오 케이스",type:"액세서리",compat:["pad","mini"],price:129000,isNew:true,rank:5,art:"folio",colors:[["스카이","#7FB0D6"],["미드나이트","#2C3A57"]]},
     {id:"overlay",name:"촉각 그래픽 오버레이 세트 (20매)",type:"액세서리",compat:["pad","mini"],price:79000,isNew:false,rank:6,art:"overlay",colors:[]},
-    {id:"aid",name:"청각 보조기기",type:"증정품",compat:["pad","mini"],price:0,hidden:true,gift:"ACCESS FOR ALL 증정",rank:9,art:"aid",colors:[["실버","#C8CCD2"]]}
+    {id:"aid",name:"청각 보조기기",type:"액세서리",compat:["pad","mini"],price:390000,isNew:true,gift:"ACCESS FOR ALL 기간 무료 증정",rank:7,art:"aid",colors:[["실버","#C8CCD2"]]}
   ];
   var compatName={pad:"Relief pad",mini:"Relief pad mini"};
 
@@ -1591,11 +1615,11 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
   var DETAIL={
     pad:{tag:"손끝으로 읽는 모든 수업.",g1:"톡톡톡톡.",g2:"손끝.",feats:[["bars","<b>576핀.</b> 그래프의 높낮이를 손끝 그대로."],["curve","<b>곡선까지.</b> 함수 그래프를 따라가며 좌표를 읽어 줍니다."],["map","<b>지도도.</b> 캠퍼스 길과 건물 윤곽을 손으로 익힙니다."],["braille","<b>점자 40칸.</b> 본문은 점자로, 동시에 음성으로."]],head:"촉각 디스플레이.<br><span>보지 않아도, 놓치지 않게.</span>"},
     mini:{tag:"작아도, 수업 자료는 그대로.",g1:"쏙.",g2:"가방 속으로.",feats:[["bars","<b>가볍게.</b> 한 손에 드는 크기로 강의실 이동이 편합니다."],["braille","<b>점자와 음성.</b> 핵심 기능은 Relief pad와 같습니다."],["curve","<b>그래프도.</b> 작은 화면에 맞춰 자동으로 다시 그립니다."]],head:"작은 촉각 디스플레이.<br><span>매일 들고 다니는 Relief.</span>"},
-    cloud:{tag:"기관의 촉각 자료를 한곳에서.",g1:"착착.",g2:"자동 변환.",feats:[["bars","<b>AI 변환.</b> PDF와 발표 자료 속 도표를 촉각 그래픽으로.","relief-layers"],["dash","<b>대여·반납 관리.</b> 기관 기기를 QR로 빌려주고 돌려받습니다.","relief-library-qr"],["braille","<b>교육 포함.</b> 유지보수와 교육까지 구독에 담았습니다.","relief-q-booth"]],head:"콘텐츠 관리 SaaS.<br><span>담당자의 시간을 돌려드립니다.</span>"},
+    cloud:{tag:"기관의 촉각 자료를 한곳에서.",g1:"착착.",g2:"자동 변환.",feats:[["bars","<b>AI 변환.</b> PDF와 발표 자료 속 도표를 촉각 그래픽으로.","relief-pad-silver"],["dash","<b>대여·반납 관리.</b> 기관 기기를 QR로 빌려주고 돌려받습니다.","relief-library-qr"],["braille","<b>교육 포함.</b> 유지보수와 교육까지 구독에 담았습니다.","relief-q-booth"]],head:"콘텐츠 관리 SaaS.<br><span>담당자의 시간을 돌려드립니다.</span>"},
     aid:{tag:"촉각 태블릿을 사면, 청각 보조기기까지.",g1:"ACCESS",g2:"FOR ALL.",feats:[["none","<b>하나의 구매로 더 넓게.</b> Relief pad와 청각 보조기기를 함께.","relief-p-aid"],["none","<b>귀에 걸면 바로.</b> 가볍게 거는 귀걸이형 디자인.","relief-aid-close"],["none","<b>한 강의실의 모든 학생에게.</b> 들리지 않아도 같은 수업을.","relief-q-aid"]],head:"청각 보조기기.<br><span>ACCESS FOR ALL 증정.</span>"},
     kbd:{tag:"점자 입력을 더 빠르게.",g1:"또각또각.",g2:"점자 입력.",feats:[["braille","<b>모든 키에 점자.</b> 자판 위치를 손끝으로 바로 찾습니다.","relief-kbd-keys"],["braille","<b>읽고, 바로 쓰기.</b> 촉각 화면과 키보드를 한 번에.","relief-kbd"],["braille","<b>쓴 글자는 바로 점자로.</b> 입력한 문장이 화면에 솟아오릅니다.","relief-kbd-screen"],["braille","<b>접으면 커버, 펴면 거치대.</b> 원하는 각도로 세워 씁니다.","relief-kbd-stand"]],head:"점자 키보드 커버.<br><span>Relief pad 전용.</span>"},
-    folio:{tag:"들고 다니는 동안 안전하게.",g1:"착.",g2:"보호와 거치.",feats:[["bars","<b>세워서도.</b> 덮개를 접으면 거치대가 됩니다.","relief-stand"],["bars","<b>가방 속에서도.</b> 단단한 커버가 촉각 화면을 지킵니다.","relief-bag"]],head:"휴대용 폴리오 케이스.<br><span>Relief pad, mini 공용.</span>"},
-    overlay:{tag:"종이 위에서도 촉각으로.",g1:"오돌토돌.",g2:"촉각 그래픽.",feats:[["curve","<b>20매 세트.</b> 시험지와 과제에 겹쳐 씁니다.","relief-layers"],["curve","<b>손끝으로 겹쳐 읽기.</b> 화면 위에 올려 도형과 그래프를 또렷하게.","relief-close"]],head:"촉각 그래픽 오버레이.<br><span>니어 팩 구성품.</span>"},
+    folio:{tag:"들고 다니는 동안 안전하게.",g1:"착.",g2:"보호와 거치.",feats:[["bars","<b>세워서도.</b> 덮개를 접으면 거치대가 됩니다.","relief-pad-touch"],["bars","<b>들고 다녀도.</b> 단단한 커버가 촉각 화면을 지킵니다.","relief-pad-hero"]],head:"휴대용 폴리오 케이스.<br><span>Relief pad, mini 공용.</span>"},
+    overlay:{tag:"종이 위에서도 촉각으로.",g1:"오돌토돌.",g2:"촉각 그래픽.",feats:[["curve","<b>20매 세트.</b> 시험지와 과제에 겹쳐 씁니다.","relief-graph"],["curve","<b>손끝으로 겹쳐 읽기.</b> 화면 위에 올려 도형과 그래프를 또렷하게.","relief-pad-light"]],head:"촉각 그래픽 오버레이.<br><span>니어 팩 구성품.</span>"},
     dock:{tag:"책상 위 정리와 충전을 한 번에.",g1:"딸깍.",g2:"충전 완료.",feats:[["bars","<b>세워서 충전.</b> 거치한 채로 수업 자료를 확인합니다."]],head:"충전 거치대.<br><span>Relief pad, mini 공용.</span>"}
   };
   var SPEC=[
@@ -1616,20 +1640,22 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
   var PH={bars:"relief-graph",curve:"relief-stand",map:"relief-pad-silver",braille:"relief-pad-light",dash:"relief-pad-gray",none:"relief-pad-float"};
   function frameHTML(pat,label,img){return '<div class="frame ph"><img src="assets/'+(img||PH[pat]||"relief-pad-silver")+'.jpg" alt="" loading="lazy"></div>'}
   var DASH='<div class="kf-dash" aria-hidden="true"><div class="kfd-bar"><b>R</b>Relief Cloud</div><div class="kfd-body"><div class="kfd-st"><div><small>이번 달 변환</small><b>128</b></div><div><small>대여 중</small><b>24대</b></div><div><small>평균 처리</small><b>9.6분</b></div></div><ul class="kfd-ls"><li><span class="c1"></span>통계학 3주차.pdf<em class="ok">완료</em></li><li><span class="c2"></span>Relief pad 대여 · 김○○<em class="run">대여 중</em></li><li><span class="c1"></span>미시경제 6장 그래프<em class="run">변환 중</em></li></ul></div></div>';
+  function CV(){var pins="";for(var y=0;y<9;y++)for(var x=0;x<16;x++){var cy=4-Math.round(Math.sin(x/15*Math.PI*1.6)*3);pins+='<i'+(y===cy||(y===8)||(x===0)?' class="up"':'')+'></i>'}
+    return '<div class="cv" aria-hidden="true"><div class="cv-doc"><span class="cv-tag">PDF</span><b>통계학 3주차.pdf</b><small>그래프 4개 · 12쪽</small><svg viewBox="0 0 160 90"><path d="M8 82H152M8 82V8" stroke="#8e8e93" stroke-width="1.5" fill="none"/><path d="M10 50C40 10 60 12 80 45S125 85 150 30" stroke="#0a84ff" stroke-width="3" fill="none" stroke-linecap="round"/></svg></div><div class="cv-arr"><span>AI 촉각 변환</span><b>9.6분</b></div><div class="cv-pins">'+pins+'</div></div>'}
   var ACC={
     pad:{cut:"relief-pad-hero-cut",noPrice:true,sec:[
       {h:"576개의 핀.",s:"그래프가 손끝에서 솟아오릅니다.",img:"relief-graph",alt:"촉각 그래프가 솟아오른 Relief pad.",p:"<b>R2 촉각 엔진.</b> 핀 하나하나가 0.2초 만에 오르내리며 함수 곡선과 막대그래프를 그대로 그립니다."},
       {h:"읽는 대로, 들립니다.",s:"점자 40칸과 음성을 동시에.",img:"relief-finger",alt:"손끝으로 점자를 읽는 모습.",p:"<b>손끝이 닿은 곳을 바로 읽어 줍니다.</b> 본문은 점자로, 그래프 값은 음성으로 함께 확인합니다."},
-      {two:[["relief-hand","손에 든 얇은 Relief pad.","<b>두께 9mm, 690g.</b> 강의실 가방에 그대로 들어갑니다."],["relief-corner","무광 표면 위의 점자 핀.","<b>눈부심 없는 무광 표면.</b> 저시력 학생도 편하게 봅니다."]]},
+      {two:[["relief-pad-float","옆에서 본 얇은 Relief pad.","<b>두께 9mm, 690g.</b> 강의실 가방에 그대로 들어갑니다."],["relief-pad-silver","무광 표면 위의 점자 핀.","<b>눈부심 없는 무광 표면.</b> 저시력 학생도 편하게 봅니다."]]},
       {h:"책상 위의 강의실.",s:"수업 전에 먼저 읽고, 수업 중엔 함께 따라가고.",img:"relief-desk",alt:"책상 위 Relief pad의 그래프를 손끝으로 읽는 모습.",p:"<b>하루 종일 12시간.</b> 저전력 구동부 덕분에 충전 걱정 없이 수업을 듣습니다."}],
       spec:[["디스플레이","촉각 핀 576개 (32×18) · 핀 높이 3단계"],["점자·음성","점자 셀 40칸 · 동시 음성 출력"],["엔진","R2 촉각 엔진 · 핀 반응 0.2초"],["크기·무게","두께 9mm · 690g"],["배터리","최대 12시간 · USB‑C 충전"],["가격","개인 ₩1,990,000 · 교육기관 ₩1,790,000/대 · 공공기관 ₩1,590,000/대 (5대 이상)"]]},
     mini:{cut:"relief-pad-gold-cut",noPrice:true,sec:[
       {h:"한 손에 쏙.",s:"420g, 매일 들고 다니는 Relief.",img:"relief-q-carry",alt:"Relief pad mini를 한 손에 들고 점자를 읽는 학생.",p:"<b>강의실에서 도서관까지.</b> 한 손으로 들고 걸으며 점자를 읽습니다."},
-      {h:"가방 속으로.",s:"작아져도, 수업 자료는 그대로.",img:"relief-bag",alt:"가방에서 꺼내는 Relief pad mini.",p:"<b>336개의 핀과 점자 20칸.</b> 작은 화면에 맞춰 그래프를 자동으로 다시 그립니다."},
-      {two:[["relief-pad-gold","스타라이트 색상의 Relief pad mini.","<b>두 가지 색.</b> 스페이스 그레이와 스타라이트."],["relief-side","옆에서 본 얇은 Relief pad mini.","<b>최대 10시간.</b> 하루 수업을 충전 없이 버팁니다."]]}],
+      {h:"작아져도, 그대로.",s:"수업 자료는 하나도 줄지 않게.",img:"relief-pad-tilt",alt:"비스듬히 놓인 Relief pad mini.",p:"<b>336개의 핀과 점자 20칸.</b> 작은 화면에 맞춰 그래프를 자동으로 다시 그립니다."},
+      {two:[["relief-pad-gold","스타라이트 색상의 Relief pad mini.","<b>두 가지 색.</b> 스페이스 그레이와 스타라이트."],["relief-pad-gray","스페이스 그레이 Relief pad mini.","<b>최대 10시간.</b> 하루 수업을 충전 없이 버팁니다."]]}],
       spec:[["디스플레이","촉각 핀 336개 (24×14) · 핀 높이 2단계"],["점자·음성","점자 셀 20칸 · 동시 음성 출력"],["엔진","R1 촉각 엔진 · 핀 반응 0.3초"],["무게","420g"],["배터리","최대 10시간 · USB‑C 충전"],["가격","₩1,490,000부터"]]},
-    cloud:{cut:"relief-graph-cut",noPrice:true,sec:[
-      {h:"PDF 한 장이, 촉각 자료로.",s:"AI가 그래프를 일으켜 세웁니다.",img:"relief-layers",alt:"촉각 그래픽 레이어로 바뀌는 강의 자료.",p:"<b>AI 일괄 변환.</b> 강의 PDF와 발표 자료 속 도표를 평균 10분 만에 촉각 그래픽과 점자 파일로 바꿉니다."},
+    cloud:{nocut:true,noPrice:true,sec:[
+      {h:"PDF 한 장이, 촉각 자료로.",s:"AI가 그래프를 일으켜 세웁니다.",cv:true,p:"<b>AI 일괄 변환.</b> 강의 PDF와 발표 자료 속 도표를 평균 10분 만에 촉각 그래픽과 점자 파일로 바꿉니다."},
       {h:"한 화면에서 관리.",s:"변환 요청, 기기 대여, 학생별 지원.",dash:true,p:"<b>담당자를 위한 대시보드.</b> 이번 달 변환 건수와 대여 현황을 웹 브라우저에서 바로 확인합니다."},
       {two:[["relief-library-qr","도서관 대여 데스크의 Relief pad와 QR.","<b>대여·반납 기록.</b> 기관 기기를 QR로 빌려주고 돌려받습니다."],["relief-q-booth","현장에서 Relief를 써 보는 학생.","<b>교육과 유지보수 포함.</b> 담당자와 이용자 교육까지 구독에 담았습니다."]]}],
       spec:[["관리","기관 전체 학생 · 기기 대여·반납 기록 · 학생별 지원 내역"],["변환","AI 일괄 변환 · 강의 PDF·발표 자료 · 점자 파일 생성"],["속도","요청 후 평균 10분"],["이용","웹 브라우저 · 연간 구독 · 교육·유지보수 포함"],["요금","교육기관 ₩59,000/월 · 공공기관 ₩199,000/월"]]},
@@ -1637,30 +1663,30 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
       {h:"ACCESS FOR ALL.",s:"촉각 태블릿을 사면, 청각 보조기기까지.",img:"relief-p-aid",alt:"강의실 책상 위 Relief pad와 청각 보조기기.",p:"<b>하나의 구매로 더 넓어지는 접근성.</b> 신학기에 Relief pad를 도입하는 기관에 청각 보조기기를 함께 드립니다."},
       {h:"귀에 걸면, 바로.",s:"가볍고 편안한 귀걸이형.",img:"relief-aid-close",alt:"책상 위에 놓인 귀걸이형 청각 보조기기.",p:"<b>하루 종일 착용해도 편안하게.</b> 투명 튜브와 부드러운 이어팁으로 귀에 부담이 적습니다."},
       {h:"한 강의실의 모든 학생에게.",s:"보이지 않아도, 들리지 않아도.",img:"relief-q-aid",alt:"청각 보조기기를 낀 학생이 Relief pad를 읽습니다.",p:"<b>시각장애 학생뿐 아니라.</b> 한 기관 안의 청각장애 학생도 같은 수업을 함께 듣습니다."}],
-      spec:[["구성","귀걸이형 청각 보조기기 1세트 · 충전 케이스"],["대상","ACCESS FOR ALL 기간 Relief pad 구매 기관"],["혜택","Relief pad 구매 시 무료 증정"]]},
+      spec:[["구성","귀걸이형 청각 보조기기 1세트 · 충전 케이스"],["단품 가격","₩390,000"],["혜택","ACCESS FOR ALL 기간 Relief pad 구매 시 무료 증정"]]},
     kbd:{cut:"relief-kbd-cut",sec:[
       {h:"읽고, 바로 씁니다.",s:"화면은 점자로, 손은 키보드 위에.",img:"relief-kbd",alt:"Relief pad에 연결한 점자 키보드 커버.",p:"<b>붙이는 순간 노트북처럼.</b> 촉각 화면으로 강의 자료를 읽으면서 과제와 메모를 바로 입력합니다."},
       {h:"모든 키에 점자.",s:"보지 않아도 키를 찾습니다.",img:"relief-kbd-keys",cls:"pvp-pano",alt:"키마다 점자가 새겨진 키보드 자판.",p:"<b>키마다 새긴 점자 표기.</b> 자판 위치를 손끝으로 바로 확인하고, 6점 점자 입력 모드로 바꾸면 점자로도 씁니다."},
       {two:[["relief-kbd-screen","입력한 문장이 점자로 솟아오른 화면.","<b>쓴 글자는 바로 점자로.</b> 입력한 문장이 화면에 점자로 솟아올라 손끝으로 다시 확인합니다."],["relief-kbd-stand","접어서 거치대가 된 키보드 커버.","<b>접으면 커버, 펴면 거치대.</b> 원하는 각도로 세워 오래 써도 편안합니다."]]}],
       spec:[["키","점자 표기 풀사이즈 키 · 6점 점자 입력 모드"],["연결","자석 커넥터 · 충전과 페어링 필요 없음"],["무게","약 380g"]]},
     folio:{sec:[
-      {h:"착 감싸고, 세워 쓰고.",s:"덮개를 접으면 바로 거치대.",img:"relief-stand",alt:"폴리오 케이스로 세운 Relief pad.",p:"<b>두 가지 각도.</b> 읽을 때는 낮게, 들을 때는 세워서 씁니다."},
-      {h:"가방 속에서도 안전하게.",s:"촉각 화면을 지키는 단단한 커버.",img:"relief-bag",alt:"가방에서 꺼내는 Relief pad.",p:"<b>핀을 누르지 않는 설계.</b> 덮개 안쪽을 띄워 핀 디스플레이가 눌리지 않습니다."}],
+      {h:"착 감싸고, 세워 쓰고.",s:"덮개를 접으면 바로 거치대.",img:"relief-pad-touch",alt:"폴리오 케이스로 세운 Relief pad.",p:"<b>두 가지 각도.</b> 읽을 때는 낮게, 들을 때는 세워서 씁니다."},
+      {h:"들고 다녀도 안전하게.",s:"촉각 화면을 지키는 단단한 커버.",img:"relief-pad-hero",alt:"폴리오 케이스를 씌운 Relief pad.",p:"<b>핀을 누르지 않는 설계.</b> 덮개 안쪽을 띄워 핀 디스플레이가 눌리지 않습니다."}],
       spec:[["소재","부드러운 안감 · 생활 방수 외피"],["무게","약 260g"]]},
     overlay:{sec:[
-      {h:"종이 위에서도 촉각으로.",s:"시험지와 과제에 겹쳐 씁니다.",img:"relief-layers",alt:"겹쳐진 촉각 그래픽 오버레이 시트.",p:"<b>20매 세트.</b> 도형과 그래프를 볼록하게 찍어 낸 투명 시트입니다."},
-      {h:"화면 위에 한 장 더.",s:"핀 그래픽에 질감을 더합니다.",img:"relief-close",alt:"Relief pad 화면의 촉각 점자.",p:"<b>지우고 다시 쓰는 시트.</b> 수업마다 새 도형을 올려 손끝으로 비교합니다."}],
+      {h:"종이 위에서도 촉각으로.",s:"시험지와 과제에 겹쳐 씁니다.",img:"relief-graph",alt:"겹쳐진 촉각 그래픽 오버레이 시트.",p:"<b>20매 세트.</b> 도형과 그래프를 볼록하게 찍어 낸 투명 시트입니다."},
+      {h:"화면 위에 한 장 더.",s:"핀 그래픽에 질감을 더합니다.",img:"relief-pad-light",alt:"Relief pad 화면의 촉각 점자.",p:"<b>지우고 다시 쓰는 시트.</b> 수업마다 새 도형을 올려 손끝으로 비교합니다."}],
       spec:[["구성","투명 촉각 시트 20매"],["크기","A4 · Relief pad 화면 크기"]]}
   };
   function accHTML(p){var a=ACC[p.id]||{sec:[],spec:[]};var cp={pad:"Relief pad",mini:"Relief pad mini"};
     var secs=a.sec.map(function(x){if(x.two)return '<section class="pvp-s pvp-rv"><div class="pvp-two">'+x.two.map(function(t){return '<div><figure><img src="assets/'+t[0]+'.jpg" alt="'+t[1]+'" loading="lazy"></figure><p class="pvp-p sm">'+t[2]+'</p></div>'}).join("")+'</div></section>';
-      return '<section class="pvp-s pvp-rv"><h2 class="pvp-h">'+x.h+'<br><span>'+x.s+'</span></h2>'+(x.dash?'<div class="pvp-wide pvp-dashbox">'+DASH+'</div>':'<figure class="pvp-wide '+(x.cls||"")+'"><img src="assets/'+x.img+'.jpg" alt="'+x.alt+'" loading="lazy"></figure>')+'<p class="pvp-p">'+x.p+'</p></section>'}).join("");
+      return '<section class="pvp-s pvp-rv"><h2 class="pvp-h">'+x.h+'<br><span>'+x.s+'</span></h2>'+(x.cv?'<div class="pvp-wide pvp-dashbox dk">'+CV()+'</div>':x.dash?'<div class="pvp-wide pvp-dashbox dk">'+DASH+'</div>':'<figure class="pvp-wide '+(x.cls||"")+'"><img src="assets/'+x.img+'.jpg" alt="'+x.alt+'" loading="lazy"></figure>')+'<p class="pvp-p">'+x.p+'</p></section>'}).join("");
     var rows=[["호환",p.compat.map(function(c){return cp[c]||c}).join(", ")]].concat(a.spec).concat(p.colors.length?[["색상",p.colors.map(function(c){return c[0]}).join(", ")]]:[]).concat(a.noPrice?[]:[["가격",wonP(p)]]);
     return '<div class="pvp" aria-label="'+p.name+' 자세히 보기">'+secs+
-      '<section class="pvp-s pvp-rv acc-spec"><h2 class="pvp-h">'+p.name.replace(" 기관 구독","")+'.<br><span>한눈에 보기.</span></h2>'+(a.duo?'<div class="acc-duo"><img class="acc-cut" src="assets/relief-pad-float-cut.webp" alt="" loading="lazy"><img class="acc-ear" src="assets/relief-aid-cut.webp" alt="" loading="lazy"></div>':'<img class="acc-cut" src="assets/'+(a.cut||(p.id==="folio"?"relief-stand-cut":"relief-layers-cut"))+'.webp" alt="" loading="lazy">')+'<dl class="acc-dl">'+rows.map(function(r){return '<div><dt>'+r[0]+'</dt><dd>'+r[1]+'</dd></div>'}).join("")+'</dl><div class="pvp-cta"><a class="buy" href="#contact" data-buy="'+p.name+'">'+(p.gift?'도입 상담 신청':p.id==="cloud"||p.id==="pad"?'도입 상담 · 구입하기':'구입하기')+'</a>'+(p.id==="pad"?'<a class="pvp-lk" href="#p-mini">Relief pad mini 알아보기 ›</a>':'<a class="pvp-lk" href="#p-pad">Relief pad 알아보기 ›</a>')+'</div><p class="acc-note">사양과 가격은 기획안 예시입니다.</p></section></div>'}
+      '<section class="pvp-s pvp-rv acc-spec"><h2 class="pvp-h">'+p.name.replace(" 기관 구독","")+'.<br><span>한눈에 보기.</span></h2>'+(a.nocut?'':a.duo?'<div class="acc-duo"><img class="acc-cut" src="assets/relief-pad-float-cut.webp" alt="" loading="lazy"><img class="acc-ear" src="assets/relief-aid-cut.webp" alt="" loading="lazy"></div>':'<img class="acc-cut" src="assets/'+(a.cut||(p.id==="folio"?"relief-pad-hero-cut":"relief-graph-cut"))+'.webp" alt="" loading="lazy">')+'<dl class="acc-dl">'+rows.map(function(r){return '<div><dt>'+r[0]+'</dt><dd>'+r[1]+'</dd></div>'}).join("")+'</dl><div class="pvp-cta"><a class="buy" href="#contact" data-buy="'+p.name+'">'+(p.gift?'도입 상담 신청':p.id==="cloud"||p.id==="pad"?'도입 상담 · 구입하기':'구입하기')+'</a>'+(p.id==="pad"?'<a class="pvp-lk" href="#p-mini">Relief pad mini 알아보기 ›</a>':'<a class="pvp-lk" href="#p-pad">Relief pad 알아보기 ›</a>')+'</div><p class="acc-note">사양과 가격은 기획안 예시입니다.</p></section></div>'}
   function renderPV(p){
     pvCur=p;pv.classList.toggle("pv-acc",true);var d=DETAIL[p.id],isPad=p.id==="pad"||p.id==="mini",isAcc=true,others=["pad","mini","cloud"];
-    var cut=function(n){return '<img class="cut" src="assets/'+n+'-cut.webp" alt="">'};var hero=isPad?'<div class="trio" aria-hidden="true"><div class="tri l">'+cut("relief-pad-gray")+'</div><div class="tri c">'+cut(p.id==="mini"?"relief-pad-gold":"relief-graph")+'</div><div class="tri r">'+cut("relief-pad-hero")+'</div></div>':p.id==="aid"?'<div class="flat svg-art aid-duo" aria-hidden="true"><img class="art-cut" src="assets/relief-pad-float-cut.webp" alt=""><img class="aid-ear" src="assets/relief-aid-cut.webp" alt=""></div>':'<div class="flat svg-art" aria-hidden="true">'+art(p.art,p.colors[0]&&p.colors[0][1])+'</div>';
+    var cut=function(n){return '<img class="cut" src="assets/'+n+'-cut.webp" alt="">'};var hero=isPad?'<div class="trio" aria-hidden="true"><div class="tri l">'+cut("relief-pad-gray")+'</div><div class="tri c">'+cut(p.id==="mini"?"relief-pad-gold":"relief-graph")+'</div><div class="tri r">'+cut("relief-pad-hero")+'</div></div>':p.id==="cloud"?'<div class="flat cloud-hero" aria-hidden="true"><div class="pvp-dashbox dk">'+CV()+'</div></div>':p.id==="aid"?'<div class="flat svg-art aid-duo" aria-hidden="true"><img class="art-cut" src="assets/relief-pad-float-cut.webp" alt=""><img class="aid-ear" src="assets/relief-aid-cut.webp" alt=""></div>':'<div class="flat svg-art" aria-hidden="true">'+art(p.art,p.colors[0]&&p.colors[0][1])+'</div>';
     var slides=d.feats.map(function(f,i){return '<div class="pv-slide" role="group" aria-roledescription="슬라이드" aria-label="'+(i+1)+' / '+d.feats.length+'"><div aria-hidden="true" style="width:100%;display:flex;justify-content:center">'+frameHTML(f[0],f[0].toUpperCase()+" MODE",f[2])+'</div><p>'+f[1]+'</p></div>'}).join("");
     var dots=d.feats.length>1?'<div class="pv-ctrl"><div class="pv-dots" id="pv-dots" role="group" aria-label="슬라이드 선택">'+d.feats.map(function(f,i){return '<button type="button" aria-label="'+(i+1)+'번째 기능 보기"></button>'}).join("")+'</div><button class="pv-play" type="button" id="pv-play" aria-label="자동 넘김 일시정지">'+PAUSE.replace('viewBox','aria-hidden="true" viewBox')+'</button></div>':'';
     var models=others.map(function(id){var m=products.filter(function(x){return x.id===id})[0],dd=DETAIL[id],me=id===p.id;
