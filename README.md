@@ -26,7 +26,8 @@
 | v20 | [/versions/v20/](https://service-marketing-03.github.io/versions/v20/) | 음성으로 듣기 버튼 섹션마다 다시 표시, 새 캠퍼스 사진 6장, 프로모션 카드를 애플 교육 카드 비율(4:5, 사진 60%)로, 스토어 5대·대여·개인 타일을 실사 사진으로 |
 | v21 | [/versions/v21/](https://service-marketing-03.github.io/versions/v21/) | 스토어 타일 6장 모두 흰 카드+아래 사진, 주황 라벨 제거, 프로모션 1·2번째 카드 이전 사진으로, 핵심 기능 3번째 사진 교체 |
 | v22 | [/versions/v22/](https://service-marketing-03.github.io/versions/v22/) | 스토어(기관 할인) 카드 6장을 이전 모양(색 배경·기기 컷·×5·달력·앱 배지)으로 되돌리고 주황 라벨만 제거 |
-| v30 (현재) | [/versions/v30/](https://service-marketing-03.github.io/versions/v30/) | 흐린 저해상도 사진 교체, 클라우드 상세를 검정 배경 화면 이미지로, 혜택 카드 깨짐 수정, 액세서리에 청각 보조기기 추가 |
+| v31 (현재) | [/versions/v31/](https://service-marketing-03.github.io/versions/v31/) | 폴리오 케이스 사진을 이전 것으로 되돌리고 선명하게 키움 |
+| v30 | [/versions/v30/](https://service-marketing-03.github.io/versions/v30/) | 흐린 저해상도 사진 교체, 클라우드 상세를 검정 배경 화면 이미지로, 혜택 카드 깨짐 수정, 액세서리에 청각 보조기기 추가 |
 | v29 | [/versions/v29/](https://service-marketing-03.github.io/versions/v29/) | 패드·미니·클라우드 상세도 키보드 페이지 방식으로, 청각 보조기기 상세 추가, 프로모션 아래 제품 상세 줄 |
 | v28 | [/versions/v28/](https://service-marketing-03.github.io/versions/v28/) | 액세서리(점자 키보드·폴리오 케이스·오버레이) 상세 페이지를 제품 위주 내용으로 교체 |
 | v27 | [/versions/v27/](https://service-marketing-03.github.io/versions/v27/) | 모바일 프로모션 카드에서 사진이 글자를 가리던 문제 수정, 모바일 카드 세로 확대 |
