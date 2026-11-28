@@ -1088,6 +1088,83 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
 .vs li{font-size:13px;padding:.45rem .8rem;border-radius:999px;background:#e8e8ed;color:#6e6e73;text-decoration:line-through;text-decoration-color:rgba(110,110,115,.5)}
 .vs li.me{background:#0071e3;color:#fff;text-decoration:none;font-weight:600}
 :root[data-contrast="high"] .vs li{background:#000;color:#fff;border:1px solid #fff}
+
+/* v34: Korean shop-style detail content, Apple look */
+.pvp-pt{margin:0 0 14px;font-size:13px;font-weight:700;letter-spacing:.12em;color:#2997ff}
+.sp-pain-l{list-style:none;margin:0 auto;padding:0;max-width:880px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sp-pain-l li{background:#1c1c1e;border-radius:22px;padding:28px 24px;font-size:19px;font-weight:600;line-height:1.45;color:#f5f5f7;text-align:left;letter-spacing:-.01em}
+.sp-arrow{margin:40px 0 0;font-size:clamp(22px,3vw,34px);font-weight:700;color:#86868b;letter-spacing:-.02em}.sp-arrow b{color:#f5f5f7}
+.sp-rev{list-style:none;margin:0 auto;padding:0;max-width:1080px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:left}
+.sp-rev li{background:#1c1c1e;border-radius:22px;padding:28px 24px}
+.sp-rev .st{margin:0;color:#ff9f0a;letter-spacing:2px;font-size:15px}
+.sp-rev .q{margin:14px 0 18px;font-size:20px;font-weight:700;line-height:1.4;color:#f5f5f7;letter-spacing:-.015em}
+.sp-rev .who{margin:0;font-size:14px;color:#86868b}
+.sp-note{margin:18px 0 0;font-size:12px;color:#6e6e73}
+.sp-deal{max-width:720px;margin:0 auto;background:#fff;color:#1d1d1f;border-radius:32px;padding:clamp(32px,5vw,56px) clamp(22px,5vw,56px);text-align:center}
+.sp-dl{display:inline-block;margin:0;padding:.35rem .9rem;border-radius:999px;background:#1d1d1f;color:#fff;font-size:13px;font-weight:700}
+.sp-deal h2{margin:16px 0 0;font-size:clamp(24px,3vw,32px);letter-spacing:-.02em}
+.sp-price{display:flex;align-items:baseline;justify-content:center;gap:14px;flex-wrap:wrap;margin:22px 0 0}
+.sp-price .pct{font-size:clamp(40px,6vw,64px);font-weight:800;color:#0071e3;letter-spacing:-.03em}
+.sp-price s{color:#86868b;font-size:18px}
+.sp-price strong{font-size:clamp(34px,5vw,52px);font-weight:800;letter-spacing:-.03em}.sp-price small{font-size:18px;font-weight:600;margin-left:2px}
+.sp-dnote{margin:8px 0 0;color:#6e6e73;font-size:14px}
+.sp-gift{list-style:none;margin:26px auto 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.sp-gift li{background:#f5f5f7;border-radius:999px;padding:.55rem 1rem;font-size:15px;font-weight:600}
+.sp-gift li::before{content:"✓ ";color:#0071e3}
+.sp-period{margin:22px 0 0;color:#6e6e73;font-size:13px}
+.sp-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.sp-cta .buy{background:#0071e3;color:#fff;border-radius:999px;padding:.9rem 1.8rem;font-size:17px;text-decoration:none;font-weight:600}
+.sp-ghost{border:1.5px solid #0071e3;color:#0071e3;border-radius:999px;padding:.85rem 1.6rem;font-size:17px;text-decoration:none;font-weight:600}
+.sp-box{list-style:none;margin:0 auto;padding:0;max-width:880px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.sp-box li{display:flex;align-items:center;gap:12px;background:#1c1c1e;border-radius:18px;padding:18px 22px;font-size:17px;color:#f5f5f7}
+.sp-box span{width:28px;height:28px;border-radius:50%;background:#2c2c2e;display:grid;place-items:center;font-size:13px;color:#86868b}
+.sp-how{list-style:none;margin:0 auto;padding:0;max-width:1080px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:left;counter-reset:s}
+.sp-how li{background:#1c1c1e;border-radius:22px;padding:28px 24px}
+.sp-how b{font-size:12px;letter-spacing:.12em;color:#2997ff}
+.sp-how h3{margin:10px 0 8px;font-size:22px;color:#f5f5f7;letter-spacing:-.015em}
+.sp-how p{margin:0;color:#a1a1a6;font-size:16px;line-height:1.5}
+.sp-faq{max-width:760px;margin:0 auto;text-align:left}
+.sp-faq details{border-bottom:1px solid #333;padding:20px 4px}
+.sp-faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:1rem;font-size:18px;font-weight:600;color:#f5f5f7}
+.sp-faq summary::-webkit-details-marker{display:none}
+.sp-faq summary::after{content:"+";font-size:24px;line-height:1;color:#86868b;transition:transform .3s}
+.sp-faq details[open] summary::after{transform:rotate(45deg)}
+.sp-faq details p{margin:12px 0 0;color:#a1a1a6;font-size:16px;line-height:1.6;animation:faqIn .4s ease}
+.sp-bar{position:fixed;z-index:60;left:50%;transform:translateX(-50%);bottom:16px;width:min(640px,calc(100% - 120px));display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 10px 10px 22px;border-radius:999px;background:rgba(28,28,30,.82);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);box-shadow:0 10px 30px rgba(0,0,0,.35),inset 0 0 0 1px rgba(255,255,255,.1)}
+.sp-bar-t{display:flex;flex-direction:column;min-width:0}.sp-bar-t b{color:#f5f5f7;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sp-bar-t span{color:#a1a1a6;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sp-bar .buy{flex:none;background:#0071e3;color:#fff;border-radius:999px;padding:.7rem 1.3rem;font-size:15px;font-weight:600;text-decoration:none}
+.pv{padding-bottom:90px}
+@media (max-width:760px){.sp-pain-l,.sp-rev,.sp-how{grid-template-columns:1fr}.sp-pain-l li,.sp-rev .q{font-size:17px}.sp-bar{left:16px;right:96px;width:auto;transform:none}.sp-box li{font-size:15px;padding:14px 16px}}
+:root[data-contrast="high"] .sp-pain-l li,:root[data-contrast="high"] .sp-rev li,:root[data-contrast="high"] .sp-how li,:root[data-contrast="high"] .sp-box li{border:2px solid #fff}
+
+/* v34: access section, Apple look */
+.access{background:var(--bg)}
+.access .head{text-align:center;margin-inline:auto;max-width:760px}.access .head .sub{margin-inline:auto}
+.access .acc-grid{gap:20px;margin:56px 0 72px}
+.access .acc-card{background:var(--surface);border-radius:28px;padding:36px 28px 32px;gap:10px;box-shadow:0 2px 12px rgba(0,0,0,.04);transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+@media (hover:hover){.access .acc-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -16px rgba(0,0,0,.18)}}
+.access .acc-card .ico{width:44px;height:44px;margin-bottom:14px}
+.access .acc-card .ico [stroke]{stroke:#0071e3}.access .acc-card .ico [fill="var(--ink)"],.access .acc-card .ico g{fill:#0071e3}.access .acc-card .ico text{fill:#0071e3}
+.access .acc-card h3{font-size:21px;letter-spacing:-.02em}
+.access .acc-card p{font-size:15px;line-height:1.55;color:var(--muted)}
+.access .split{grid-template-columns:1fr 1.35fr;gap:56px;align-items:center}
+.acc-ttl{font-size:clamp(28px,3.4vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1.15}
+.access .split .lead{font-size:17px;line-height:1.6}
+#acc-form{border:0;border-radius:28px;padding:36px;gap:18px 16px;box-shadow:0 2px 12px rgba(0,0,0,.04)}
+#acc-form .field label,#acc-form .field legend{font-size:13px;font-weight:600;color:var(--muted)}
+#acc-form .field input,#acc-form .field select{border:1.5px solid transparent;background:var(--bg);border-radius:12px;min-height:50px;padding:.75rem 1rem;font-size:16px;transition:border-color .2s,box-shadow .2s}
+#acc-form .field input:focus,#acc-form .field select:focus{outline:0;border-color:#0071e3;box-shadow:0 0 0 4px rgba(0,113,227,.15)}
+#acc-form .checks{gap:8px;margin-top:6px}
+#acc-form .checks label{position:relative;padding:.6rem 1.05rem;border-radius:999px;background:var(--bg);border:1.5px solid transparent;font-size:15px;font-weight:500;color:var(--ink);cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+#acc-form .checks input{position:absolute;opacity:0;width:1px;height:1px}
+#acc-form .checks label:has(input:checked){background:rgba(0,113,227,.1);border-color:#0071e3;color:#0071e3;font-weight:600}
+#acc-form .checks label:has(input:checked)::before{content:"✓";margin-right:2px}
+#acc-form .checks label:has(input:focus-visible){box-shadow:0 0 0 4px rgba(0,113,227,.3)}
+#acc-form .btn{width:100%;min-height:52px;border-radius:999px;background:#0071e3;font-size:17px;font-weight:600;justify-content:center}
+#acc-form .btn:hover{background:#0077ed}
+@media (max-width:860px){.access .split{grid-template-columns:1fr;gap:28px}.access .split>div:first-child{text-align:center}#acc-form{padding:24px 20px}}
+@media (max-width:560px){.access .acc-grid{grid-template-columns:1fr 1fr;gap:12px;margin:36px 0 48px}.access .acc-card{padding:22px 18px;border-radius:22px}.access .acc-card h3{font-size:16px}.access .acc-card p{font-size:13px}.access .acc-card .ico{width:34px;height:34px;margin-bottom:6px}}
+:root[data-contrast="high"] #acc-form .checks label{border-color:currentColor}
 </style>
 
 <div class="vfab" id="vfab" style="right:20px;bottom:96px">
@@ -1212,30 +1289,24 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
 
 <section class="sec story" id="promo" aria-labelledby="promo-title">
   <div class="wrap">
-    <div class="head"><p class="k-eyebrow">Relief 홍보물</p><h2 class="big" id="promo-title">손끝에서 일어서는 수업.</h2><p class="sub">기존 보조기기는 각자 한 가지를 잘합니다. Relief는 대학생의 수업 자료 읽기 하나에 집중합니다.</p>
+    <div class="head"><p class="k-eyebrow">Relief 홍보물</p><h2 class="big" id="promo-title">손끝에서 일어서는 수업.</h2><p class="sub">AI가 강의 자료를 촉각으로 바꾸고, 기관이 도입해 학생이 씁니다.</p>
       <button class="listen" type="button" data-listen="promo" aria-pressed="false"><span class="ll">음성으로 듣기</span><span class="ldots" aria-hidden="true"></span><span class="lc" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 2.8l8.2 5.2L5 13.2z" fill="currentColor"/></svg></span></button></div>
     <div class="scrolly" id="scrolly">
       <div class="stage-col">
         <div class="stage" aria-hidden="true">
           <div class="tilt3d" id="t3d">
-            <div class="st-ph"><img class="on" src="assets/relief-pad-float.jpg" alt=""><img src="assets/relief-graph.jpg" alt=""><img src="assets/relief-q-carry.jpg" style="object-position:50% 35%" alt="캠퍼스에서 Relief pad를 한 손에 들고 점자를 읽는 학생."></div><div hidden><div id="pad3d"></div><span id="pad3d-label"></span></div>
+            <div class="st-ph"><img class="on" src="assets/relief-graph.jpg" alt=""><img src="assets/relief-q-carry.jpg" style="object-position:50% 35%" alt="캠퍼스에서 Relief pad를 한 손에 들고 점자를 읽는 학생."></div><div hidden><div id="pad3d"></div><span id="pad3d-label"></span></div>
           </div>
           <div class="floor"></div>
         </div>
       </div>
       <ol class="steps-col">
         <li class="sblock on" data-step="0">
-          <p class="k">핵심시장 · 시각장애 대학생</p>
-          <h3>강의 자료, 이제 혼자 읽습니다.</h3>
-          <p>화면낭독은 읽기만, 점자단말기는 글자만, 촉각 그래픽 기기는 그림만. Relief는 <strong>시각장애 대학생의 수업 자료 읽기</strong>에 필요한 것을 하나로 묶었습니다.</p>
-          <ul class="vs"><li>스마트폰 화면낭독</li><li>카메라 문자 인식</li><li>점자정보단말기</li><li>촉각 그래픽 기기</li><li class="me">Relief · 촉각 그래픽 + 점자 + 음성 + 기관 관리</li></ul>
-        </li>
-        <li class="sblock" data-step="1">
           <p class="k">핵심가치 · 촉각 전환</p>
           <h3>AI가 그래프를 일으켜 세웁니다.</h3>
           <p>그래프·도표·이미지는 <strong>촉각으로</strong>, 글과 자료 내용은 <strong>점자와 음성으로</strong>. 남의 도움을 기다리지 않고 스스로 예습합니다.</p>
         </li>
-        <li class="sblock" data-step="2">
+        <li class="sblock" data-step="1">
           <p class="k">목표고객 · 기관 도입</p>
           <h3>기관이 도입하고, 학생이 씁니다.</h3>
           <p>대학교 장애학생지원센터에서 시작해 특수학교, 공공기관·도서관·복지관으로 넓힙니다. <strong>기관 도입·SaaS 구독</strong>으로 기기, 콘텐츠 관리, 교육을 함께 제공합니다.</p>
@@ -1298,7 +1369,7 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
     </div>
     <div class="split">
       <div>
-        <h3 style="font-size:1.6rem;font-weight:800">무료로 신청하세요.</h3>
+        <h3 class="acc-ttl">무료로 신청하세요.</h3>
         <p class="lead">기관 담당자뿐 아니라 시각장애인 본인도 신청할 수 있습니다. 신청 후 영업일 기준 5일 안에 보내 드립니다.</p>
       </div>
       <form id="acc-form" novalidate>
@@ -1469,7 +1540,7 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
   var sc=document.getElementById("scrolly"),t3=document.getElementById("t3d"),g3=document.getElementById("pad3d"),lab3=document.getElementById("pad3d-label"),blocks=sc.querySelectorAll(".sblock"),pins3=g3.children,step3=-1;
   for(var k=0;k<pins3.length;k++)pins3[k].style.setProperty("--d",((k%COLS)*0.018)+"s");
   patterns.none=function(){return false};
-  var stepPat=["none","bars","curve"],stepLab=["STEP 1 · READY","STEP 2 · BAR CHART","STEP 3 · y = sin x"];
+  var stepPat=["bars","curve"],stepLab=["STEP 1 · BAR CHART","STEP 2 · y = sin x"];
   function setStep(n){if(n===step3)return;step3=n;var f=patterns[stepPat[n]];for(var i=0;i<pins3.length;i++)pins3[i].classList.toggle("up",!!f(i%COLS,Math.floor(i/COLS)));lab3.textContent=stepLab[n];document.querySelectorAll(".st-ph img").forEach(function(im,i){im.classList.toggle("on",i===n)});blocks.forEach(function(b,i){b.classList.toggle("on",i===n)})}
   function onScroll(){var r=sc.getBoundingClientRect(),vh=innerHeight,p=Math.min(1,Math.max(0,(vh*.55-r.top)/(r.height-vh*.45)));
     t3.style.setProperty("--rx",(62-56*Math.min(1,p*1.6))+"deg");t3.style.setProperty("--rz",(-16+16*Math.min(1,p*1.6))+"deg");t3.style.setProperty("--ty",(30-30*p)+"px");t3.style.setProperty("--sc",(.92+.08*Math.min(1,p*1.6)));
@@ -1642,9 +1713,9 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
       {h:"책상 위의 강의실.",s:"수업 전에 먼저 읽고, 수업 중엔 함께 따라가고.",img:"relief-desk",alt:"책상 위 Relief pad의 그래프를 손끝으로 읽는 모습.",p:"<b>하루 종일 12시간.</b> 저전력 구동부 덕분에 충전 걱정 없이 수업을 듣습니다."}],
       spec:[["디스플레이","촉각 핀 576개 (32×18) · 핀 높이 3단계"],["점자·음성","점자 셀 40칸 · 동시 음성 출력"],["엔진","R2 촉각 엔진 · 핀 반응 0.2초"],["크기·무게","두께 9mm · 690g"],["배터리","최대 12시간 · USB‑C 충전"],["가격","개인 ₩1,990,000 · 교육기관 ₩1,790,000/대 · 공공기관 ₩1,590,000/대 (5대 이상)"]]},
     mini:{cut:"relief-pad-gold-cut",noPrice:true,sec:[
-      {h:"한 손에 쏙.",s:"420g, 매일 들고 다니는 Relief.",img:"relief-q-carry",alt:"Relief pad mini를 한 손에 들고 점자를 읽는 학생.",p:"<b>강의실에서 도서관까지.</b> 한 손으로 들고 걸으며 점자를 읽습니다."},
+      {h:"한 손에 쏙.",s:"420g, 매일 들고 다니는 Relief.",img:"relief-hand-hd",cls:"pvp-pano",alt:"한 손 위에 가볍게 올린 얇은 Relief pad mini.",p:"<b>강의실에서 도서관까지.</b> 한 손으로 가볍게 들고 다닙니다."},
       {h:"작아져도, 그대로.",s:"수업 자료는 하나도 줄지 않게.",img:"relief-pad-tilt",alt:"비스듬히 놓인 Relief pad mini.",p:"<b>336개의 핀과 점자 20칸.</b> 작은 화면에 맞춰 그래프를 자동으로 다시 그립니다."},
-      {two:[["relief-pad-gold","스타라이트 색상의 Relief pad mini.","<b>두 가지 색.</b> 스페이스 그레이와 스타라이트."],["relief-pad-gray","스페이스 그레이 Relief pad mini.","<b>최대 10시간.</b> 하루 수업을 충전 없이 버팁니다."]]}],
+      {two:[["relief-mini-duo","겹쳐 놓은 스페이스 그레이와 스타라이트 Relief pad mini.","<b>두 가지 색.</b> 스페이스 그레이와 스타라이트."],["relief-mini-battery","배터리 10시간을 나타낸 그림.","<b>최대 10시간.</b> 하루 수업을 충전 없이 버팁니다."]]}],
       spec:[["디스플레이","촉각 핀 336개 (24×14) · 핀 높이 2단계"],["점자·음성","점자 셀 20칸 · 동시 음성 출력"],["엔진","R1 촉각 엔진 · 핀 반응 0.3초"],["무게","420g"],["배터리","최대 10시간 · USB‑C 충전"],["가격","₩1,490,000부터"]]},
     cloud:{nocut:true,noPrice:true,sec:[
       {h:"PDF 한 장이, 촉각 자료로.",s:"AI가 그래프를 일으켜 세웁니다.",cv:true,p:"<b>AI 일괄 변환.</b> 강의 PDF와 발표 자료 속 도표를 평균 10분 만에 촉각 그래픽과 점자 파일로 바꿉니다."},
@@ -1670,12 +1741,68 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
       {h:"화면 위에 한 장 더.",s:"핀 그래픽에 질감을 더합니다.",img:"relief-pad-light",alt:"Relief pad 화면의 촉각 점자.",p:"<b>지우고 다시 쓰는 시트.</b> 수업마다 새 도형을 올려 손끝으로 비교합니다."}],
       spec:[["구성","투명 촉각 시트 20매"],["크기","A4 · Relief pad 화면 크기"]]}
   };
+  var HOWPAD=[["자료 올리기","강의 PDF를 Relief Cloud에 올립니다."],["자동 변환","AI가 그래프는 촉각으로, 글은 점자로 바꿉니다."],["손끝으로 읽기","Relief pad에서 바로 읽고 음성으로 함께 듣습니다."]];
+  var SHOP={
+    pad:{pain:["그래프 문제는 결국 친구한테 물어봐요.","점자 자료가 나오기까지 2주를 기다려요.","수업 중엔 PPT를 따라갈 방법이 없어요."],
+      rev:[["통계 그래프를 처음으로 혼자 읽었어요.","파일럿 참여 학생 · 통계학과 3학년"],["자료 변환 요청이 반으로 줄었습니다.","장애학생지원센터 담당자"],["수업 전에 미리 읽고 가니 질문이 생겨요.","파일럿 참여 학생 · 경영학과 2학년"]],
+      deal:{label:"신학기 런칭 특가",was:1990000,now:1590000,unit:"/대",note:"공공기관 5대 이상 도입 기준 · 교육기관 ₩1,790,000/대",gifts:["케이스·파우치 증정","청각 보조기기 증정 (ACCESS FOR ALL)","파일럿 후 전환 시 설치비 면제"]},
+      box:["Relief pad 본체","USB‑C 충전 케이블","점자 빠른 시작 안내서","케이스·파우치 (프로모션)"],how:HOWPAD,
+      faq:[["점자를 잘 몰라도 쓸 수 있나요?","네. 모든 내용을 음성으로 함께 읽어 주고, 촉각 그래픽은 점자 없이도 손으로 읽을 수 있습니다."],["화면낭독기와 같이 쓸 수 있나요?","네. 스마트폰과 PC의 화면낭독 기능과 함께 쓸 수 있습니다."],["정부 지원을 받을 수 있나요?","정보통신보조기기 보급사업으로 최대 95%, 대학 장애학생지원센터 지원으로 학생 1인당 최대 600만 원까지 안내해 드립니다."]]},
+    mini:{pain:["태블릿이 무거워 매일 들고 다니기 힘들어요.","강의실 이동이 많아 펼쳐 둘 시간이 없어요.","작은 기기는 그래프가 잘 안 그려져요."],
+      rev:[["가방에 넣고 다니니 매 수업에 꺼내 써요.","파일럿 참여 학생 · 사회복지학과"],["한 손에 들고 도서관까지 걸으며 읽어요.","파일럿 참여 학생 · 국문학과"],["작아도 그래프가 그대로 그려져서 놀랐어요.","파일럿 참여 학생 · 경제학과"]],
+      deal:{label:"신학기 런칭 특가",was:1690000,now:1490000,gifts:["케이스·파우치 증정","기본 앱 1년 포함"]},
+      box:["Relief pad mini 본체","USB‑C 충전 케이블","점자 빠른 시작 안내서","파우치 (프로모션)"],how:HOWPAD,
+      faq:[["Relief pad와 무엇이 다른가요?","핀 336개, 점자 20칸으로 화면이 작고 420g으로 가볍습니다. 핵심 기능은 같습니다."],["배터리는 얼마나 가나요?","최대 10시간이며 USB‑C로 충전합니다."],["Relief Cloud가 꼭 필요한가요?","개인 구매에는 기본 앱 1년이 포함되어 바로 변환할 수 있습니다."]]},
+    cloud:{pain:["점자 자료 요청이 학기 초에 한꺼번에 몰려요.","누가 어떤 기기를 빌렸는지 엑셀로 관리해요.","그래프 하나 촉각 자료로 만드는 데 며칠 걸려요."],
+      rev:[["변환 처리 시간이 며칠에서 10분으로 줄었어요.","장애학생지원센터 담당자"],["대여 현황을 한 화면에서 보니 반납 누락이 없어요.","대학 도서관 담당자"],["학생별 지원 내역이 남아 보고서가 쉬워요.","장애학생지원센터 팀장"]],
+      deal:{label:"첫 계약 특가",was:79000,now:59000,unit:"/월",note:"교육기관 기준 · 공공기관 ₩199,000/월",gifts:["첫 3개월 변환 무제한","담당자 교육 무료","대표 자료 무료 변환"]},
+      box:["기관 관리자 계정","학생 계정","AI 변환 서버","교육·유지보수"],
+      how:[["기관 가입","담당자 계정을 만들고 학생을 초대합니다."],["자료 요청","학생이나 담당자가 강의 자료를 올립니다."],["확인·배포","변환된 자료가 학생 기기로 바로 전송됩니다."]],
+      faq:[["설치가 필요한가요?","아니요. 웹 브라우저로 바로 씁니다."],["어떤 파일을 바꿀 수 있나요?","PDF, PPT, 이미지 속 그래프·도표·지도를 바꿉니다."],["계약 기간은 어떻게 되나요?","연간 구독이며, 무료 파일럿 후 전환할 수 있습니다."]]},
+    kbd:{pain:["과제를 쓸 때 화면 키보드는 위치를 못 찾겠어요.","점자단말기와 태블릿을 따로 들고 다녀요.","읽다가 메모하려면 기기를 바꿔야 해요."],
+      rev:[["읽던 화면 그대로 바로 답을 써요.","파일럿 참여 학생 · 법학과"],["키에 점자가 있어 처음부터 안 헤맸어요.","파일럿 참여 학생 · 교육학과"],["접어서 세우니 거치대가 따로 필요 없어요.","파일럿 참여 학생 · 컴퓨터공학과"]],
+      deal:{label:"NEW 런칭 특가",was:229000,now:189000,gifts:["Relief pad와 함께 구매 시 무료 각인"]},
+      box:["점자 키보드 커버","6점 입력 빠른 안내서","세척용 천"],
+      how:[["붙이기","Relief pad 아래 자석 커넥터에 붙입니다."],["바로 입력","페어링과 충전 없이 바로 씁니다."],["6점 모드","단축키로 6점 점자 입력으로 바꿉니다."]],
+      faq:[["Relief pad mini에도 맞나요?","아니요. Relief pad 전용입니다."],["따로 충전해야 하나요?","아니요. 커넥터로 전원을 받습니다."],["한글 점자 입력이 되나요?","네. 한글과 영문 점자 모두 입력됩니다."]]},
+    folio:{pain:["가방 속에서 핀이 눌릴까 봐 걱정돼요.","책상에 세워 둘 거치대가 없어요.","케이스를 따로 사야 하는지 몰랐어요."],
+      rev:[["덮개를 접으면 바로 세워져서 편해요.","파일럿 참여 학생 · 영문학과"],["가방에 그냥 넣어도 안심돼요.","파일럿 참여 학생 · 행정학과"],["신학기에 같이 받아서 따로 살 필요가 없었어요.","파일럿 참여 학생 · 심리학과"]],
+      deal:{label:"신학기 증정",was:129000,now:0,gifts:["Relief pad·mini 구매 시 무료 증정","파우치 함께 증정"]},
+      box:["폴리오 케이스","파우치"],
+      how:[["끼우기","기기를 케이스에 끼웁니다."],["접어 세우기","덮개를 접어 두 가지 각도로 세웁니다."],["넣어 다니기","파우치에 넣어 가방에 담습니다."]],
+      faq:[["Relief pad mini에도 맞나요?","네. pad용과 mini용이 따로 있습니다."],["색상은 무엇이 있나요?","스카이와 미드나이트 두 가지입니다."],["따로 살 수도 있나요?","네. 단품은 ₩129,000입니다."]]},
+    overlay:{pain:["시험지 그래프는 촉각으로 볼 방법이 없어요.","종이 자료와 화면 자료를 비교하기 어려워요.","수업마다 새 촉각 자료를 만들기 번거로워요."],
+      rev:[["시험지 위에 겹쳐 그래프를 읽었어요.","파일럿 참여 학생 · 수학교육과"],["도형 문제를 손으로 비교할 수 있어요.","파일럿 참여 학생 · 건축학과"],["지우고 다시 쓰니 한 세트로 한 학기를 써요.","장애학생지원센터 담당자"]],
+      deal:{label:"니어 팩 특가",was:99000,now:79000,gifts:["니어 팩 구매 시 포함"]},
+      box:["투명 촉각 시트 20매","보관 파일"],
+      how:[["올리기","시트를 종이나 화면 위에 올립니다."],["찍어 내기","도형과 그래프를 볼록하게 찍습니다."],["다시 쓰기","지우고 다음 수업에 다시 씁니다."]],
+      faq:[["몇 번 다시 쓸 수 있나요?","시트마다 여러 번 지우고 다시 쓸 수 있습니다."],["크기는 어떻게 되나요?","A4와 Relief pad 화면 크기입니다."],["단품으로 살 수 있나요?","네. 20매 ₩79,000입니다."]]},
+    aid:{pain:["시각장애 학생만 지원하면 청각장애 학생은요?","보조기기 예산을 따로 잡기 어려워요.","한 강의실에 다양한 학생이 함께 있어요."],
+      rev:[["한 번 도입으로 두 학생을 함께 지원했어요.","장애학생지원센터 담당자"],["보청기를 따로 신청할 필요가 없었어요.","파일럿 참여 학생 · 사학과"],["가볍고 편해서 하루 종일 껴요.","파일럿 참여 학생 · 디자인학과"]],
+      deal:{label:"ACCESS FOR ALL",was:390000,now:0,gifts:["Relief pad 구매 시 무료 증정","신학기 기간 한정"]},
+      box:["귀걸이형 청각 보조기기","충전 케이스","크기별 이어팁 3종"],
+      how:[["Relief pad 구매","ACCESS FOR ALL 기간에 Relief pad를 도입합니다."],["함께 받기","기기와 함께 청각 보조기기를 받습니다."],["맞춰 끼우기","이어팁을 골라 귀에 맞춥니다."]],
+      faq:[["누구나 받을 수 있나요?","ACCESS FOR ALL 기간에 Relief pad를 구매한 기관과 개인이 받습니다."],["단품으로 살 수 있나요?","네. 단품은 ₩390,000입니다."],["충전은 어떻게 하나요?","충전 케이스에 넣어 두면 됩니다."]]}
+  };
+  var won=function(n){return "₩"+n.toLocaleString("ko-KR")};
+  function shopTop(p){var m=SHOP[p.id];if(!m)return "";
+    return '<section class="pvp-s pvp-rv sp-pain"><p class="pvp-pt">이런 고민</p><h2 class="pvp-h">이런 고민, 있으셨죠?</h2><ul class="sp-pain-l">'+m.pain.map(function(t){return '<li>“'+t+'”</li>'}).join("")+'</ul><p class="sp-arrow">그래서, <b>'+p.name.replace(" 기관 구독","")+'</b>.</p></section>'}
+  function shopBottom(p){var m=SHOP[p.id];if(!m)return "";var d=m.deal,pct=Math.round((d.was-d.now)/d.was*100);
+    var rev='<section class="pvp-s pvp-rv"><p class="pvp-pt">후기</p><h2 class="pvp-h">먼저 써 본 사람들.<br><span>파일럿 체험 후기.</span></h2><ul class="sp-rev">'+m.rev.map(function(r){return '<li><p class="st" aria-label="별점 5점">★★★★★</p><p class="q">“'+r[0]+'”</p><p class="who">'+r[1]+'</p></li>'}).join("")+'</ul><p class="sp-note">파일럿 체험 후기는 기획안 예시입니다.</p></section>';
+    var deal='<section class="pvp-s pvp-rv" id="pv-deal"><div class="sp-deal"><p class="sp-dl">'+d.label+'</p><h2>'+p.name.replace(" 기관 구독","")+'</h2><div class="sp-price">'+(d.now===0?'<b class="pct">FREE</b><s>'+won(d.was)+'</s><strong>₩0</strong>':'<b class="pct">'+pct+'%</b><s>'+won(d.was)+(d.unit||"")+'</s><strong>'+won(d.now)+'<small>'+(d.unit||"")+'</small></strong>')+'</div>'+(d.note?'<p class="sp-dnote">'+d.note+'</p>':'')+
+      '<ul class="sp-gift">'+d.gifts.map(function(g){return '<li>'+g+'</li>'}).join("")+'</ul><p class="sp-period">프로모션 기간 · 2027년 2월 1일 – 3월 31일</p><div class="sp-cta"><a class="buy" href="#contact" data-buy="'+p.name+'">'+(d.now===0?'혜택 받고 도입 상담':'지금 구매하기')+'</a><a class="sp-ghost" href="#contact" data-plan="무료 파일럿·방문 시연">무료 파일럿 신청</a></div></div></section>';
+    var box='<section class="pvp-s pvp-rv"><p class="pvp-pt">구성품</p><h2 class="pvp-h">상자 안에는.</h2><ul class="sp-box">'+m.box.map(function(b,i){return '<li><span>'+(i+1)+'</span>'+b+'</li>'}).join("")+'</ul></section>';
+    var how='<section class="pvp-s pvp-rv"><p class="pvp-pt">HOW TO</p><h2 class="pvp-h">이렇게 씁니다.</h2><ol class="sp-how">'+m.how.map(function(h,i){return '<li><b>STEP '+(i+1)+'</b><h3>'+h[0]+'</h3><p>'+h[1]+'</p></li>'}).join("")+'</ol></section>';
+    return rev+deal+box+how}
+  function shopFaq(p){var m=SHOP[p.id];if(!m)return "";var d=m.deal;
+    return '<section class="pvp-s pvp-rv sp-faqs"><p class="pvp-pt">FAQ</p><h2 class="pvp-h">자주 묻는 질문.</h2><div class="sp-faq">'+m.faq.map(function(f){return '<details><summary>'+f[0]+'</summary><p>'+f[1]+'</p></details>'}).join("")+'</div></section>'+
+      '<div class="sp-bar"><div class="sp-bar-t"><b>'+p.name.replace(" 기관 구독","")+'</b><span>'+d.label+' · '+(d.now===0?'무료 증정':won(d.now)+(d.unit||""))+'</span></div><a class="buy" href="#pv-deal">구매하기</a></div>'}
   function accHTML(p){var a=ACC[p.id]||{sec:[],spec:[]};var cp={pad:"Relief pad",mini:"Relief pad mini"};
-    var secs=a.sec.map(function(x){if(x.two)return '<section class="pvp-s pvp-rv"><div class="pvp-two">'+x.two.map(function(t){return '<div><figure><img src="assets/'+t[0]+'.jpg" alt="'+t[1]+'" loading="lazy"></figure><p class="pvp-p sm">'+t[2]+'</p></div>'}).join("")+'</div></section>';
-      return '<section class="pvp-s pvp-rv"><h2 class="pvp-h">'+x.h+'<br><span>'+x.s+'</span></h2>'+(x.cv?'<div class="pvp-wide pvp-dashbox dk">'+CV()+'</div>':x.dash?'<div class="pvp-wide pvp-dashbox dk">'+DASH+'</div>':'<figure class="pvp-wide '+(x.cls||"")+'"><img src="assets/'+x.img+'.jpg" alt="'+x.alt+'" loading="lazy"></figure>')+'<p class="pvp-p">'+x.p+'</p></section>'}).join("");
+    var pt=0;var secs=a.sec.map(function(x){if(x.two)return '<section class="pvp-s pvp-rv"><div class="pvp-two">'+x.two.map(function(t){return '<div><figure><img src="assets/'+t[0]+'.jpg" alt="'+t[1]+'" loading="lazy"></figure><p class="pvp-p sm">'+t[2]+'</p></div>'}).join("")+'</div></section>';
+      return '<section class="pvp-s pvp-rv"><p class="pvp-pt">POINT 0'+(++pt)+'</p><h2 class="pvp-h">'+x.h+'<br><span>'+x.s+'</span></h2>'+(x.cv?'<div class="pvp-wide pvp-dashbox dk">'+CV()+'</div>':x.dash?'<div class="pvp-wide pvp-dashbox dk">'+DASH+'</div>':'<figure class="pvp-wide '+(x.cls||"")+'"><img src="assets/'+x.img+'.jpg" alt="'+x.alt+'" loading="lazy"></figure>')+'<p class="pvp-p">'+x.p+'</p></section>'}).join("");
     var rows=[["호환",p.compat.map(function(c){return cp[c]||c}).join(", ")]].concat(a.spec).concat(p.colors.length?[["색상",p.colors.map(function(c){return c[0]}).join(", ")]]:[]).concat(a.noPrice?[]:[["가격",wonP(p)]]);
-    return '<div class="pvp" aria-label="'+p.name+' 자세히 보기">'+secs+
-      '<section class="pvp-s pvp-rv acc-spec"><h2 class="pvp-h">'+p.name.replace(" 기관 구독","")+'.<br><span>한눈에 보기.</span></h2>'+(a.nocut?'':a.duo?'<div class="acc-duo"><img class="acc-cut" src="assets/relief-pad-float-cut.webp" alt="" loading="lazy"><img class="acc-ear" src="assets/relief-aid-cut.webp" alt="" loading="lazy"></div>':'<img class="acc-cut" src="assets/'+(a.cut||(p.id==="folio"?"relief-stand-cut":"relief-graph-cut"))+'.webp" alt="" loading="lazy">')+'<dl class="acc-dl">'+rows.map(function(r){return '<div><dt>'+r[0]+'</dt><dd>'+r[1]+'</dd></div>'}).join("")+'</dl><div class="pvp-cta"><a class="buy" href="#contact" data-buy="'+p.name+'">'+(p.gift?'도입 상담 신청':p.id==="cloud"||p.id==="pad"?'도입 상담 · 구입하기':'구입하기')+'</a>'+(p.id==="pad"?'<a class="pvp-lk" href="#p-mini">Relief pad mini 알아보기 ›</a>':'<a class="pvp-lk" href="#p-pad">Relief pad 알아보기 ›</a>')+'</div><p class="acc-note">사양과 가격은 기획안 예시입니다.</p></section></div>'}
+    return '<div class="pvp" aria-label="'+p.name+' 자세히 보기">'+shopTop(p)+secs+shopBottom(p)+
+      '<section class="pvp-s pvp-rv acc-spec"><h2 class="pvp-h">'+p.name.replace(" 기관 구독","")+'.<br><span>한눈에 보기.</span></h2>'+(a.nocut?'':a.duo?'<div class="acc-duo"><img class="acc-cut" src="assets/relief-pad-float-cut.webp" alt="" loading="lazy"><img class="acc-ear" src="assets/relief-aid-cut.webp" alt="" loading="lazy"></div>':'<img class="acc-cut" src="assets/'+(a.cut||(p.id==="folio"?"relief-stand-cut":"relief-graph-cut"))+'.webp" alt="" loading="lazy">')+'<dl class="acc-dl">'+rows.map(function(r){return '<div><dt>'+r[0]+'</dt><dd>'+r[1]+'</dd></div>'}).join("")+'</dl><div class="pvp-cta"><a class="buy" href="#contact" data-buy="'+p.name+'">'+(p.gift?'도입 상담 신청':p.id==="cloud"||p.id==="pad"?'도입 상담 · 구입하기':'구입하기')+'</a>'+(p.id==="pad"?'<a class="pvp-lk" href="#p-mini">Relief pad mini 알아보기 ›</a>':'<a class="pvp-lk" href="#p-pad">Relief pad 알아보기 ›</a>')+'</div><p class="acc-note">사양과 가격은 기획안 예시입니다.</p></section>'+shopFaq(p)+'</div>'}
   function renderPV(p){
     pvCur=p;pv.classList.toggle("pv-acc",true);var d=DETAIL[p.id],isPad=p.id==="pad"||p.id==="mini",isAcc=true,others=["pad","mini","cloud"];
     var cut=function(n){return '<img class="cut" src="assets/'+n+'-cut.webp" alt="">'};var hero=isPad?'<div class="trio" aria-hidden="true"><div class="tri l">'+cut("relief-pad-gray")+'</div><div class="tri c">'+cut(p.id==="mini"?"relief-pad-gold":"relief-graph")+'</div><div class="tri r">'+cut("relief-pad-hero")+'</div></div>':p.id==="cloud"?'<div class="flat cloud-hero" aria-hidden="true"><div class="pvp-dashbox dk">'+CV()+'</div></div>':p.id==="aid"?'<div class="flat svg-art aid-duo" aria-hidden="true"><img class="art-cut" src="assets/relief-pad-float-cut.webp" alt=""><img class="aid-ear" src="assets/relief-aid-cut.webp" alt=""></div>':'<div class="flat svg-art" aria-hidden="true">'+art(p.art,p.colors[0]&&p.colors[0][1])+'</div>';
