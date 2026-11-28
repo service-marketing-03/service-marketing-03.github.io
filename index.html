@@ -1217,6 +1217,28 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
 .pvp-wide.pvp-fit{background:#efeff2;display:grid;place-items:center}
 .pvp-wide.pvp-fit img{position:static!important;width:min(62%,600px)!important;height:auto!important;object-fit:contain!important;-webkit-mask-image:radial-gradient(72% 72% at 50% 50%,#000 62%,transparent 100%);mask-image:radial-gradient(72% 72% at 50% 50%,#000 62%,transparent 100%)}
 @media (max-width:640px){.pvp-wide.pvp-fit img{width:92%!important}}
+
+/* v38: Toss-style org part */
+.org{background:var(--bg);padding-top:120px}
+.org-hero{text-align:center}
+.org-h{font-size:clamp(30px,4.8vw,60px);font-weight:800;letter-spacing:-.04em;line-height:1.22;margin:0 0 20px}
+.org-sub{font-size:clamp(17px,1.6vw,20px);color:var(--muted);margin:0 auto 28px;max-width:640px;line-height:1.6}
+.org-fig{margin:56px auto 0;max-width:1100px;border-radius:32px;overflow:hidden;aspect-ratio:16/10;background:#ddd}
+.org-fig img{width:100%;height:100%;object-fit:cover;object-position:50% 74%;transform:scale(1.08);transition:transform 1.6s cubic-bezier(.2,.8,.2,1)}
+.org-fig.in img,.rv-ready .org-fig img{transform:scale(1)}
+.org-lab{margin:clamp(96px,12vw,160px) 0 0;font-size:15px;font-weight:700;color:#0064ff}
+.org .val-l{margin-top:28px}
+.org-stats{margin-top:clamp(110px,13vw,180px);text-align:center}
+.org-h2{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.035em;line-height:1.25;margin:0 0 56px}
+.org-stats ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.org-stats li{background:var(--surface);border-radius:28px;padding:44px 24px 40px}
+.org-stats b{display:block;font-size:clamp(34px,4.4vw,56px);font-weight:800;letter-spacing:-.04em;color:#0064ff;line-height:1.1}
+.org-stats li p{margin:14px 0 0;font-size:16px;color:var(--muted);line-height:1.5}
+.org-note{margin:20px 0 0;font-size:13px;color:var(--muted)}
+@media (max-width:760px){.org{padding-top:80px}.org-fig{border-radius:22px;aspect-ratio:4/5;margin-top:36px}.org-fig img{object-position:50% 50%}.org-stats ul{grid-template-columns:1fr;gap:12px}.org-stats li{padding:28px 20px}.org-h2{margin-bottom:32px}}
+
+.kf-cv .cv-pad{width:100%;max-width:420px;justify-self:center;filter:drop-shadow(0 24px 40px rgba(10,132,255,.25))}
+@media (max-width:640px){.kf-cv .cv-pad{max-width:260px}}
 </style>
 
 <div class="vfab" id="vfab" style="right:20px;bottom:96px">
@@ -1234,16 +1256,16 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
 
-<div class="gnav" role="navigation" aria-label="Relief 전체 메뉴"><div class="wrap"><a class="g-logo" href="#top" aria-label="Relief 처음으로">Relief</a><ul class="g-tabs"><li><button type="button" class="g-tab" data-col="intro" aria-expanded="false" aria-controls="gmega">소개</button></li><li><button type="button" class="g-tab" data-col="device" aria-expanded="false" aria-controls="gmega">기기</button></li><li><button type="button" class="g-tab" data-col="org" aria-expanded="false" aria-controls="gmega">기관</button></li><li><button type="button" class="g-tab" data-col="promo" aria-expanded="false" aria-controls="gmega">프로모션</button></li></ul><a class="g-cta" href="#contact">도입 상담</a></div><div class="g-mega" id="gmega" hidden><div class="g-cols"><div class="g-col" data-col="intro"><p class="g-cap">Relief를 알아보고</p><ul><li><a href="#value">고객 가치</a></li><li><a href="#features">핵심 기능</a></li><li><a href="#design">디자인</a></li></ul></div><div class="g-col" data-col="device"><p class="g-cap">손끝에 맞는 기기를 고르고</p><ul><li><a href="#p-pad">Relief pad</a></li><li><a href="#p-mini">Relief pad mini</a></li><li><a href="#p-kbd">점자 키보드 커버</a></li><li><a href="#p-folio">폴리오 케이스</a></li><li><a href="#p-aid">청각 보조기기</a></li><li><a href="#p-overlay">촉각 오버레이</a></li><li><a href="#engrave">점자 이름 각인</a></li><li><a href="#shop">전체 제품 보기</a></li></ul></div><div class="g-col" data-col="org"><p class="g-cap">기관 도입을 준비하고</p><ul><li><a href="#plans">구입 방식·가격</a></li><li><a href="#faq">자주 묻는 질문</a></li><li><a href="#contact">시연·도입 상담</a></li></ul></div><div class="g-col" data-col="promo"><p class="g-cap">혜택은 놓치지 않게</p><ul><li><a href="#afa">ACCESS FOR ALL</a></li><li><a href="#sales">신학기 프로모션</a></li><li><a href="#access">홍보물 신청</a></li><li><a href="#contact" data-plan="무료 파일럿·방문 시연">무료 파일럿 신청</a></li></ul></div></div></div></div>
+<div class="gnav" role="navigation" aria-label="Relief 전체 메뉴"><div class="wrap"><a class="g-logo" href="#top" aria-label="Relief 처음으로">Relief</a><ul class="g-tabs"><li><button type="button" class="g-tab" data-col="intro" aria-expanded="false" aria-controls="gmega">소개</button></li><li><button type="button" class="g-tab" data-col="device" aria-expanded="false" aria-controls="gmega">기기</button></li><li><button type="button" class="g-tab" data-col="org" aria-expanded="false" aria-controls="gmega">기관</button></li><li><button type="button" class="g-tab" data-col="promo" aria-expanded="false" aria-controls="gmega">프로모션</button></li></ul><a class="g-cta" href="#contact">도입 상담</a></div><div class="g-mega" id="gmega" hidden><div class="g-cols"><div class="g-col" data-col="intro"><p class="g-cap">Relief를 알아보고</p><ul><li><a href="#features">핵심 기능</a></li><li><a href="#design">디자인</a></li></ul></div><div class="g-col" data-col="device"><p class="g-cap">손끝에 맞는 기기를 고르고</p><ul><li><a href="#p-pad">Relief pad</a></li><li><a href="#p-mini">Relief pad mini</a></li><li><a href="#p-kbd">점자 키보드 커버</a></li><li><a href="#p-folio">폴리오 케이스</a></li><li><a href="#p-aid">청각 보조기기</a></li><li><a href="#p-overlay">촉각 오버레이</a></li><li><a href="#engrave">점자 이름 각인</a></li><li><a href="#shop">전체 제품 보기</a></li></ul></div><div class="g-col" data-col="org"><p class="g-cap">기관 도입을 준비하고</p><ul><li><a href="#value">고객 가치</a></li><li><a href="#org-stats">정부·기관 지원</a></li><li><a href="#plans">구입 방식·가격</a></li><li><a href="#faq">자주 묻는 질문</a></li><li><a href="#contact">시연·도입 상담</a></li></ul></div><div class="g-col" data-col="promo"><p class="g-cap">혜택은 놓치지 않게</p><ul><li><a href="#afa">ACCESS FOR ALL</a></li><li><a href="#sales">신학기 프로모션</a></li><li><a href="#access">홍보물 신청</a></li><li><a href="#contact" data-plan="무료 파일럿·방문 시연">무료 파일럿 신청</a></li></ul></div></div></div></div>
 <header class="bar">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Relief pad 처음으로">Relief pad</a>
     <button class="nav-tog" type="button" aria-expanded="false" aria-controls="lnav" aria-label="메뉴 열기"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     <nav aria-label="페이지 메뉴" id="lnav">
       <ul>
-        <li><a href="#value">소개</a></li>
+        <li><a href="#features">소개</a></li>
         <li><a href="#shop">기기</a></li>
-        <li><a href="#plans">기관</a></li>
+        <li><a href="#value">기관</a></li>
         <li><a href="#sales">프로모션</a></li>
       </ul>
     </nav>
@@ -1276,18 +1298,7 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
   </div>
 </section>
 
-<section class="sec val" id="value" aria-labelledby="value-title">
-  <div class="wrap">
-    <p class="chap">01 · 소개</p>
-    <h2 class="val-h" id="value-title">시각장애인의 정보 접근성과<br>기관의 지원 역량을 함께 높입니다.</h2>
-    <button class="listen" type="button" data-listen="value" aria-pressed="false"><span class="ll">음성으로 듣기</span><span class="ldots" aria-hidden="true"></span><span class="lc" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 2.8l8.2 5.2L5 13.2z" fill="currentColor"/></svg></span></button>
-    <ol class="val-l">
-      <li class="val-r"><div class="val-tx"><p class="val-k">이용자 경험</p><h3>그래프는 손끝으로,<br>글은 점자와 음성으로.</h3><p>그래프·도표·이미지는 촉각으로, 텍스트와 자료 내용은 점자·음성으로 제공합니다.</p></div><figure><img src="assets/relief-finger.jpg" alt="손끝으로 Relief pad의 점자를 읽는 모습." loading="lazy"></figure></li>
-      <li class="val-r"><div class="val-tx"><p class="val-k">콘텐츠 전환</p><h3>강의 자료를<br>AI가 촉각으로.</h3><p>AI 기반 시각자료 변환으로 학습 자료를 촉각 콘텐츠로 제공합니다.</p></div><figure class="lt"><img src="assets/relief-graph.jpg" alt="그래프가 촉각으로 솟은 Relief pad 화면." loading="lazy"></figure></li>
-      <li class="val-r"><div class="val-tx"><p class="val-k">기관 지원</p><h3>기기부터 교육까지,<br>기관이 한 번에.</h3><p>기관별 콘텐츠 관리 SaaS에 기기 공급, 업데이트·유지보수, 담당자와 이용자 교육을 결합합니다.</p></div><figure><img src="assets/relief-pad-touch.jpg" alt="거치대에 세운 Relief pad." loading="lazy"></figure></li>
-    </ol>
-  </div>
-</section>
+<div class="chap-band" role="presentation"><div class="wrap"><p class="chap">01 · 소개</p><p class="chap-t">손끝으로 읽는 모든 수업.</p></div></div>
 <section class="sec" id="features" aria-labelledby="feat-title">
   <div class="wrap">
     <div class="head"><h2 class="big" id="feat-title">핵심 기능.</h2>
@@ -1323,7 +1334,7 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
       </div>
     </div>
   </div>
-<div class="kf-wrap"><ul class="kf-rail" id="kfrail" aria-label="Relief 핵심 기능"><li class="kf-card kf-dark" id="kf0" role="group" aria-roledescription="슬라이드" aria-label="1 / 5"><h3 class="kf-h">강의 PDF 속 그래프 한 장을 올리면<br>몇 초 만에 손으로 읽는 촉각 그래픽으로.</h3><div class="kf-cv" aria-hidden="true"><div class="cv"><div class="cv-doc"><span class="cv-tag">PDF</span><b>통계학 3주차.pdf</b><small>그래프 4개 · 12쪽</small><svg viewBox="0 0 160 90"><path d="M8 82H152M8 82V8" stroke="#8e8e93" stroke-width="1.5" fill="none"/><path d="M10 50C40 10 60 12 80 45S125 85 150 30" stroke="#0a84ff" stroke-width="3" fill="none" stroke-linecap="round"/></svg></div><div class="cv-arr"><span>AI 촉각 변환</span><b>9.6분</b></div><div class="cv-pins"><i class="up"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="up"></i><i></i><i></i><i class="up"></i><i class="up"></i><i class="up"></i><i class="up"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="up"></i><i></i><i class="up"></i><i></i><i></i><i></i><i></i><i class="up"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="up"></i><i class="up"></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="up"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="up"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="up"></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="up"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="up"></i><i></i><i></i><i></i><i></i><i></i><i class="up"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="up"></i><i class="up"></i><i></i><i></i><i></i><i class="up"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="up"></i><i class="up"></i><i class="up"></i><i class="up"></i><i class="up"></i><i class="up"></i><i class="up"></i><i class="up"></i><i class="up"></i><i class="up"></i><i class="up"></i><i class="up"></i><i class="up"></i><i class="up"></i><i class="up"></i><i class="up"></i><i class="up"></i><i class="up"></i><i class="up"></i></div></div></div><p class="kf-cap">AI 촉각 변환</p></li><li class="kf-card" id="kf1" role="group" aria-roledescription="슬라이드" aria-label="2 / 5"><h3 class="kf-h">576개의 핀이 오르내리며<br>함수 곡선, 도형, 지도를 그대로.</h3><img class="kf-img" src="assets/relief-graph.jpg" alt="촉각 그래프가 솟아오른 Relief pad 화면." loading="lazy"><p class="kf-cap">576핀 · 32×18 촉각 디스플레이</p></li><li class="kf-card" id="kf2" role="group" aria-roledescription="슬라이드" aria-label="3 / 5"><h3 class="kf-h">텍스트는 점자와 음성으로.<br>손끝이 닿은 값은 바로 읽어 줍니다.</h3><img class="kf-img" src="assets/relief-finger.jpg" alt="손끝으로 Relief pad 화면의 점자를 읽는 모습." loading="lazy"><p class="kf-cap">점자 + 음성 동시 출력</p></li><li class="kf-card" id="kf3" role="group" aria-roledescription="슬라이드" aria-label="4 / 5"><h3 class="kf-h">변환 요청과 기기 대여,<br>학생별 지원 내역을 한 화면에서.</h3><div class="kf-dash" aria-hidden="true"><div class="kfd-bar"><b>R</b>Relief 기관 관리</div><div class="kfd-body"><div class="kfd-st"><div><small>이번 달 변환</small><b>128</b></div><div><small>대여 중</small><b>24대</b></div><div><small>평균 처리</small><b>9.6분</b></div></div><ul class="kfd-ls"><li><span class="c1"></span>통계학 3주차.pdf<em class="ok">완료</em></li><li><span class="c2"></span>Relief pad 대여 · 김○○<em class="run">대여 중</em></li><li><span class="c1"></span>미시경제 6장 그래프<em class="run">변환 중</em></li></ul></div></div><p class="kf-cap">Relief 기관 관리</p></li><li class="kf-card" id="kf4" role="group" aria-roledescription="슬라이드" aria-label="5 / 5"><h3 class="kf-h">기기 공급으로 끝나지 않고<br>담당자와 이용자 교육까지 함께.</h3><img class="kf-img" src="assets/relief-q-fair.jpg" style="object-position:50% 30%" alt="부스에서 담당자와 학생이 함께 Relief pad를 써 보는 모습." loading="lazy"><p class="kf-cap">업데이트 · 유지보수 · 교육</p></li></ul><div class="kf-ctrl"><div class="kf-dots"><button type="button" class="kf-dot" data-i="0" aria-label="1번째 기능 보기"></button><button type="button" class="kf-dot" data-i="1" aria-label="2번째 기능 보기"></button><button type="button" class="kf-dot" data-i="2" aria-label="3번째 기능 보기"></button><button type="button" class="kf-dot" data-i="3" aria-label="4번째 기능 보기"></button><button type="button" class="kf-dot" data-i="4" aria-label="5번째 기능 보기"></button></div><button type="button" class="kf-play" id="kfplay" aria-label="자동 넘김 일시정지"></button></div></div></div>
+<div class="kf-wrap"><ul class="kf-rail" id="kfrail" aria-label="Relief 핵심 기능"><li class="kf-card kf-dark" id="kf0" role="group" aria-roledescription="슬라이드" aria-label="1 / 5"><h3 class="kf-h">강의 PDF 속 그래프 한 장을 올리면<br>몇 초 만에 손으로 읽는 촉각 그래픽으로.</h3><div class="kf-cv" aria-hidden="true"><div class="cv"><div class="cv-doc"><span class="cv-tag">PDF</span><b>통계학 3주차.pdf</b><small>그래프 4개 · 12쪽</small><svg viewBox="0 0 160 90"><path d="M8 82H152M8 82V8" stroke="#8e8e93" stroke-width="1.5" fill="none"/><path d="M10 50C40 10 60 12 80 45S125 85 150 30" stroke="#0a84ff" stroke-width="3" fill="none" stroke-linecap="round"/></svg></div><div class="cv-arr"><span>AI 촉각 변환</span><b>9.6분</b></div><img class="cv-pad" src="assets/relief-graph-cut.webp" alt=""></div></div><p class="kf-cap">AI 촉각 변환</p></li><li class="kf-card" id="kf1" role="group" aria-roledescription="슬라이드" aria-label="2 / 5"><h3 class="kf-h">576개의 핀이 오르내리며<br>함수 곡선, 도형, 지도를 그대로.</h3><img class="kf-img" src="assets/relief-graph.jpg" alt="촉각 그래프가 솟아오른 Relief pad 화면." loading="lazy"><p class="kf-cap">576핀 · 32×18 촉각 디스플레이</p></li><li class="kf-card" id="kf2" role="group" aria-roledescription="슬라이드" aria-label="3 / 5"><h3 class="kf-h">텍스트는 점자와 음성으로.<br>손끝이 닿은 값은 바로 읽어 줍니다.</h3><img class="kf-img" src="assets/relief-finger.jpg" alt="손끝으로 Relief pad 화면의 점자를 읽는 모습." loading="lazy"><p class="kf-cap">점자 + 음성 동시 출력</p></li><li class="kf-card" id="kf3" role="group" aria-roledescription="슬라이드" aria-label="4 / 5"><h3 class="kf-h">변환 요청과 기기 대여,<br>학생별 지원 내역을 한 화면에서.</h3><div class="kf-dash" aria-hidden="true"><div class="kfd-bar"><b>R</b>Relief 기관 관리</div><div class="kfd-body"><div class="kfd-st"><div><small>이번 달 변환</small><b>128</b></div><div><small>대여 중</small><b>24대</b></div><div><small>평균 처리</small><b>9.6분</b></div></div><ul class="kfd-ls"><li><span class="c1"></span>통계학 3주차.pdf<em class="ok">완료</em></li><li><span class="c2"></span>Relief pad 대여 · 김○○<em class="run">대여 중</em></li><li><span class="c1"></span>미시경제 6장 그래프<em class="run">변환 중</em></li></ul></div></div><p class="kf-cap">Relief 기관 관리</p></li><li class="kf-card" id="kf4" role="group" aria-roledescription="슬라이드" aria-label="5 / 5"><h3 class="kf-h">기기 공급으로 끝나지 않고<br>담당자와 이용자 교육까지 함께.</h3><img class="kf-img" src="assets/relief-q-fair.jpg" style="object-position:50% 30%" alt="부스에서 담당자와 학생이 함께 Relief pad를 써 보는 모습." loading="lazy"><p class="kf-cap">업데이트 · 유지보수 · 교육</p></li></ul><div class="kf-ctrl"><div class="kf-dots"><button type="button" class="kf-dot" data-i="0" aria-label="1번째 기능 보기"></button><button type="button" class="kf-dot" data-i="1" aria-label="2번째 기능 보기"></button><button type="button" class="kf-dot" data-i="2" aria-label="3번째 기능 보기"></button><button type="button" class="kf-dot" data-i="3" aria-label="4번째 기능 보기"></button><button type="button" class="kf-dot" data-i="4" aria-label="5번째 기능 보기"></button></div><button type="button" class="kf-play" id="kfplay" aria-label="자동 넘김 일시정지"></button></div></div></div>
 </section>
 
 <section class="sec slim" id="design" aria-labelledby="design-title" style="padding-top:2rem">
@@ -1404,7 +1415,32 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
 
 
 
-<div class="chap-band" role="presentation"><div class="wrap"><p class="chap">03 · 기관</p><p class="chap-t">기관이 도입하고, 학생이 씁니다.</p></div></div>
+<section class="sec org" id="value" aria-labelledby="value-title">
+  <div class="wrap">
+    <div class="org-hero">
+      <p class="chap">03 · 기관</p>
+      <h2 class="org-h" id="value-title">시각장애인의 정보 접근성과<br>기관의 지원 역량을 함께 높입니다.</h2>
+      <p class="org-sub">기관이 도입하고, 학생이 씁니다. 대학교 장애학생지원센터부터 특수학교, 공공기관·도서관까지.</p>
+      <button class="listen" type="button" data-listen="value" aria-pressed="false"><span class="ll">음성으로 듣기</span><span class="ldots" aria-hidden="true"></span><span class="lc" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 2.8l8.2 5.2L5 13.2z" fill="currentColor"/></svg></span></button>
+      <figure class="org-fig"><img src="assets/relief-org-hero.jpg" alt="캠퍼스 야외 테이블에서 학생들이 함께 Relief pad의 점자를 읽고 있습니다." loading="lazy"></figure>
+    </div>
+    <p class="org-lab">고객 가치</p>
+    <ol class="val-l">
+      <li class="val-r"><div class="val-tx"><p class="val-k">이용자 경험</p><h3>그래프는 손끝으로,<br>글은 점자와 음성으로.</h3><p>그래프·도표·이미지는 촉각으로, 텍스트와 자료 내용은 점자·음성으로 제공합니다.</p></div><figure><img src="assets/relief-finger.jpg" alt="손끝으로 Relief pad의 점자를 읽는 모습." loading="lazy"></figure></li>
+      <li class="val-r"><div class="val-tx"><p class="val-k">콘텐츠 전환</p><h3>강의 자료를<br>AI가 촉각으로.</h3><p>AI 기반 시각자료 변환으로 학습 자료를 촉각 콘텐츠로 제공합니다.</p></div><figure class="lt"><img src="assets/relief-graph.jpg" alt="그래프가 촉각으로 솟은 Relief pad 화면." loading="lazy"></figure></li>
+      <li class="val-r"><div class="val-tx"><p class="val-k">기관 지원</p><h3>기기부터 교육까지,<br>기관이 한 번에.</h3><p>기관별 콘텐츠 관리 SaaS에 기기 공급, 업데이트·유지보수, 담당자와 이용자 교육을 결합합니다.</p></div><figure><img src="assets/relief-pad-touch.jpg" alt="거치대에 세운 Relief pad." loading="lazy"></figure></li>
+    </ol>
+    <div class="org-stats" id="org-stats">
+      <h3 class="org-h2">도입 부담은 줄이고,<br>지원은 더 넓게.</h3>
+      <ul>
+        <li><b><span class="cnt" data-to="9.6" data-dec="1">9.6</span>분</b><p>그래프 한 장을<br>촉각 자료로 바꾸는 시간</p></li>
+        <li><b>최대 <span class="cnt" data-to="95">95</span>%</b><p>정보통신보조기기<br>보급사업 정부 지원</p></li>
+        <li><b><span class="cnt" data-to="600">600</span>만 원</b><p>대학 장애학생지원센터<br>학생 1인당 지원 한도</p></li>
+      </ul>
+      <p class="org-note">지원 비율과 한도는 기획안 기준이며, 기관과 사업 공고에 따라 달라질 수 있습니다.</p>
+    </div>
+  </div>
+</section>
 <section class="sec" id="plans" aria-labelledby="plans-title" style="padding-top:1rem">
   <div class="wrap">
     <div class="ehead"><h2 class="big" id="plans-title">수익 모델 · 구입 방식.</h2><a class="elink" href="#p-pad">Relief pad 더 알아보기 <span aria-hidden="true">›</span></a></div>
