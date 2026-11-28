@@ -1722,7 +1722,7 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
     function open(k){gm.hidden=false;gn.classList.add("mega-on");tabs.forEach(function(t){var on=t.dataset.col===k;t.setAttribute("aria-expanded",on?"true":"false");t.classList.toggle("on",on)});cols.forEach(function(c){c.classList.toggle("on",c.dataset.col===k)})}
     function close(){gm.hidden=true;gn.classList.remove("mega-on");tabs.forEach(function(t){t.setAttribute("aria-expanded","false");t.classList.remove("on")})}
     var hov=matchMedia("(hover:hover)").matches;
-    tabs.forEach(function(t){t.addEventListener("click",function(){if(t.classList.contains("on")&&!hov)close();else open(t.dataset.col)});if(hov){t.addEventListener("mouseenter",function(){clearTimeout(tm);open(t.dataset.col)})}});
+    var PG={intro:"#intro",device:"#device",org:"#orgp",promo:"#promop"};tabs.forEach(function(t){t.addEventListener("click",function(){close();var h=PG[t.dataset.col];if(location.hash===h)route();else location.hash=h});if(hov){t.addEventListener("mouseenter",function(){clearTimeout(tm);open(t.dataset.col)})}});
     if(hov){gn.addEventListener("mouseleave",function(){tm=setTimeout(close,180)});gn.addEventListener("mouseenter",function(){clearTimeout(tm)})}
     gm.addEventListener("click",function(e){if(e.target.closest("a"))close()});
     document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!gm.hidden){close();tabs[0].focus()}});
