@@ -26,7 +26,8 @@
 | v20 | [/versions/v20/](https://service-marketing-03.github.io/versions/v20/) | 음성으로 듣기 버튼 섹션마다 다시 표시, 새 캠퍼스 사진 6장, 프로모션 카드를 애플 교육 카드 비율(4:5, 사진 60%)로, 스토어 5대·대여·개인 타일을 실사 사진으로 |
 | v21 | [/versions/v21/](https://service-marketing-03.github.io/versions/v21/) | 스토어 타일 6장 모두 흰 카드+아래 사진, 주황 라벨 제거, 프로모션 1·2번째 카드 이전 사진으로, 핵심 기능 3번째 사진 교체 |
 | v22 | [/versions/v22/](https://service-marketing-03.github.io/versions/v22/) | 스토어(기관 할인) 카드 6장을 이전 모양(색 배경·기기 컷·×5·달력·앱 배지)으로 되돌리고 주황 라벨만 제거 |
-| v35 (현재) | [/versions/v35/](https://service-marketing-03.github.io/versions/v35/) | Relief Cloud 제외, 토스식 전체 메뉴(소개·기기·기관·프로모션), 고객 가치 섹션, 섹션 순서 재배치 |
+| v36 (현재) | [/versions/v36/](https://service-marketing-03.github.io/versions/v36/) | "손끝에서 일어서는 수업" 섹션 삭제, 도입 상담 폼을 홍보물 신청 폼과 같은 스타일로, pad 두께 사진 교체 |
+| v35 | [/versions/v35/](https://service-marketing-03.github.io/versions/v35/) | Relief Cloud 제외, 토스식 전체 메뉴(소개·기기·기관·프로모션), 고객 가치 섹션, 섹션 순서 재배치 |
 | v34 | [/versions/v34/](https://service-marketing-03.github.io/versions/v34/) | 상세페이지를 쇼핑몰 흐름(고민·POINT·후기·런칭 특가·구성품·사용법·FAQ·하단 구매 바)으로, 비교 파트 삭제, 홍보물 신청 애플 스타일, mini 사진 교체 |
 | v33 | [/versions/v33/](https://service-marketing-03.github.io/versions/v33/) | "무엇이 다른가요"를 "손끝에서 일어서는 수업"에 합침 |
 | v32 | [/versions/v32/](https://service-marketing-03.github.io/versions/v32/) | 청각 보조기기 상세를 사람 사진 없이 제품 사진 위주로 |

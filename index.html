@@ -1150,21 +1150,21 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
 .access .split{grid-template-columns:1fr 1.35fr;gap:56px;align-items:center}
 .acc-ttl{font-size:clamp(28px,3.4vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1.15}
 .access .split .lead{font-size:17px;line-height:1.6}
-#acc-form{border:0;border-radius:28px;padding:36px;gap:18px 16px;box-shadow:0 2px 12px rgba(0,0,0,.04)}
-#acc-form .field label,#acc-form .field legend{font-size:13px;font-weight:600;color:var(--muted)}
-#acc-form .field input,#acc-form .field select{border:1.5px solid transparent;background:var(--bg);border-radius:12px;min-height:50px;padding:.75rem 1rem;font-size:16px;transition:border-color .2s,box-shadow .2s}
-#acc-form .field input:focus,#acc-form .field select:focus{outline:0;border-color:#0071e3;box-shadow:0 0 0 4px rgba(0,113,227,.15)}
-#acc-form .checks{gap:8px;margin-top:6px}
-#acc-form .checks label{position:relative;padding:.6rem 1.05rem;border-radius:999px;background:var(--bg);border:1.5px solid transparent;font-size:15px;font-weight:500;color:var(--ink);cursor:pointer;transition:background .2s,border-color .2s,color .2s}
-#acc-form .checks input{position:absolute;opacity:0;width:1px;height:1px}
-#acc-form .checks label:has(input:checked){background:rgba(0,113,227,.1);border-color:#0071e3;color:#0071e3;font-weight:600}
-#acc-form .checks label:has(input:checked)::before{content:"✓";margin-right:2px}
-#acc-form .checks label:has(input:focus-visible){box-shadow:0 0 0 4px rgba(0,113,227,.3)}
-#acc-form .btn{width:100%;min-height:52px;border-radius:999px;background:#0071e3;font-size:17px;font-weight:600;justify-content:center}
-#acc-form .btn:hover{background:#0077ed}
-@media (max-width:860px){.access .split{grid-template-columns:1fr;gap:28px}.access .split>div:first-child{text-align:center}#acc-form{padding:24px 20px}}
+:is(#acc-form,#demo-form){border:0;border-radius:28px;padding:36px;gap:18px 16px;box-shadow:0 2px 12px rgba(0,0,0,.04)}
+:is(#acc-form,#demo-form) .field label,:is(#acc-form,#demo-form) .field legend{font-size:13px;font-weight:600;color:var(--muted)}
+:is(#acc-form,#demo-form) .field input,:is(#acc-form,#demo-form) .field select,:is(#acc-form,#demo-form) .field textarea{border:1.5px solid transparent;background:var(--bg);border-radius:12px;min-height:50px;padding:.75rem 1rem;font-size:16px;transition:border-color .2s,box-shadow .2s}
+:is(#acc-form,#demo-form) .field input:focus,:is(#acc-form,#demo-form) .field select:focus,:is(#acc-form,#demo-form) .field textarea:focus{outline:0;border-color:#0071e3;box-shadow:0 0 0 4px rgba(0,113,227,.15)}
+:is(#acc-form,#demo-form) .checks{gap:8px;margin-top:6px}
+:is(#acc-form,#demo-form) .checks label{position:relative;padding:.6rem 1.05rem;border-radius:999px;background:var(--bg);border:1.5px solid transparent;font-size:15px;font-weight:500;color:var(--ink);cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+:is(#acc-form,#demo-form) .checks input{position:absolute;opacity:0;width:1px;height:1px}
+:is(#acc-form,#demo-form) .checks label:has(input:checked){background:rgba(0,113,227,.1);border-color:#0071e3;color:#0071e3;font-weight:600}
+:is(#acc-form,#demo-form) .checks label:has(input:checked)::before{content:"✓";margin-right:2px}
+:is(#acc-form,#demo-form) .checks label:has(input:focus-visible){box-shadow:0 0 0 4px rgba(0,113,227,.3)}
+:is(#acc-form,#demo-form) .btn{width:100%;min-height:52px;border-radius:999px;background:#0071e3;font-size:17px;font-weight:600;justify-content:center}
+:is(#acc-form,#demo-form) .btn:hover{background:#0077ed}
+@media (max-width:860px){.access .split{grid-template-columns:1fr;gap:28px}.access .split>div:first-child{text-align:center}:is(#acc-form,#demo-form){padding:24px 20px}}
 @media (max-width:560px){.access .acc-grid{grid-template-columns:1fr 1fr;gap:12px;margin:36px 0 48px}.access .acc-card{padding:22px 18px;border-radius:22px}.access .acc-card h3{font-size:16px}.access .acc-card p{font-size:13px}.access .acc-card .ico{width:34px;height:34px;margin-bottom:6px}}
-:root[data-contrast="high"] #acc-form .checks label{border-color:currentColor}
+:root[data-contrast="high"] :is(#acc-form,#demo-form) .checks label{border-color:currentColor}
 
 /* v35: Toss-style mega menu, chapters, value */
 .gnav{position:relative;z-index:70;background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);font-size:15px}
@@ -1199,6 +1199,11 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
 @media (hover:hover){.val-r:hover img{transform:scale(1.04)}}
 @media (max-width:760px){.val-r{grid-template-columns:1fr;gap:20px}.val-r:nth-child(2) .val-tx{order:0}.val-l{margin-top:40px;gap:56px}.chap-band{padding-top:72px}}
 :root[data-contrast="high"] .g-mega{background:#000}:root[data-contrast="high"] .g-col a,:root[data-contrast="high"] .g-tab{color:#fff!important}
+.contact{background:var(--bg)}
+.contact .split{grid-template-columns:1fr 1.35fr;gap:56px;align-items:center}
+.contact .lead{font-size:17px;line-height:1.6}
+:is(#acc-form,#demo-form) .field textarea{min-height:130px}
+@media (max-width:860px){.contact .split{grid-template-columns:1fr;gap:28px}.contact .split>div:first-child{text-align:center}}
 </style>
 
 <div class="vfab" id="vfab" style="right:20px;bottom:96px">
@@ -1216,7 +1221,7 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
 
-<div class="gnav" role="navigation" aria-label="Relief 전체 메뉴"><div class="wrap"><a class="g-logo" href="#top" aria-label="Relief 처음으로">Relief</a><ul class="g-tabs"><li><button type="button" class="g-tab" data-col="intro" aria-expanded="false" aria-controls="gmega">소개</button></li><li><button type="button" class="g-tab" data-col="device" aria-expanded="false" aria-controls="gmega">기기</button></li><li><button type="button" class="g-tab" data-col="org" aria-expanded="false" aria-controls="gmega">기관</button></li><li><button type="button" class="g-tab" data-col="promo" aria-expanded="false" aria-controls="gmega">프로모션</button></li></ul><a class="g-cta" href="#contact">도입 상담</a></div><div class="g-mega" id="gmega" hidden><div class="g-cols"><div class="g-col" data-col="intro"><p class="g-cap">Relief를 알아보고</p><ul><li><a href="#value">고객 가치</a></li><li><a href="#features">핵심 기능</a></li><li><a href="#design">디자인</a></li></ul></div><div class="g-col" data-col="device"><p class="g-cap">손끝에 맞는 기기를 고르고</p><ul><li><a href="#p-pad">Relief pad</a></li><li><a href="#p-mini">Relief pad mini</a></li><li><a href="#p-kbd">점자 키보드 커버</a></li><li><a href="#p-folio">폴리오 케이스</a></li><li><a href="#p-aid">청각 보조기기</a></li><li><a href="#p-overlay">촉각 오버레이</a></li><li><a href="#engrave">점자 이름 각인</a></li><li><a href="#shop">전체 제품 보기</a></li></ul></div><div class="g-col" data-col="org"><p class="g-cap">기관 도입을 준비하고</p><ul><li><a href="#promo">기관 도입 이야기</a></li><li><a href="#plans">구입 방식·가격</a></li><li><a href="#faq">자주 묻는 질문</a></li><li><a href="#contact">시연·도입 상담</a></li></ul></div><div class="g-col" data-col="promo"><p class="g-cap">혜택은 놓치지 않게</p><ul><li><a href="#afa">ACCESS FOR ALL</a></li><li><a href="#sales">신학기 프로모션</a></li><li><a href="#access">홍보물 신청</a></li><li><a href="#contact" data-plan="무료 파일럿·방문 시연">무료 파일럿 신청</a></li></ul></div></div></div></div>
+<div class="gnav" role="navigation" aria-label="Relief 전체 메뉴"><div class="wrap"><a class="g-logo" href="#top" aria-label="Relief 처음으로">Relief</a><ul class="g-tabs"><li><button type="button" class="g-tab" data-col="intro" aria-expanded="false" aria-controls="gmega">소개</button></li><li><button type="button" class="g-tab" data-col="device" aria-expanded="false" aria-controls="gmega">기기</button></li><li><button type="button" class="g-tab" data-col="org" aria-expanded="false" aria-controls="gmega">기관</button></li><li><button type="button" class="g-tab" data-col="promo" aria-expanded="false" aria-controls="gmega">프로모션</button></li></ul><a class="g-cta" href="#contact">도입 상담</a></div><div class="g-mega" id="gmega" hidden><div class="g-cols"><div class="g-col" data-col="intro"><p class="g-cap">Relief를 알아보고</p><ul><li><a href="#value">고객 가치</a></li><li><a href="#features">핵심 기능</a></li><li><a href="#design">디자인</a></li></ul></div><div class="g-col" data-col="device"><p class="g-cap">손끝에 맞는 기기를 고르고</p><ul><li><a href="#p-pad">Relief pad</a></li><li><a href="#p-mini">Relief pad mini</a></li><li><a href="#p-kbd">점자 키보드 커버</a></li><li><a href="#p-folio">폴리오 케이스</a></li><li><a href="#p-aid">청각 보조기기</a></li><li><a href="#p-overlay">촉각 오버레이</a></li><li><a href="#engrave">점자 이름 각인</a></li><li><a href="#shop">전체 제품 보기</a></li></ul></div><div class="g-col" data-col="org"><p class="g-cap">기관 도입을 준비하고</p><ul><li><a href="#plans">구입 방식·가격</a></li><li><a href="#faq">자주 묻는 질문</a></li><li><a href="#contact">시연·도입 상담</a></li></ul></div><div class="g-col" data-col="promo"><p class="g-cap">혜택은 놓치지 않게</p><ul><li><a href="#afa">ACCESS FOR ALL</a></li><li><a href="#sales">신학기 프로모션</a></li><li><a href="#access">홍보물 신청</a></li><li><a href="#contact" data-plan="무료 파일럿·방문 시연">무료 파일럿 신청</a></li></ul></div></div></div></div>
 <header class="bar">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Relief pad 처음으로">Relief pad</a>
@@ -1225,7 +1230,7 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
       <ul>
         <li><a href="#value">소개</a></li>
         <li><a href="#shop">기기</a></li>
-        <li><a href="#promo">기관</a></li>
+        <li><a href="#plans">기관</a></li>
         <li><a href="#sales">프로모션</a></li>
       </ul>
     </nav>
@@ -1387,36 +1392,6 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
 
 
 <div class="chap-band" role="presentation"><div class="wrap"><p class="chap">03 · 기관</p><p class="chap-t">기관이 도입하고, 학생이 씁니다.</p></div></div>
-<section class="sec story" id="promo" aria-labelledby="promo-title">
-  <div class="wrap">
-    <div class="head"><h2 class="big" id="promo-title">손끝에서 일어서는 수업.</h2><p class="sub">AI가 강의 자료를 촉각으로 바꾸고, 기관이 도입해 학생이 씁니다.</p>
-      <button class="listen" type="button" data-listen="promo" aria-pressed="false"><span class="ll">음성으로 듣기</span><span class="ldots" aria-hidden="true"></span><span class="lc" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 2.8l8.2 5.2L5 13.2z" fill="currentColor"/></svg></span></button></div>
-    <div class="scrolly" id="scrolly">
-      <div class="stage-col">
-        <div class="stage" aria-hidden="true">
-          <div class="tilt3d" id="t3d">
-            <div class="st-ph"><img class="on" src="assets/relief-graph.jpg" alt=""><img src="assets/relief-q-carry.jpg" style="object-position:50% 35%" alt="캠퍼스에서 Relief pad를 한 손에 들고 점자를 읽는 학생."></div><div hidden><div id="pad3d"></div><span id="pad3d-label"></span></div>
-          </div>
-          <div class="floor"></div>
-        </div>
-      </div>
-      <ol class="steps-col">
-        <li class="sblock on" data-step="0">
-          <p class="k">핵심가치 · 촉각 전환</p>
-          <h3>AI가 그래프를 일으켜 세웁니다.</h3>
-          <p>그래프·도표·이미지는 <strong>촉각으로</strong>, 글과 자료 내용은 <strong>점자와 음성으로</strong>. 남의 도움을 기다리지 않고 스스로 예습합니다.</p>
-        </li>
-        <li class="sblock" data-step="1">
-          <p class="k">목표고객 · 기관 도입</p>
-          <h3>기관이 도입하고, 학생이 씁니다.</h3>
-          <p>대학교 장애학생지원센터에서 시작해 특수학교, 공공기관·도서관·복지관으로 넓힙니다. <strong>기관 도입·SaaS 구독</strong>으로 기기, 콘텐츠 관리, 교육을 함께 제공합니다.</p>
-          <ul class="tiers"><li><b>1차</b> 대학교·장애학생지원센터</li><li><b>2차</b> 특수학교·초·중·고</li><li><b>3차</b> 공공기관·도서관·복지관</li></ul>
-        </li>
-      </ol>
-    </div>
-  </div>
-</section>
-
 <section class="sec" id="plans" aria-labelledby="plans-title" style="padding-top:1rem">
   <div class="wrap">
     <div class="ehead"><h2 class="big" id="plans-title">수익 모델 · 구입 방식.</h2><a class="elink" href="#p-pad">Relief pad 더 알아보기 <span aria-hidden="true">›</span></a></div>
@@ -1585,7 +1560,7 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
   if(!reduce&&matchMedia("(pointer:fine)").matches){hero.addEventListener("pointermove",function(e){var r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;ht.style.setProperty("--ry",(x*18-6)+"deg");ht.style.setProperty("--rx",(16-y*14)+"deg")});hero.addEventListener("pointerleave",function(){ht.style.removeProperty("--ry");ht.style.removeProperty("--rx")})}
 
   // 홍보물: 스크롤하면 태블릿이 일어서고 핀이 솟아오름
-  var sc=document.getElementById("scrolly"),t3=document.getElementById("t3d"),g3=document.getElementById("pad3d"),lab3=document.getElementById("pad3d-label"),blocks=sc.querySelectorAll(".sblock"),pins3=g3.children,step3=-1;
+  if(document.getElementById("scrolly")){var sc=document.getElementById("scrolly"),t3=document.getElementById("t3d"),g3=document.getElementById("pad3d"),lab3=document.getElementById("pad3d-label"),blocks=sc.querySelectorAll(".sblock"),pins3=g3.children,step3=-1;
   for(var k=0;k<pins3.length;k++)pins3[k].style.setProperty("--d",((k%COLS)*0.018)+"s");
   patterns.none=function(){return false};
   var stepPat=["bars","curve"],stepLab=["STEP 1 · BAR CHART","STEP 2 · y = sin x"];
@@ -1593,7 +1568,7 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
   function onScroll(){var r=sc.getBoundingClientRect(),vh=innerHeight,p=Math.min(1,Math.max(0,(vh*.55-r.top)/(r.height-vh*.45)));
     t3.style.setProperty("--rx",(62-56*Math.min(1,p*1.6))+"deg");t3.style.setProperty("--rz",(-16+16*Math.min(1,p*1.6))+"deg");t3.style.setProperty("--ty",(30-30*p)+"px");t3.style.setProperty("--sc",(.92+.08*Math.min(1,p*1.6)));
     setStep(p<.3?0:p<.66?1:2)}
-  addEventListener("scroll",onScroll,{passive:true});addEventListener("resize",onScroll);onScroll();
+  addEventListener("scroll",onScroll,{passive:true});addEventListener("resize",onScroll);onScroll();}
 
   // 스크롤 등장과 숫자 카운트
   if("IntersectionObserver" in window&&!reduce){
@@ -1767,7 +1742,7 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
     pad:{cut:"relief-pad-hero-cut",noPrice:true,sec:[
       {h:"576개의 핀.",s:"그래프가 손끝에서 솟아오릅니다.",img:"relief-graph",alt:"촉각 그래프가 솟아오른 Relief pad.",p:"<b>R2 촉각 엔진.</b> 핀 하나하나가 0.2초 만에 오르내리며 함수 곡선과 막대그래프를 그대로 그립니다."},
       {h:"읽는 대로, 들립니다.",s:"점자 40칸과 음성을 동시에.",img:"relief-finger",alt:"손끝으로 점자를 읽는 모습.",p:"<b>손끝이 닿은 곳을 바로 읽어 줍니다.</b> 본문은 점자로, 그래프 값은 음성으로 함께 확인합니다."},
-      {two:[["relief-pad-float","옆에서 본 얇은 Relief pad.","<b>두께 9mm, 690g.</b> 강의실 가방에 그대로 들어갑니다."],["relief-pad-silver","무광 표면 위의 점자 핀.","<b>눈부심 없는 무광 표면.</b> 저시력 학생도 편하게 봅니다."]]},
+      {two:[["relief-pad-thin","한 손 위에 올린 두께 9mm의 얇은 Relief pad.","<b>두께 9mm, 690g.</b> 강의실 가방에 그대로 들어갑니다."],["relief-pad-float","무광 표면 위의 점자 핀.","<b>눈부심 없는 무광 표면.</b> 저시력 학생도 편하게 봅니다."]]},
       {h:"책상 위의 강의실.",s:"수업 전에 먼저 읽고, 수업 중엔 함께 따라가고.",img:"relief-desk",alt:"책상 위 Relief pad의 그래프를 손끝으로 읽는 모습.",p:"<b>하루 종일 12시간.</b> 저전력 구동부 덕분에 충전 걱정 없이 수업을 듣습니다."}],
       spec:[["디스플레이","촉각 핀 576개 (32×18) · 핀 높이 3단계"],["점자·음성","점자 셀 40칸 · 동시 음성 출력"],["엔진","R2 촉각 엔진 · 핀 반응 0.2초"],["크기·무게","두께 9mm · 690g"],["배터리","최대 12시간 · USB‑C 충전"],["가격","개인 ₩1,990,000 · 교육기관 ₩1,790,000/대 · 공공기관 ₩1,590,000/대 (5대 이상)"]]},
     mini:{cut:"relief-pad-gold-cut",noPrice:true,sec:[
@@ -1873,7 +1848,7 @@ footer .wrap{padding-block:2rem;display:grid;gap:.5rem}
       '<div class="uses-wrap"><button class="uses-pill" type="button" aria-expanded="false" aria-controls="pv-uses">Relief로 할 수 있는 일 알아보기<span class="ci" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></button></div><ul class="uses" id="pv-uses" hidden><li><b>강의 자료 예습</b>PDF 속 그래프와 도표를 손으로 먼저 읽어 봅니다.</li><li><b>수식과 함수</b>곡선을 따라가며 좌표를 음성으로 듣습니다.</li><li><b>캠퍼스 지도</b>건물과 길의 윤곽을 손끝으로 익힙니다.</li><li><b>시험·과제</b>점자 입력으로 답안을 바로 작성합니다.</li></ul>'+
       '<div class="pv-cta"><a class="buy" href="#contact" data-buy="'+p.name+'">'+(p.gift?'도입 상담':'구입하기')+'</a><p class="from">'+(p.gift||wonP(p)+'부터')+'</p></div></div></section>'+
       '<section class="pv-sec" aria-labelledby="pv-feat"><div class="wrap"><div class="pv-panel" role="region" aria-roledescription="캐러셀" aria-labelledby="pv-feat"><h2 id="pv-feat">'+d.head+'</h2><div style="overflow:hidden"><div class="pv-track" id="pv-track">'+slides+'</div></div>'+dots+'</div></div></section>'+
-      (isAcc?accHTML(p):'<div class="pvp" aria-label="Relief 이야기">'+'<section class="pvp-s pvp-rv"><h2 class="pvp-h">강의실에서.<br><span>그래프를 손끝으로 먼저 읽습니다.</span></h2><figure class="pvp-wide"><img src="assets/relief-desk.jpg" alt="책상 위 Relief pad의 촉각 그래프를 손끝으로 읽는 모습." loading="lazy"></figure><p class="pvp-p"><b>강의 PDF 속 그래프 한 장.</b> 수업 전에 촉각 그래픽으로 바꿔 두면, 수업 시간에는 친구들과 같은 속도로 따라갑니다.</p></section>'+'<section class="pvp-s pvp-rv"><h2 class="pvp-h">ACCESS FOR ALL.<br><span>촉각 태블릿을 사면, 청각 보조기기까지.</span></h2><div class="pvp-two"><figure><img src="assets/relief-p-aid.jpg" alt="강의실 책상 위 Relief pad와 보청기." loading="lazy"></figure><figure><img src="assets/relief-q-aid.jpg" alt="보청기를 낀 학생이 Relief pad를 읽습니다." loading="lazy"></figure></div><p class="pvp-p"><b>하나의 구매로 더 넓어지는 접근성.</b> 시각장애 학생뿐 아니라 한 기관 안의 다양한 학생에게 함께 닿습니다.</p></section>'+'<section class="pvp-s pvp-rv"><h2 class="pvp-h">캠퍼스에서 먼저.<br><span>4월 20일, 체험 부스에서 만나요.</span></h2><figure class="pvp-wide"><img src="assets/relief-q-booth.jpg" alt="캠퍼스 천막 부스에서 Relief pad를 체험하는 학생." loading="lazy"></figure><p class="pvp-p"><b>장애인의 날 캠퍼스 체험 부스.</b> 장애학생지원센터·인권센터와 함께 누구나 무료로 직접 만져 볼 수 있습니다.</p></section>'+'<section class="pvp-s pvp-rv"><div class="pvp-two"><div><figure><img src="assets/relief-q-fair.jpg" alt="박람회 부스에서 웃으며 Relief pad를 체험하는 두 학생." loading="lazy"></figure><p class="pvp-p sm"><b>3월·9월 동아리 박람회·취업 페스티벌.</b> 사람이 가장 많이 모이는 신학기 행사에서 직접 만져 봅니다.</p></div><div><figure><img src="assets/relief-library-qr.jpg" alt="도서관 대여 데스크의 Relief pad와 할인 QR 스탠드." loading="lazy"></figure><p class="pvp-p sm"><b>공공기관 대여, QR로 할인.</b> 도서관·복지관 대여 기기에 할인 QR을 붙여 드립니다.</p></div></div></section>'+'<section class="pvp-s pvp-rv"><h2 class="pvp-h">점자 키보드 커버.<br><span>읽는 것에서, 쓰는 것까지.</span></h2><figure class="pvp-wide pvp-soft"><img src="assets/relief-kbd.jpg" alt="점자 키보드 커버를 연결한 Relief pad." loading="lazy"></figure><p class="pvp-p"><b>6점 점자 키.</b> 익숙한 배열 그대로, 과제와 메모를 바로 입력합니다.</p></section>'+'<section class="pvp-s pvp-rv pvp-end"><figure class="pvp-wide"><img src="assets/relief-q-carry.jpg" alt="캠퍼스에서 Relief pad를 들고 공부하는 학생." loading="lazy"></figure><h2 class="pvp-h">혼자서도, 끝까지.<br><span>Relief와 함께하는 새 학기.</span></h2><div class="pvp-cta"><a class="buy" href="#contact">도입 상담 신청</a><a class="pvp-lk" href="#promo">신학기 프로모션 보기 ›</a></div></section>'+'</div>'+'<section class="pv-sec" aria-label="Relief로 하는 일"><div class="wrap"><div class="two">'+
+      (isAcc?accHTML(p):'<div class="pvp" aria-label="Relief 이야기">'+'<section class="pvp-s pvp-rv"><h2 class="pvp-h">강의실에서.<br><span>그래프를 손끝으로 먼저 읽습니다.</span></h2><figure class="pvp-wide"><img src="assets/relief-desk.jpg" alt="책상 위 Relief pad의 촉각 그래프를 손끝으로 읽는 모습." loading="lazy"></figure><p class="pvp-p"><b>강의 PDF 속 그래프 한 장.</b> 수업 전에 촉각 그래픽으로 바꿔 두면, 수업 시간에는 친구들과 같은 속도로 따라갑니다.</p></section>'+'<section class="pvp-s pvp-rv"><h2 class="pvp-h">ACCESS FOR ALL.<br><span>촉각 태블릿을 사면, 청각 보조기기까지.</span></h2><div class="pvp-two"><figure><img src="assets/relief-p-aid.jpg" alt="강의실 책상 위 Relief pad와 보청기." loading="lazy"></figure><figure><img src="assets/relief-q-aid.jpg" alt="보청기를 낀 학생이 Relief pad를 읽습니다." loading="lazy"></figure></div><p class="pvp-p"><b>하나의 구매로 더 넓어지는 접근성.</b> 시각장애 학생뿐 아니라 한 기관 안의 다양한 학생에게 함께 닿습니다.</p></section>'+'<section class="pvp-s pvp-rv"><h2 class="pvp-h">캠퍼스에서 먼저.<br><span>4월 20일, 체험 부스에서 만나요.</span></h2><figure class="pvp-wide"><img src="assets/relief-q-booth.jpg" alt="캠퍼스 천막 부스에서 Relief pad를 체험하는 학생." loading="lazy"></figure><p class="pvp-p"><b>장애인의 날 캠퍼스 체험 부스.</b> 장애학생지원센터·인권센터와 함께 누구나 무료로 직접 만져 볼 수 있습니다.</p></section>'+'<section class="pvp-s pvp-rv"><div class="pvp-two"><div><figure><img src="assets/relief-q-fair.jpg" alt="박람회 부스에서 웃으며 Relief pad를 체험하는 두 학생." loading="lazy"></figure><p class="pvp-p sm"><b>3월·9월 동아리 박람회·취업 페스티벌.</b> 사람이 가장 많이 모이는 신학기 행사에서 직접 만져 봅니다.</p></div><div><figure><img src="assets/relief-library-qr.jpg" alt="도서관 대여 데스크의 Relief pad와 할인 QR 스탠드." loading="lazy"></figure><p class="pvp-p sm"><b>공공기관 대여, QR로 할인.</b> 도서관·복지관 대여 기기에 할인 QR을 붙여 드립니다.</p></div></div></section>'+'<section class="pvp-s pvp-rv"><h2 class="pvp-h">점자 키보드 커버.<br><span>읽는 것에서, 쓰는 것까지.</span></h2><figure class="pvp-wide pvp-soft"><img src="assets/relief-kbd.jpg" alt="점자 키보드 커버를 연결한 Relief pad." loading="lazy"></figure><p class="pvp-p"><b>6점 점자 키.</b> 익숙한 배열 그대로, 과제와 메모를 바로 입력합니다.</p></section>'+'<section class="pvp-s pvp-rv pvp-end"><figure class="pvp-wide"><img src="assets/relief-q-carry.jpg" alt="캠퍼스에서 Relief pad를 들고 공부하는 학생." loading="lazy"></figure><h2 class="pvp-h">혼자서도, 끝까지.<br><span>Relief와 함께하는 새 학기.</span></h2><div class="pvp-cta"><a class="buy" href="#contact">도입 상담 신청</a><a class="pvp-lk" href="#sales">신학기 프로모션 보기 ›</a></div></section>'+'</div>'+'<section class="pv-sec" aria-label="Relief로 하는 일"><div class="wrap"><div class="two">'+
         '<div class="tc"><div class="tc-media tc-dark" aria-hidden="true"><div class="jobs">'+[["PDF","linear-gradient(145deg,#ff6b6b,#c81d4a)","‘통계학 3주차.pdf’ 촉각 변환 중","그래프 4개 · 62% 완료",.62],["점","linear-gradient(145deg,#5ac8fa,#0a84ff)","‘미시경제 6장’ 점자 변환 중","38쪽 중 21쪽",.55],["지도","linear-gradient(145deg,#34d399,#059669)","‘캠퍼스 지도’ 촉각 지도 만드는 중","건물 12곳 · 거의 완료",.9]].map(function(j){var c=2*Math.PI*15;return '<div class="job"><span class="jic" style="background:'+j[1]+'">'+j[0]+'</span><span class="jt"><b>'+j[2]+'</b><small>'+j[3]+'</small></span><svg class="ring" viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="none" stroke="rgba(0,0,0,.15)" stroke-width="4"/><circle cx="20" cy="20" r="15" fill="none" stroke="#1d1d1f" stroke-width="4" stroke-linecap="round" stroke-dasharray="'+(c*j[4]).toFixed(1)+' '+c.toFixed(1)+'" transform="rotate(-90 20 20)"/><rect x="16" y="16" width="8" height="8" rx="1.5" fill="#1d1d1f"/></svg></div>'}).join("")+'</div><div class="sheet"><b>변환하는 중</b><small>‘통계학 3주차.pdf’ 촉각 그래픽으로 바꾸는 중</small><span class="bar"><i></i></span><em>취소</em></div></div>'+
         '<p class="tc-p">무거운 자료 변환은 <b>‘자동 변환’</b>이 뒤에서 처리합니다. 담당자는 <b>‘변환 현황’</b>에서 학생별 진행 상황을 한눈에 확인하죠.</p></div>'+
         '<div class="tc"><div class="tc-media tc-dark tc-dev" aria-hidden="true">'+frameHTML("curve","y = sin x")+'<div class="tl"><span class="tl-play"></span><span class="tl-time">00:03:12</span><span class="wave">'+Array.apply(null,Array(42)).map(function(_,i){return '<i style="height:'+(18+Math.round(Math.abs(Math.sin(i*1.7)+Math.sin(i*.6))*26))+'%"></i>'}).join("")+'</span></div></div>'+
