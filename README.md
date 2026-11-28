@@ -26,7 +26,8 @@
 | v20 | [/versions/v20/](https://service-marketing-03.github.io/versions/v20/) | 음성으로 듣기 버튼 섹션마다 다시 표시, 새 캠퍼스 사진 6장, 프로모션 카드를 애플 교육 카드 비율(4:5, 사진 60%)로, 스토어 5대·대여·개인 타일을 실사 사진으로 |
 | v21 | [/versions/v21/](https://service-marketing-03.github.io/versions/v21/) | 스토어 타일 6장 모두 흰 카드+아래 사진, 주황 라벨 제거, 프로모션 1·2번째 카드 이전 사진으로, 핵심 기능 3번째 사진 교체 |
 | v22 | [/versions/v22/](https://service-marketing-03.github.io/versions/v22/) | 스토어(기관 할인) 카드 6장을 이전 모양(색 배경·기기 컷·×5·달력·앱 배지)으로 되돌리고 주황 라벨만 제거 |
-| v39 (현재) | [/versions/v39/](https://service-marketing-03.github.io/versions/v39/) | 청각 보조기기 검정 배경 사진 선명하게 |
+| v40 (현재) | [/versions/v40/](https://service-marketing-03.github.io/versions/v40/) | 소개·기기·기관·프로모션을 별도 페이지로 분리, 기관 페이지는 기관 내용만(기기 공급·관리 SaaS·도입 절차·지원·수익 모델·FAQ·상담) |
+| v39 | [/versions/v39/](https://service-marketing-03.github.io/versions/v39/) | 청각 보조기기 검정 배경 사진 선명하게 |
 | v38 | [/versions/v38/](https://service-marketing-03.github.io/versions/v38/) | 기관 파트를 토스 송금 페이지식으로(큰 제목·사진·고객 가치·지원 숫자), 기능 카드에 Relief pad 이미지 |
 | v37 | [/versions/v37/](https://service-marketing-03.github.io/versions/v37/) | 핵심 기능 첫 카드를 검정 배경 변환 화면으로, 폴리오 케이스 사진 선명하게 |
 | v36 | [/versions/v36/](https://service-marketing-03.github.io/versions/v36/) | "손끝에서 일어서는 수업" 섹션 삭제, 도입 상담 폼을 홍보물 신청 폼과 같은 스타일로, pad 두께 사진 교체 |
